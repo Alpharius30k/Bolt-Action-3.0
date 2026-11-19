@@ -51,7 +51,18 @@
         "type": "selectionEntry"
       },
       {"name": "Landing Craft, Personnel", "id": "557c-1e92-3186-4e10", "hidden": false, "import": true, "targetId": "46e0-6f93-5f49-a115", "type": "selectionEntry"},
-      {"name": "Landing Craft, Mechanized", "id": "5860-4d4c-dee3-d68b", "hidden": false, "import": true, "targetId": "d1a4-6c2d-5268-ee98", "type": "selectionEntry"}
+      {"name": "Landing Craft, Mechanized", "id": "5860-4d4c-dee3-d68b", "hidden": false, "import": true, "targetId": "d1a4-6c2d-5268-ee98", "type": "selectionEntry"},
+      {"name": "Platoon Commander", "id": "c7fa-f448-b64b-cbef", "hidden": false, "import": true, "targetId": "312f-6b30-d109-2535", "type": "selectionEntry"},
+      {"name": "Forward Air Observer unit", "id": "0f08-035c-fb3a-97ad", "hidden": false, "import": true, "targetId": "fc9b-11c9-19ff-2b8a", "type": "selectionEntry"},
+      {
+        "name": "Forward Artillery Observer unit",
+        "id": "f4c3-16de-c421-2cbc",
+        "hidden": false,
+        "import": true,
+        "targetId": "a7ac-1418-6940-60ab",
+        "type": "selectionEntry"
+      },
+      {"name": "Medic unit", "id": "d267-531c-6964-dd4a", "hidden": false, "import": true, "targetId": "5e4a-b2a3-d3ef-f2f3", "type": "selectionEntry"}
     ],
     "sharedSelectionEntries": [
       {
@@ -209,6 +220,39 @@
                     "targetId": "a297-b22b-85e4-cc7e",
                     "type": "selectionEntry",
                     "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 4}]
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Weapon",
+                    "id": "ffbc-7715-e832-686e",
+                    "defaultSelectionEntryId": "f989-33da-7223-20a0",
+                    "hidden": false,
+                    "constraints": [
+                      {"id": "f87a-1968-7f6f-ca8d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "dcd2-3452-f73d-22fe", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ],
+                    "entryLinks": [
+                      {"name": "Rifle", "id": "8ca3-c7ca-6529-6c39", "hidden": false, "import": true, "targetId": "caae-7f3a-368b-3047", "type": "selectionEntry"},
+                      {
+                        "name": "Pistol",
+                        "id": "55ab-38c7-970a-f00d",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "9f21-3c1e-56d5-1ef2",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -1}]
+                      },
+                      {
+                        "name": "SMG",
+                        "id": "e8db-623e-c810-57aa",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "a297-b22b-85e4-cc7e",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 4}]
+                      }
+                    ]
                   }
                 ]
               },
@@ -3098,6 +3142,1046 @@
               {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
               {"name": "Transport", "$text": "3", "typeId": "724f-91db-8d2d-f080"},
               {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Platoon Commander Unit",
+        "id": "312f-6b30-d109-2535",
+        "hidden": false,
+        "import": true,
+        "type": "unit",
+        "categoryLinks": [
+          {"name": "Officer", "id": "34ef-92be-9e12-31bb", "hidden": false, "primary": true, "targetId": "a6d4-c1f9-851d-0ba9"},
+          {"name": "Infantry", "id": "7923-448b-7bcb-294b", "hidden": false, "primary": false, "targetId": "6e1f-0001-8995-dbac"}
+        ],
+        "constraints": [{"id": "4d59-e265-f6ec-edeb", "field": "selections", "includeChildSelections": false, "scope": "force", "shared": true, "type": "max", "value": 1}],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "b10f-852a-3f4a-bfe7",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "For King and Country",
+            "id": "fd19-5d30-8fb1-1f52",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "91f8-643f-200f-2813",
+            "type": "selectionEntryGroup",
+            "modifiers": [
+              {"affects": "self.entries.recursive.51e4-f467-08cc-abc6", "field": "hidden", "type": "set", "value": true},
+              {"affects": "self.entries.recursive.b071-2c91-872a-8d83", "field": "hidden", "type": "set", "value": true}
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "f3af-bc62-955c-51ec",
+                "childName": "Company Platoon",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Platoon Commander",
+            "id": "c085-a173-36c1-922b",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 3,
+            "type": "model",
+            "constraints": [
+              {"id": "5cb2-cabc-2202-2b2d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "1380-77eb-6a53-71eb", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "modifiers": [
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 21,
+                "conditions": [
+                  {
+                    "childId": "7d03-bd00-3f70-aece",
+                    "childName": "Inexpirence",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 30,
+                "conditions": [
+                  {
+                    "childId": "8066-4eb9-90e7-203a",
+                    "childName": "Regular",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 39,
+                "conditions": [
+                  {
+                    "childId": "a930-4c61-71a3-c8f5",
+                    "childName": "Veteran",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Wargear",
+                "id": "5cc0-8aab-57a6-1bc1",
+                "hidden": false,
+                "entryLinks": [
+                  {
+                    "name": "Wire Cutters",
+                    "id": "fa5e-3f5c-9430-e380",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "1297-5781-3312-f218",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 1}]
+                  },
+                  {
+                    "name": "Intelligence",
+                    "id": "8583-1d6d-72f5-65f3",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "26ae-96a7-94d1-2ab7",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 50}]
+                  }
+                ]
+              },
+              {
+                "name": "Weapon",
+                "id": "80ab-edba-5944-82b9",
+                "defaultSelectionEntryId": "6d2e-fefc-2b45-100a",
+                "hidden": false,
+                "constraints": [
+                  {"id": "a8d5-90d4-7cd9-6970", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "0dbe-43f9-5ea8-410c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "Rifle", "id": "6d2e-fefc-2b45-100a", "hidden": false, "import": true, "targetId": "caae-7f3a-368b-3047", "type": "selectionEntry"},
+                  {
+                    "name": "Pistol",
+                    "id": "4cb9-1358-aea7-b96b",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "9f21-3c1e-56d5-1ef2",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -1}]
+                  },
+                  {
+                    "name": "SMG",
+                    "id": "670b-b558-45cc-dadb",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "a297-b22b-85e4-cc7e",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 4}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Additional Men",
+            "id": "da46-fa04-cf05-c3c9",
+            "hidden": false,
+            "import": true,
+            "type": "model",
+            "constraints": [{"id": "5869-28b7-e5f7-f3d8", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 5}],
+            "costs": [{"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+            "modifiers": [
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 7,
+                "conditions": [
+                  {
+                    "childId": "7d03-bd00-3f70-aece",
+                    "childName": "Inexpirence",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 10,
+                "conditions": [
+                  {
+                    "childId": "8066-4eb9-90e7-203a",
+                    "childName": "Regular",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 13,
+                "conditions": [
+                  {
+                    "childId": "a930-4c61-71a3-c8f5",
+                    "childName": "Veteran",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Additional Men",
+                "id": "88c5-818e-8d37-b4a5",
+                "hidden": false,
+                "typeId": "e518-6709-d65b-ba02",
+                "typeName": "Unit",
+                "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Weapon",
+                "id": "b344-9e7d-c215-b8b4",
+                "defaultSelectionEntryId": "47ff-f4af-a37c-61e3",
+                "hidden": false,
+                "constraints": [
+                  {"id": "2c04-0f08-2de9-3286", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "154a-12cb-45b3-1d00", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "Rifle", "id": "ae12-a0af-98a3-d5a2", "hidden": false, "import": true, "targetId": "caae-7f3a-368b-3047", "type": "selectionEntry"},
+                  {
+                    "name": "Pistol",
+                    "id": "dcb6-474d-a02b-5032",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "9f21-3c1e-56d5-1ef2",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -1}]
+                  },
+                  {
+                    "name": "SMG",
+                    "id": "e4dd-c3d0-3ee8-1701",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "a297-b22b-85e4-cc7e",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 4}]
+                  }
+                ]
+              },
+              {
+                "name": "Wargear",
+                "id": "e414-6e02-9c4f-3f67",
+                "hidden": false,
+                "entryLinks": [
+                  {
+                    "name": "Wire Cutters",
+                    "id": "5707-af4a-bff9-34b9",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "1297-5781-3312-f218",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 1}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Forward Air Observer unit",
+        "id": "fc9b-11c9-19ff-2b8a",
+        "hidden": false,
+        "import": true,
+        "type": "unit",
+        "categoryLinks": [
+          {"name": "Support", "id": "2962-8d41-2a00-12a7", "hidden": false, "primary": true, "targetId": "baa3-9104-b66e-a552"},
+          {"name": "Infantry", "id": "2e1a-ec99-aa3f-0252", "hidden": false, "primary": false, "targetId": "6e1f-0001-8995-dbac"}
+        ],
+        "constraints": [{"id": "6dfc-719e-564c-a08c", "field": "selections", "includeChildSelections": false, "scope": "force", "shared": true, "type": "max", "value": 1}],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "2d15-5f40-48f5-3a6f",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "7d03-bd00-3f70-aece", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "For King and Country",
+            "id": "28d8-78e0-72f4-139f",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "91f8-643f-200f-2813",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "f3af-bc62-955c-51ec",
+                "childName": "Company Platoon",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "6dfc-719e-564c-a08c",
+            "type": "set",
+            "value": 0,
+            "conditions": [
+              {
+                "childId": "f4c3-16de-c421-2cbc",
+                "childName": "Forward Artillery Observer unit",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Additional Men",
+            "id": "4669-0cf3-fdcb-644e",
+            "hidden": false,
+            "import": true,
+            "type": "model",
+            "constraints": [{"id": "5d36-a08f-4506-d6d7", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "costs": [{"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+            "modifiers": [
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 7,
+                "conditions": [
+                  {
+                    "childId": "7d03-bd00-3f70-aece",
+                    "childName": "Inexpirence",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 11,
+                "conditions": [
+                  {
+                    "childId": "8066-4eb9-90e7-203a",
+                    "childName": "Regular",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 14,
+                "conditions": [
+                  {
+                    "childId": "a930-4c61-71a3-c8f5",
+                    "childName": "Veteran",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Additional Men",
+                "id": "cf43-35e0-6b7c-e9c8",
+                "hidden": false,
+                "typeId": "e518-6709-d65b-ba02",
+                "typeName": "Unit",
+                "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Weapon",
+                "id": "1cfa-1217-6605-75dc",
+                "defaultSelectionEntryId": "8423-6b9d-1f19-c47e",
+                "hidden": false,
+                "constraints": [
+                  {"id": "bf4b-769c-756a-9954", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "faee-1b13-03d6-05b1", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "Rifle", "id": "8423-6b9d-1f19-c47e", "hidden": false, "import": true, "targetId": "caae-7f3a-368b-3047", "type": "selectionEntry"},
+                  {
+                    "name": "Pistol",
+                    "id": "169f-fd78-567c-63c4",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "9f21-3c1e-56d5-1ef2",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -1}]
+                  },
+                  {
+                    "name": "SMG",
+                    "id": "5e92-e05f-5809-b5da",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "a297-b22b-85e4-cc7e",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 4}]
+                  }
+                ]
+              },
+              {
+                "name": "Wargear",
+                "id": "fd39-ea39-179d-9a52",
+                "hidden": false,
+                "entryLinks": [
+                  {
+                    "name": "Wire Cutters",
+                    "id": "8c68-7b48-b08d-af3c",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "1297-5781-3312-f218",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 1}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Forward Air Observer",
+            "id": "d473-0da4-0755-5a44",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 3,
+            "type": "model",
+            "constraints": [
+              {"id": "a1fa-38fb-8d9d-4465", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "7e6e-9609-7f4c-785e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "infoLinks": [
+              {"name": "Observer", "id": "6ce0-d7bb-9c06-b3e2", "hidden": false, "targetId": "04c2-cf97-34dd-185f", "type": "profile"},
+              {"name": "Infiltrator", "id": "025c-e192-f676-4b37", "hidden": false, "targetId": "f302-dea3-875e-af89", "type": "rule"}
+            ],
+            "modifiers": [
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 75,
+                "conditions": [
+                  {
+                    "childId": "8066-4eb9-90e7-203a",
+                    "childName": "Regular",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 90,
+                "conditions": [
+                  {
+                    "childId": "a930-4c61-71a3-c8f5",
+                    "childName": "Veteran",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Forward Air Observer",
+                "id": "ebfd-404f-af7f-c247",
+                "hidden": false,
+                "typeId": "e518-6709-d65b-ba02",
+                "typeName": "Unit",
+                "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Weapon",
+                "id": "1028-6e83-9216-7bbc",
+                "defaultSelectionEntryId": "b607-913b-883b-13b3",
+                "hidden": false,
+                "constraints": [
+                  {"id": "ce39-7357-1b1e-c37a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "7974-be25-3453-e90c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "Rifle", "id": "b607-913b-883b-13b3", "hidden": false, "import": true, "targetId": "caae-7f3a-368b-3047", "type": "selectionEntry"},
+                  {
+                    "name": "Pistol",
+                    "id": "b655-21ba-4be4-5abd",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "9f21-3c1e-56d5-1ef2",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -1}]
+                  },
+                  {
+                    "name": "SMG",
+                    "id": "9af6-0cf7-1859-7eb7",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "a297-b22b-85e4-cc7e",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 4}]
+                  }
+                ]
+              },
+              {
+                "name": "Wargear",
+                "id": "26f9-d0bf-3974-7f60",
+                "hidden": false,
+                "entryLinks": [
+                  {
+                    "name": "Wire Cutters",
+                    "id": "3a01-e496-eff3-b1f4",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "1297-5781-3312-f218",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 1}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Forward Artillery Observer unit",
+        "id": "a7ac-1418-6940-60ab",
+        "hidden": false,
+        "import": true,
+        "type": "unit",
+        "categoryLinks": [
+          {"name": "Support", "id": "7a07-f938-eb77-5a7f", "hidden": false, "primary": true, "targetId": "baa3-9104-b66e-a552"},
+          {"name": "Infantry", "id": "06d9-fa09-25be-606a", "hidden": false, "primary": false, "targetId": "6e1f-0001-8995-dbac"}
+        ],
+        "constraints": [{"id": "5ba9-2450-7768-5f8e", "field": "selections", "includeChildSelections": false, "scope": "force", "shared": true, "type": "max", "value": 1}],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "37f7-5216-75bb-1376",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "7d03-bd00-3f70-aece", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "For King and Country",
+            "id": "c3b2-9496-a490-2c6d",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "targetId": "91f8-643f-200f-2813",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "f3af-bc62-955c-51ec",
+                "childName": "Company Platoon",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "5ba9-2450-7768-5f8e",
+            "type": "set",
+            "value": 0,
+            "conditions": [
+              {
+                "childId": "0f08-035c-fb3a-97ad",
+                "childName": "Forward Air Observer unit",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Additional Men",
+            "id": "0995-6622-84f6-4f85",
+            "hidden": false,
+            "import": true,
+            "type": "model",
+            "constraints": [{"id": "5cdd-1ee5-80fc-2d53", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "costs": [{"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+            "modifiers": [
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 7,
+                "conditions": [
+                  {
+                    "childId": "7d03-bd00-3f70-aece",
+                    "childName": "Inexpirence",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 11,
+                "conditions": [
+                  {
+                    "childId": "8066-4eb9-90e7-203a",
+                    "childName": "Regular",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 14,
+                "conditions": [
+                  {
+                    "childId": "a930-4c61-71a3-c8f5",
+                    "childName": "Veteran",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "unit-self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Additional Men",
+                "id": "f6d6-2380-2974-2205",
+                "hidden": false,
+                "typeId": "e518-6709-d65b-ba02",
+                "typeName": "Unit",
+                "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Weapon",
+                "id": "8137-e90c-a0c0-d1cf",
+                "defaultSelectionEntryId": "8423-6b9d-1f19-c47e",
+                "hidden": false,
+                "constraints": [
+                  {"id": "0b68-65f3-0d46-c859", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "0417-0aa1-1da0-6c2b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "Rifle", "id": "44d3-8d4d-964d-a537", "hidden": false, "import": true, "targetId": "caae-7f3a-368b-3047", "type": "selectionEntry"},
+                  {
+                    "name": "Pistol",
+                    "id": "5b92-998d-5c6f-f6d2",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "9f21-3c1e-56d5-1ef2",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -1}]
+                  },
+                  {
+                    "name": "SMG",
+                    "id": "35c7-4098-af84-5b5d",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "a297-b22b-85e4-cc7e",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 4}]
+                  }
+                ]
+              },
+              {
+                "name": "Wargear",
+                "id": "2d6b-1691-d498-d80d",
+                "hidden": false,
+                "entryLinks": [
+                  {
+                    "name": "Wire Cutters",
+                    "id": "9cf0-d111-4ef2-1b08",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "1297-5781-3312-f218",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 1}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Forward Artillery Observer",
+            "id": "7689-c552-8293-512f",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 3,
+            "type": "model",
+            "constraints": [
+              {"id": "3259-ecf8-6a10-3281", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "df89-3b63-614d-c57f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "infoLinks": [
+              {"name": "Observer", "id": "66e5-31d9-7e3c-2148", "hidden": false, "targetId": "04c2-cf97-34dd-185f", "type": "profile"},
+              {"name": "Infiltrator", "id": "a32f-008c-4441-1f5f", "hidden": false, "targetId": "f302-dea3-875e-af89", "type": "rule"}
+            ],
+            "modifiers": [
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 75,
+                "conditions": [
+                  {
+                    "childId": "8066-4eb9-90e7-203a",
+                    "childName": "Regular",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 90,
+                "conditions": [
+                  {
+                    "childId": "a930-4c61-71a3-c8f5",
+                    "childName": "Veteran",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Forward Air Observer",
+                "id": "c0ed-9982-b460-2064",
+                "hidden": false,
+                "typeId": "e518-6709-d65b-ba02",
+                "typeName": "Unit",
+                "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Weapon",
+                "id": "172a-a4f9-2072-7654",
+                "defaultSelectionEntryId": "4167-2838-15b2-6b3f",
+                "hidden": false,
+                "constraints": [
+                  {"id": "3464-2bbe-a339-d837", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "93af-fb98-8197-be2d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "Rifle", "id": "4167-2838-15b2-6b3f", "hidden": false, "import": true, "targetId": "caae-7f3a-368b-3047", "type": "selectionEntry"},
+                  {
+                    "name": "Pistol",
+                    "id": "5375-13ad-b502-5356",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "9f21-3c1e-56d5-1ef2",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -1}]
+                  },
+                  {
+                    "name": "SMG",
+                    "id": "e23b-acb1-1b29-6f4d",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "a297-b22b-85e4-cc7e",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 4}]
+                  }
+                ]
+              },
+              {
+                "name": "Wargear",
+                "id": "a944-df8b-1b73-258a",
+                "hidden": false,
+                "entryLinks": [
+                  {
+                    "name": "Wire Cutters",
+                    "id": "326a-e089-caff-8386",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "1297-5781-3312-f218",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 1}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Medic unit",
+        "id": "5e4a-b2a3-d3ef-f2f3",
+        "hidden": false,
+        "import": true,
+        "type": "unit",
+        "categoryLinks": [
+          {"name": "Support", "id": "f4b0-4c3c-367e-9928", "hidden": false, "primary": true, "targetId": "baa3-9104-b66e-a552"},
+          {"name": "Infantry", "id": "5945-571b-3881-a565", "hidden": false, "primary": false, "targetId": "6e1f-0001-8995-dbac"}
+        ],
+        "constraints": [{"id": "f00e-4a15-68c0-289b", "field": "selections", "includeChildSelections": false, "scope": "force", "shared": true, "type": "max", "value": 1}],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "7e1d-8f84-f843-c7c0",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "For King and Country",
+            "id": "02c2-b5eb-ecce-babd",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "91f8-643f-200f-2813",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "f3af-bc62-955c-51ec",
+                "childName": "Company Platoon",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "instanceOf",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Medic",
+            "id": "31bb-66a4-c022-22f1",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "type": "upgrade",
+            "constraints": [
+              {"id": "548c-27f3-832e-cbc2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "ec96-d46a-a5ab-05c8", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "entryLinks": [
+              {
+                "name": "Pistol",
+                "id": "6ed9-b1be-1c6b-beab",
+                "hidden": false,
+                "import": true,
+                "targetId": "9f21-3c1e-56d5-1ef2",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "fb9b-906d-bf93-489f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "719d-8c65-dced-636d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              }
+            ],
+            "infoLinks": [
+              {"name": "Self-Defence", "id": "c3fe-988f-dca1-a391", "hidden": false, "targetId": "e8b4-73d0-f785-0ac6", "type": "profile"},
+              {"name": "Medic", "id": "8e20-3056-c1c0-59f9", "hidden": false, "targetId": "6fe4-7f3c-b588-9c74", "type": "profile"}
+            ],
+            "modifiers": [
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 23,
+                "conditions": [
+                  {
+                    "childId": "8066-4eb9-90e7-203a",
+                    "childName": "Regular",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 30,
+                "conditions": [
+                  {
+                    "childId": "a930-4c61-71a3-c8f5",
+                    "childName": "Veteran",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Medic",
+                "id": "9c08-5f14-2801-a81d",
+                "hidden": false,
+                "typeId": "e518-6709-d65b-ba02",
+                "typeName": "Unit",
+                "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
             ]
           }
         ]

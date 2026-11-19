@@ -238,6 +238,28 @@
             "typeId": "855b-a61a-569c-a804"
           }
         ]
+      },
+      {
+        "name": "Observer",
+        "id": "04c2-cf97-34dd-185f",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "Can be used as a spotter for Mortars or Howitzers", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Medic",
+        "id": "6fe4-7f3c-b588-9c74",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": "When a friendly inf. or arty unit within 6” suffer damage from Small Arms, roll a D6 for each Damage. On a 6, ignore that damage.",
+            "typeId": "855b-a61a-569c-a804"
+          }
+        ]
       }
     ],
     "sharedRules": [
@@ -290,7 +312,13 @@
       {"name": "Left Arc", "id": "7cff-3595-a759-21e1", "description": "Can Fire **Left Arc**", "hidden": false},
       {"name": "Right Arc", "id": "9624-5275-579e-5fd6", "description": "Can Fire **Right Arc**", "hidden": false},
       {"name": "Rear Arc", "id": "5ef2-cf41-e953-3052", "description": "Can Fire **Rear Arc**", "hidden": false},
-      {"name": "Anti-Tank", "id": "6445-ff51-9edd-1269", "description": "+1 **to hit** when **targeting** a **vehicle**", "hidden": false}
+      {"name": "Anti-Tank", "id": "6445-ff51-9edd-1269", "description": "+1 **to hit** when **targeting** a **vehicle**", "hidden": false},
+      {
+        "name": "Infiltrator",
+        "id": "f302-dea3-875e-af89",
+        "description": "When rolling cover saves, as long as the unit does not have an Advance or Run order, it receives an additional +1 to the roll. Can benefit from special deployment rules, per scenarios",
+        "hidden": false
+      }
     ],
     "sharedSelectionEntries": [
       {
