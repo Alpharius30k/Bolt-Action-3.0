@@ -12,7 +12,9 @@
     "categoryEntries": [
       {"name": "Wheeled Vehicle", "id": "32ff-838e-b76e-9e75", "hidden": false},
       {"name": "Slow", "id": "bbc6-97a1-2fe4-23f1", "hidden": false},
-      {"name": "Command Vehicle", "id": "37c7-6f9a-1f38-4b49", "hidden": false}
+      {"name": "Command Vehicle", "id": "37c7-6f9a-1f38-4b49", "hidden": false},
+      {"name": "Track Vehicle", "id": "69e4-d6cc-40f5-f145", "hidden": false},
+      {"name": "Landing Craft", "id": "7631-6648-712a-a856", "hidden": false}
     ],
     "entryLinks": [
       {"name": "Company Commander", "id": "6d44-21b1-4a9a-61e5", "hidden": false, "import": true, "targetId": "4d66-e2fa-da6d-ed08", "type": "selectionEntry"},
@@ -29,7 +31,27 @@
         "import": true,
         "targetId": "9036-d706-ffef-237f",
         "type": "selectionEntry"
-      }
+      },
+      {
+        "name": "LVT 4 'Buffalo' Landing Vehicle",
+        "id": "6124-7a1c-f8a2-8325",
+        "hidden": false,
+        "import": true,
+        "targetId": "e66d-027a-9f2e-e455",
+        "type": "selectionEntry"
+      },
+      {"name": "Jeep", "id": "dd65-4c95-96c0-fd40", "hidden": false, "import": true, "targetId": "0a37-79c2-ac0f-c38a", "type": "selectionEntry"},
+      {"name": "Landing Craft, Assault", "id": "34f7-e1ab-6735-a7f9", "hidden": false, "import": true, "targetId": "857b-1711-0bf2-b8d3", "type": "selectionEntry"},
+      {
+        "name": "Landing Craft, Assault [Landing Craft]",
+        "id": "b460-7059-c629-cce0",
+        "hidden": false,
+        "import": true,
+        "targetId": "04fb-5f3c-54be-4241",
+        "type": "selectionEntry"
+      },
+      {"name": "Landing Craft, Personnel", "id": "557c-1e92-3186-4e10", "hidden": false, "import": true, "targetId": "46e0-6f93-5f49-a115", "type": "selectionEntry"},
+      {"name": "Landing Craft, Mechanized", "id": "5860-4d4c-dee3-d68b", "hidden": false, "import": true, "targetId": "d1a4-6c2d-5268-ee98", "type": "selectionEntry"}
     ],
     "sharedSelectionEntries": [
       {
@@ -61,6 +83,25 @@
             "sortIndex": 2,
             "targetId": "91f8-643f-200f-2813",
             "type": "selectionEntryGroup"
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "f3af-bc62-955c-51ec",
+                "childName": "Company Platoon",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "notInstanceOf",
+                "value": 1
+              }
+            ]
           }
         ],
         "selectionEntries": [
@@ -483,6 +524,23 @@
                 "value": 1
               }
             ]
+          },
+          {
+            "field": "hidden",
+            "type": "set",
+            "value": true,
+            "conditions": [
+              {
+                "childId": "f3af-bc62-955c-51ec",
+                "childName": "Company Platoon",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "force",
+                "shared": true,
+                "type": "notInstanceOf",
+                "value": 1
+              }
+            ]
           }
         ],
         "profiles": [
@@ -504,7 +562,8 @@
         "type": "model",
         "categoryLinks": [
           {"name": "Transport", "id": "8a25-40fc-3b08-10cf", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
-          {"name": "Wheeled Vehicle", "id": "9752-7c06-4b82-fe11", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"}
+          {"name": "Wheeled Vehicle", "id": "9752-7c06-4b82-fe11", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
+          {"name": "Vehicles", "id": "4a5a-00ec-b6c7-a718", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
         ],
         "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
         "entryLinks": [{"name": "Expirence", "id": "1ae6-032e-1500-7336", "hidden": false, "import": true, "targetId": "2ba1-b6c8-a30e-89b0", "type": "selectionEntryGroup"}],
@@ -590,7 +649,8 @@
         "type": "model",
         "categoryLinks": [
           {"name": "Transport", "id": "8aa2-06af-bf57-4238", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
-          {"name": "Wheeled Vehicle", "id": "1a94-c8f6-d340-346b", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"}
+          {"name": "Wheeled Vehicle", "id": "1a94-c8f6-d340-346b", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
+          {"name": "Vehicles", "id": "59b0-a4f0-0651-c7cd", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
         ],
         "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
         "entryLinks": [
@@ -608,7 +668,7 @@
             "id": "c0fc-2273-86c2-c8a0",
             "hidden": false,
             "import": true,
-            "targetId": "9239-f6e7-f050-ae4b",
+            "targetId": "6359-a62c-cfb9-95de",
             "type": "selectionEntry",
             "constraints": [{"id": "99f2-b6cc-890a-0428", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
@@ -696,7 +756,8 @@
         "type": "model",
         "categoryLinks": [
           {"name": "Transport", "id": "623b-f005-1526-e362", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
-          {"name": "Wheeled Vehicle", "id": "a6a6-9b02-fae8-401b", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"}
+          {"name": "Wheeled Vehicle", "id": "a6a6-9b02-fae8-401b", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
+          {"name": "Vehicles", "id": "79ee-0df1-35a2-26b9", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
         ],
         "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
         "entryLinks": [
@@ -714,7 +775,7 @@
             "id": "d8e0-5059-6119-b437",
             "hidden": false,
             "import": true,
-            "targetId": "9239-f6e7-f050-ae4b",
+            "targetId": "6359-a62c-cfb9-95de",
             "type": "selectionEntry",
             "constraints": [{"id": "2d5a-e89a-f533-c6a3", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
@@ -802,7 +863,8 @@
         "type": "model",
         "categoryLinks": [
           {"name": "Wheeled Vehicle", "id": "ab15-8b8d-0a24-0aff", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
-          {"name": "Transport", "id": "8a5b-b7bf-a628-8977", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"}
+          {"name": "Transport", "id": "8a5b-b7bf-a628-8977", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Vehicles", "id": "1531-d735-7604-ae2f", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
         ],
         "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
         "entryLinks": [
@@ -820,7 +882,7 @@
             "id": "8bea-5e47-663f-38aa",
             "hidden": false,
             "import": true,
-            "targetId": "9239-f6e7-f050-ae4b",
+            "targetId": "6359-a62c-cfb9-95de",
             "type": "selectionEntry",
             "constraints": [{"id": "de4f-9c86-cf2e-e290", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
             "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
@@ -1128,7 +1190,8 @@
         "categoryLinks": [
           {"name": "Transport", "id": "827c-202c-9ed5-b7ad", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
           {"name": "Wheeled Vehicle", "id": "5067-469b-cdff-9468", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
-          {"name": "Command Vehicle", "id": "daae-d986-7e1e-33bc", "hidden": false, "primary": false, "targetId": "37c7-6f9a-1f38-4b49"}
+          {"name": "Command Vehicle", "id": "daae-d986-7e1e-33bc", "hidden": false, "primary": false, "targetId": "37c7-6f9a-1f38-4b49"},
+          {"name": "Vehicles", "id": "d203-a20e-1666-32c4", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
         ],
         "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
         "displayCosts": [{"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
@@ -1214,6 +1277,1827 @@
               {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
               {"name": "Transport", "$text": "10", "typeId": "724f-91db-8d2d-f080"},
               {"name": "Tow", "$text": "L/M AT Gun, L Howitzer, L AA Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jeep",
+        "id": "0a37-79c2-ac0f-c38a",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "d6c4-c8f6-9cd6-7005", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Wheeled Vehicle", "id": "eccf-367e-ed5e-4197", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
+          {"name": "Vehicles", "id": "4e2d-7f90-ca2e-5891", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [{"name": "Expirence", "id": "6989-cbcc-804c-3f48", "hidden": false, "import": true, "targetId": "2ba1-b6c8-a30e-89b0", "type": "selectionEntryGroup"}],
+        "infoLinks": [
+          {"name": "Tow", "id": "a0ef-e0e5-7102-2693", "hidden": false, "targetId": "5121-e676-4f12-eb50", "type": "rule"},
+          {"name": "Transport", "id": "59e6-e5cd-074e-c47f", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 14,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 18,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 22,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Jeep",
+            "id": "968f-6b7b-b184-f3b1",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "3", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "L AT Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "LVT 4 'Buffalo' Landing Vehicle",
+        "id": "e66d-027a-9f2e-e455",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "0293-f33f-147c-b3d6", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Track Vehicle", "id": "e263-243a-e32f-c0e1", "hidden": false, "primary": false, "targetId": "69e4-d6cc-40f5-f145"},
+          {"name": "Command Vehicle", "id": "c9fa-cb40-94fc-afbe", "hidden": false, "primary": false, "targetId": "37c7-6f9a-1f38-4b49"},
+          {"name": "Vehicles", "id": "93e0-3efb-93ae-df99", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "1bae-b194-abf1-0520",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Amphibious", "id": "6f0d-3bf1-2df6-90e8", "hidden": false, "targetId": "b985-2a83-d396-67ff", "type": "rule"},
+          {"name": "Transport", "id": "d28a-b507-1ebc-52f7", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Open Topped", "id": "ece8-5789-d0a6-4d84", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 75,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 94,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 113,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "LVT 4 'Buffalo' Landing Vehicle",
+            "id": "effc-9082-3ae5-b572",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "24", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "dc2c-b09e-6a34-482f",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Hull Mounted HMG",
+                "id": "766b-4afa-bb73-1712",
+                "hidden": false,
+                "import": true,
+                "targetId": "2950-5032-eac8-600a",
+                "type": "selectionEntry",
+                "constraints": [{"id": "ed5c-e0d5-1892-775e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 10}]
+              },
+              {
+                "name": "Pintle Mounted Light Automatic Cannon",
+                "id": "81c3-702a-5230-4d03",
+                "hidden": false,
+                "import": true,
+                "targetId": "7cde-6412-5c26-6971",
+                "type": "selectionEntry",
+                "constraints": [{"id": "402d-71e3-ba97-f0b2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 35}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Option Pintle",
+                "id": "ba9b-c48a-b665-2758",
+                "defaultSelectionEntryId": "8418-cd63-b72b-4544",
+                "hidden": false,
+                "constraints": [
+                  {"id": "2e10-4393-b67f-8547", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1},
+                  {"id": "5ccc-70b6-e806-ae57", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1}
+                ],
+                "selectionEntries": [
+                  {
+                    "name": "2 MMG",
+                    "id": "8418-cd63-b72b-4544",
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "entryLinks": [
+                      {
+                        "name": "Pintle Mounted MMG",
+                        "id": "4f23-2145-c3d5-6c89",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "6e53-33e9-718c-fa3d",
+                        "type": "selectionEntry",
+                        "constraints": [
+                          {"id": "e0fb-8b02-96ec-8f6c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2},
+                          {"id": "f757-db6e-f84e-591f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "2 HMG",
+                    "id": "2323-1b2e-8713-0657",
+                    "hidden": false,
+                    "import": true,
+                    "type": "upgrade",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 20}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+                    "entryLinks": [
+                      {
+                        "name": "Pintle Mounted HMG",
+                        "id": "400f-742a-823a-cc84",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "f978-c230-8fd2-6aea",
+                        "type": "selectionEntry",
+                        "constraints": [
+                          {"id": "77b1-44a2-d19c-4b23", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2},
+                          {"id": "9af6-ffe0-b219-aabd", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Landing Craft, Assault [Boat]",
+        "id": "857b-1711-0bf2-b8d3",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "0be4-d3d3-e32b-ff30", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Boat", "id": "23cb-657c-aebf-6fb5", "hidden": false, "primary": false, "targetId": "a730-e929-1d61-ed38"},
+          {"name": "Slow", "id": "fb40-9c11-7373-da50", "hidden": false, "primary": false, "targetId": "bbc6-97a1-2fe4-23f1"},
+          {"name": "Vehicles", "id": "f51a-b972-8c2e-184c", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "4546-be34-9534-cbe0",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Hull Mounted LMG",
+            "id": "380b-f755-d43c-846a",
+            "hidden": false,
+            "import": true,
+            "targetId": "fed2-4f62-bd36-13fd",
+            "type": "selectionEntry",
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 5}]
+          }
+        ],
+        "infoLinks": [{"name": "Transport", "id": "72bd-201d-84fd-6e1a", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 16,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 20,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 24,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Landing Craft, Assault",
+            "id": "70df-55b1-0836-a07c",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "6\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "36", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Landing Craft, Assault [Landing Craft]",
+        "id": "04fb-5f3c-54be-4241",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "77e6-92f6-a8d0-a858", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Boat", "id": "12b5-e5d4-24cc-c99f", "hidden": false, "primary": false, "targetId": "a730-e929-1d61-ed38"},
+          {"name": "Slow", "id": "b588-a67a-1a6c-715c", "hidden": false, "primary": false, "targetId": "bbc6-97a1-2fe4-23f1"},
+          {"name": "Vehicles", "id": "8530-be4e-27c8-c380", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "cbbc-8940-4c54-b43f",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Transport", "id": "c0d6-4790-5f15-dbd4", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Landing Craft", "id": "fd89-0679-4660-870e", "hidden": false, "targetId": "8a85-9521-a4f2-9faf", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 18,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 23,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 28,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Landing Craft, Assault [Landing Craft]",
+            "id": "5b67-9baa-bda7-ef26",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "6\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "36 Soldiers / Jeep and 16 Soldiers", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "497e-6601-643a-ea56",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Hull Mounted LMG",
+                "id": "878e-9cb8-3a28-0292",
+                "hidden": false,
+                "import": true,
+                "targetId": "fed2-4f62-bd36-13fd",
+                "type": "selectionEntry",
+                "constraints": [{"id": "fc2b-fe24-f5c9-2417", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 5}]
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "2 Light Mortars",
+                "id": "7b68-e771-f022-cfe3",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "constraints": [{"id": "bffc-bd17-dde5-a936", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 40}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+                "entryLinks": [
+                  {
+                    "name": "Light Mortar",
+                    "id": "9050-5c8a-afce-dc96",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "9900-602d-0995-d4c9",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "c43e-ba93-8bfe-4fbe", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2},
+                      {"id": "8548-b993-ba1e-d190", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Landing Craft, Mechanized",
+        "id": "d1a4-6c2d-5268-ee98",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "237d-dbf3-4f78-62a6", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Boat", "id": "666d-cbe2-231f-d35d", "hidden": false, "primary": false, "targetId": "a730-e929-1d61-ed38"},
+          {"name": "Slow", "id": "618c-e18a-d7ea-8e9a", "hidden": false, "primary": false, "targetId": "bbc6-97a1-2fe4-23f1"},
+          {"name": "Vehicles", "id": "852a-29b8-3ab6-7bc6", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "b406-0846-5276-84dd",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Transport", "id": "4b9a-7c4b-4a7b-b9f0", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Landing Craft", "id": "4471-2983-5f4c-b1c3", "hidden": false, "targetId": "8a85-9521-a4f2-9faf", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 58,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 73,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 88,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Landing Craft, Mechanized",
+            "id": "2de4-740f-bfa2-ddaa",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "6\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "100 Soilders/ 2 Soft Skin Vehicles / Armored Vehicle with DV 9+ or Less", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "03b2-f46e-7620-15ea",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Front Right Facing Hull Mounted LMG",
+                "id": "d409-e093-e6e3-d469",
+                "hidden": false,
+                "import": true,
+                "targetId": "aa48-4290-766d-87c4",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "af37-02fc-b175-a611", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "4d13-6931-f30c-b221", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              },
+              {
+                "name": "Front Left Facing Hull Mounted LMG",
+                "id": "5eb8-cd6e-d58c-60e6",
+                "hidden": false,
+                "import": true,
+                "targetId": "eef1-79ed-83f5-b84b",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "69cc-f910-018c-3537", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "63cd-695f-3785-74a6", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Landing Craft, Personnel",
+        "id": "46e0-6f93-5f49-a115",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "f4eb-cb46-58c7-1d2c", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Boat", "id": "06b8-97d2-0f55-4cab", "hidden": false, "primary": false, "targetId": "a730-e929-1d61-ed38"},
+          {"name": "Slow", "id": "970f-1f37-e880-ff50", "hidden": false, "primary": false, "targetId": "bbc6-97a1-2fe4-23f1"},
+          {"name": "Vehicles", "id": "6daa-9f2a-b439-76c9", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "41df-ba64-2521-b80c",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Transport", "id": "29c1-29ec-9380-77ab", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Landing Craft", "id": "2feb-4b11-d8dc-2cc0", "hidden": false, "targetId": "8a85-9521-a4f2-9faf", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 62,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 78,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 94,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Landing Craft, Personnel",
+            "id": "8c7a-fdde-311f-476c",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "6\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": " 36 Soldiers / Jeep and 16 Soldiers", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "c290-f6d1-c546-d468",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Front Left Facing Turret Mounted MMG",
+                "id": "cfee-dd05-4fff-612e",
+                "hidden": false,
+                "import": true,
+                "targetId": "33c1-239d-4eed-8af2",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "db15-9cbd-23f6-4e73", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "8d93-c5a3-fe73-30d1", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              },
+              {
+                "name": "Front Right Facing Turret Mounted MMG",
+                "id": "b701-5c79-c3dc-1fd2",
+                "hidden": false,
+                "import": true,
+                "targetId": "678d-ba22-49ca-1922",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "23af-f811-9ccd-aeaa", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "210e-cf15-164d-4d35", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Light Truck",
+        "id": "8e5c-b23e-a0e8-2c7b",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "e868-d0dd-06c5-0225",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Front Facing Pintle Mounted MMG",
+            "id": "9ffe-c93d-5b13-0491",
+            "hidden": false,
+            "import": true,
+            "targetId": "6614-ee56-c3f6-695b",
+            "type": "selectionEntry",
+            "constraints": [{"id": "a99f-3ae4-ade6-ccc0", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Tow", "id": "db76-774f-c4c6-bacb", "hidden": false, "targetId": "5121-e676-4f12-eb50", "type": "rule"},
+          {"name": "Transport", "id": "8616-b516-2569-7865", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 18,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 23,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 28,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Light Truck",
+            "id": "bbac-c26a-4832-fa18",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "8 Soldiers", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "L/M AT Gun, L Howitzer, L AA Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M3 / M5 'Stuart' Kangaroo",
+        "id": "43f3-ba3b-2cdc-fd34",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "98fd-85ba-64fe-a1a7", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Track Vehicle", "id": "214f-86ff-de51-3d52", "hidden": false, "primary": false, "targetId": "69e4-d6cc-40f5-f145"},
+          {"name": "Vehicles", "id": "aa60-ce13-459e-7970", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "53e3-d294-9bbb-9df9",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "3b25-f6b4-be7b-6629", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Transport", "id": "b96b-cbad-cc0d-3019", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Transport", "id": "6297-39ce-74e6-51c5", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 75,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 94,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 113,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "M3 / M5 'Stuart' Kangaroo",
+            "id": "7cdd-5d17-7476-4e65",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "4", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "L/M AT Gun, L Howitzer, L AA Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "76d4-bd52-62e0-a4fe",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Hull Mounted LMG",
+                "id": "a0d1-2e2d-d04d-b0f6",
+                "hidden": false,
+                "import": true,
+                "targetId": "fed2-4f62-bd36-13fd",
+                "type": "selectionEntry",
+                "constraints": [{"id": "c368-a33a-aa8c-c15a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 5}]
+              },
+              {
+                "name": "Pintle Mounted HMG",
+                "id": "b046-bed1-9826-1115",
+                "hidden": false,
+                "import": true,
+                "targetId": "f978-c230-8fd2-6aea",
+                "type": "selectionEntry",
+                "constraints": [{"id": "1d1e-7719-aa57-a65b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 30}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M3 White Scout Car",
+        "id": "9031-da81-4155-ea15",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "3c77-50fc-7e12-f4cb", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Wheeled Vehicle", "id": "af03-b9cb-a7ac-2e27", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
+          {"name": "Vehicles", "id": "9387-272b-8313-0355", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "80aa-8b80-7337-f7ce",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "635b-ab1f-540c-2cd3", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Transport", "id": "b028-2a7b-8f23-2cf9", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Transport", "id": "8f8f-1282-d826-d530", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 75,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 94,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 113,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "M3 White Scout Car",
+            "id": "a7d9-2d75-4fe5-02c5",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "8", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": " L/M AT Gun, L Howitzer, L AA Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "4af3-44f4-95ed-48f9",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Front Facing Pintle Mounted HMG",
+                "id": "46e6-aaed-c55a-9d79",
+                "hidden": false,
+                "import": true,
+                "targetId": "0f8b-6022-01f7-0f73",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "7c55-0aea-270c-beb9", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "d39f-2fa2-7a29-8fa8", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              },
+              {
+                "name": "Rear Left Facing Pintle Mounted HMG",
+                "id": "2881-8fb1-fa7f-1417",
+                "hidden": false,
+                "import": true,
+                "targetId": "4a9e-d7d3-32ea-96a5",
+                "type": "selectionEntry",
+                "constraints": [{"id": "63e9-ec3c-03c5-9cb2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
+              },
+              {
+                "name": "Rear Right Facing Pintle Mounted HMG",
+                "id": "35d6-874e-06f6-3618",
+                "hidden": false,
+                "import": true,
+                "targetId": "aec5-0dc4-c945-45f5",
+                "type": "selectionEntry",
+                "constraints": [{"id": "819a-469e-c6c3-12af", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M4 'Sherman' / 'Ram' Kangaroo",
+        "id": "6d3b-8ab9-7092-f0c9",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "3b04-ec8f-233f-0252", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Track Vehicle", "id": "0f3d-acc0-ecb6-baa1", "hidden": false, "primary": false, "targetId": "69e4-d6cc-40f5-f145"},
+          {"name": "Vehicles", "id": "c679-bf92-74b0-1515", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "ee5b-73af-4a93-7789",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "c658-ad02-096e-e8cd", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Transport", "id": "2a2a-b1dd-fa9d-3455", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Transport", "id": "acf4-5053-aa8c-13ee", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 85,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 106,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 127,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "M4 'Sherman' / 'Ram' Kangaroo",
+            "id": "cd07-ae13-5cfa-2a67",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "9+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "11", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": " L/M/H AT Gun, L/M Howitzer, L/H AA Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "b548-ac72-7a2b-6815",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Hull Mounted LMG",
+                "id": "45b1-7125-8d92-0f32",
+                "hidden": false,
+                "import": true,
+                "targetId": "fed2-4f62-bd36-13fd",
+                "type": "selectionEntry",
+                "constraints": [{"id": "4a94-dfe5-66d3-8d84", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 5}]
+              },
+              {
+                "name": "Pintle Mounted HMG",
+                "id": "b410-ab9b-7d50-71fb",
+                "hidden": false,
+                "import": true,
+                "targetId": "f978-c230-8fd2-6aea",
+                "type": "selectionEntry",
+                "constraints": [{"id": "c50a-c51c-c754-422f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 30}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M7 'Priest' Kangaroo",
+        "id": "851c-f046-a0e5-3051",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "41e9-33e7-0619-47e6", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Track Vehicle", "id": "3088-b98b-1635-5cff", "hidden": false, "primary": false, "targetId": "69e4-d6cc-40f5-f145"},
+          {"name": "Vehicles", "id": "8953-153b-606d-a965", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "aa78-43d1-e6ba-5fd5",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "73a0-2eda-f399-7cdf", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Transport", "id": "d2d5-a83f-6874-1fb7", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Transport", "id": "e8d6-79e1-64ce-7685", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 53,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 66,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 79,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "M7 'Priest' Kangaroo",
+            "id": "aa0d-a3ec-2705-e0a8",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "11", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": " L/M/H AT Gun, L/M Howitzer, L/H AA Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "ce84-7f46-2aaf-aa94",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Hull Mounted LMG",
+                "id": "7cd8-7199-6e8c-7f78",
+                "hidden": false,
+                "import": true,
+                "targetId": "fed2-4f62-bd36-13fd",
+                "type": "selectionEntry",
+                "constraints": [{"id": "0b27-985b-aed1-ae38", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 5}]
+              },
+              {
+                "name": "Pintle Mounted HMG",
+                "id": "95df-1f03-52d7-1726",
+                "hidden": false,
+                "import": true,
+                "targetId": "f978-c230-8fd2-6aea",
+                "type": "selectionEntry",
+                "constraints": [{"id": "34bf-420e-5157-143e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 30}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Terrapin Amphibious Truck",
+        "id": "8de6-7d68-01d6-6d54",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "d026-f81e-aca9-cafc", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Wheeled Vehicle", "id": "96ae-09ff-7efd-382a", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
+          {"name": "Vehicles", "id": "969c-f888-db9c-ede9", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "0df5-1243-44f2-6cfa",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "0615-f4c7-c01a-71cf", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Transport", "id": "bb7f-18fc-e436-b853", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Tow", "id": "6430-76f8-088c-b915", "hidden": false, "targetId": "5121-e676-4f12-eb50", "type": "rule"},
+          {"name": "Amphibious", "id": "7d02-00ff-fe7f-6baa", "hidden": false, "targetId": "b985-2a83-d396-67ff", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 22,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 27,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 32,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Terrapin Amphibious Truck",
+            "id": "6e80-67c6-5303-b089",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "12", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "L/M AT Gun, L/M Howitzer, L AA Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Truck",
+        "id": "f590-e1ae-f455-13f0",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "ce44-9c08-8243-a09d",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Front Facing Pintle Mounted MMG",
+            "id": "729b-3bd2-7a27-c8c9",
+            "hidden": false,
+            "import": true,
+            "targetId": "6614-ee56-c3f6-695b",
+            "type": "selectionEntry",
+            "constraints": [{"id": "c2f6-15d6-2696-7f8a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Tow", "id": "2120-7c13-26de-cb5d", "hidden": false, "targetId": "5121-e676-4f12-eb50", "type": "rule"},
+          {"name": "Transport", "id": "e4d8-c265-b5ec-d870", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 40,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 50,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 60,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Truck",
+            "id": "5b87-85de-b2f0-b0e2",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "12", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": " L/M AT Gun, L Howitzer, L AA Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Universal Carrier W/Bren LMG",
+        "id": "76ef-f95c-bec2-9873",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "cb35-9a2b-bc6b-b7c1", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Track Vehicle", "id": "4caa-9e4f-2e35-29e0", "hidden": false, "primary": false, "targetId": "69e4-d6cc-40f5-f145"},
+          {"name": "Vehicles", "id": "57e6-fc3a-c26d-5ba1", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "infoLinks": [
+          {"name": "Transport", "id": "09af-1dc7-11d0-0b90", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"},
+          {"name": "Open Topped", "id": "3cda-f4d7-758e-a1cd", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Tow", "id": "2d7c-535e-3245-99c8", "hidden": false, "targetId": "5121-e676-4f12-eb50", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 40,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 50,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 60,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Universal Carrier W/Bren LMG",
+            "id": "588d-17d3-a162-074e",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "5", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "L/M AT Gun", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "b4ab-a3ff-2f28-563e",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Pintle Mounted LMG",
+                "id": "ca29-46a0-fc82-50d5",
+                "hidden": false,
+                "import": true,
+                "targetId": "6359-a62c-cfb9-95de",
+                "type": "selectionEntry",
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Hull mounted",
+                "id": "7f0a-0e1c-ce94-8cb3",
+                "defaultSelectionEntryId": "4200-5313-d2fc-7ce5",
+                "hidden": false,
+                "constraints": [
+                  {"id": "4f02-087c-a8b2-087c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "fa0a-0ec5-ec54-82cf", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "Hull Mounted LMG", "id": "4200-5313-d2fc-7ce5", "hidden": false, "import": true, "targetId": "fed2-4f62-bd36-13fd", "type": "selectionEntry"},
+                  {
+                    "name": "Hull Mounted Anti-Tank Rifle",
+                    "id": "d43e-44b7-a989-4ebc",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "58c0-7e9c-1918-44af",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 10}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Utility Cars",
+        "id": "b3ac-19c2-b4b6-5d21",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "6914-ba36-0709-defc",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [{"name": "Transport", "id": "f796-1441-186c-2768", "hidden": false, "targetId": "e0e2-d039-c73f-5568", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 14,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 18,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 22,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "model-self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Utility Cars",
+            "id": "a994-9514-df90-9019",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "3", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
             ]
           }
         ]

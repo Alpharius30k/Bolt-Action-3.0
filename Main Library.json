@@ -9,36 +9,18 @@
     "revision": 1,
     "type": "catalogue",
     "categoryEntries": [
-      {
-        "name": "Officer",
-        "id": "a6d4-c1f9-851d-0ba9",
-        "hidden": false,
-        "constraints": [
-          {
-            "id": "81c4-eae5-68f2-7fe2",
-            "field": "selections",
-            "includeChildForces": true,
-            "includeChildSelections": true,
-            "scope": "roster",
-            "shared": true,
-            "type": "min",
-            "value": 1
-          },
-          {"id": "cb5d-53d1-1c6d-c0a7", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}
-        ]
-      },
-      {
-        "name": "Support",
-        "id": "baa3-9104-b66e-a552",
-        "hidden": false,
-        "constraints": [{"id": "704b-b145-1c21-04bd", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}]
-      },
+      {"name": "Officer", "id": "a6d4-c1f9-851d-0ba9", "hidden": false},
+      {"name": "Support", "id": "baa3-9104-b66e-a552", "hidden": false},
       {"name": "Transport", "id": "dcb5-75bb-240d-01db", "hidden": false},
       {"name": "Infantry", "id": "6e1f-0001-8995-dbac", "hidden": false},
       {"name": "Vehicles", "id": "a827-3f5a-6588-bf47", "hidden": false},
       {"name": "Artillery", "id": "95e0-99a4-f616-19b8", "hidden": false},
       {"name": "Bicyclist", "id": "c488-c0d7-495d-9cea", "hidden": false},
-      {"name": "Boat", "id": "a730-e929-1d61-ed38", "hidden": false}
+      {"name": "Boat", "id": "a730-e929-1d61-ed38", "hidden": false},
+      {"name": "General Infantry Units", "id": "7848-d855-f69b-e75e", "hidden": false},
+      {"name": "AT Weapons / Special Weapons Teams", "id": "3a9a-3ae8-2149-8b18", "hidden": false},
+      {"name": "Heavy Weapons", "id": "4c05-26b8-8eb6-3a15", "hidden": false},
+      {"name": "Support Vehicles", "id": "9571-d87b-32a5-86fe", "hidden": false}
     ],
     "costTypes": [{"name": "Points", "id": "cf06-9113-0bb3-480a", "defaultCostLimit": 0}, {"name": "Dice", "id": "bc13-1fcd-379a-6b9c", "defaultCostLimit": 0}],
     "forceEntries": [
@@ -47,13 +29,66 @@
         "id": "f3af-bc62-955c-51ec",
         "hidden": false,
         "categoryLinks": [
-          {"name": "Officer", "id": "9844-1544-95c1-152f", "hidden": false, "targetId": "a6d4-c1f9-851d-0ba9"},
-          {"name": "Support", "id": "bb89-e0ea-b76b-645d", "hidden": false, "targetId": "baa3-9104-b66e-a552"},
+          {
+            "name": "Officer",
+            "id": "9844-1544-95c1-152f",
+            "hidden": false,
+            "targetId": "a6d4-c1f9-851d-0ba9",
+            "constraints": [
+              {"id": "91b5-5216-676f-dbd0", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1},
+              {"id": "60a6-ee1f-2037-756b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1}
+            ]
+          },
+          {
+            "name": "Support",
+            "id": "bb89-e0ea-b76b-645d",
+            "hidden": false,
+            "targetId": "baa3-9104-b66e-a552",
+            "constraints": [{"id": "6fb2-2e48-e389-5d00", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}]
+          },
           {"name": "Transport", "id": "b72f-e973-8f9b-c81c", "hidden": false, "targetId": "dcb5-75bb-240d-01db"}
         ],
         "constraints": [
           {
             "id": "abcc-de90-71cf-b1df",
+            "field": "forces",
+            "includeChildForces": true,
+            "includeChildSelections": true,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "name": "Rifle Platoon",
+        "id": "4d24-a495-b13a-b55a",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Officer",
+            "id": "f266-1985-42d0-8b15",
+            "hidden": false,
+            "targetId": "a6d4-c1f9-851d-0ba9",
+            "constraints": [{"id": "1b8e-0399-b736-fdbf", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1}]
+          },
+          {"name": "Support", "id": "375f-fdcb-c21f-db4d", "hidden": false, "targetId": "baa3-9104-b66e-a552"},
+          {
+            "name": "General Infantry Units",
+            "id": "834e-f1b2-1fb1-91c9",
+            "hidden": false,
+            "targetId": "7848-d855-f69b-e75e",
+            "constraints": [{"id": "3c75-5642-d5bc-722b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 2}]
+          },
+          {"name": "AT Weapons / Special Weapons Teams", "id": "18ab-d820-7464-f5a9", "hidden": false, "targetId": "3a9a-3ae8-2149-8b18"},
+          {"name": "Heavy Weapons", "id": "1e25-ec91-a3a7-8667", "hidden": false, "targetId": "4c05-26b8-8eb6-3a15"},
+          {"name": "Support Vehicles", "id": "a791-99f5-2e35-2450", "hidden": false, "targetId": "9571-d87b-32a5-86fe"},
+          {"name": "Transport", "id": "3ac4-abf1-0e9c-d6e5", "hidden": false, "targetId": "dcb5-75bb-240d-01db"}
+        ],
+        "constraints": [
+          {
+            "id": "4937-69a2-c3b9-4e4a",
             "field": "forces",
             "includeChildForces": true,
             "includeChildSelections": true,
@@ -207,7 +242,12 @@
     ],
     "sharedRules": [
       {"name": "Assault", "id": "6f4d-5644-3c2e-e1b2", "description": "Ignore -1 **to hit** due to **movement**", "hidden": false},
-      {"name": "Team", "id": "7836-2556-8c6d-07c4", "description": "If this **weapons** unit goes down to 1 **model** it has **-1 to hit**", "hidden": false},
+      {
+        "name": "Team",
+        "id": "7836-2556-8c6d-07c4",
+        "description": "For infantry and artillery units: If this **weapons** unit goes down to 1 **model** it has **-1 to hit**\nFor vehicle units ignore this.",
+        "hidden": false
+      },
       {"name": "Fixed", "id": "7a52-6b20-fdaa-42c4", "description": "Can only fire in the **Front Arc** of the model.", "hidden": false},
       {
         "name": "Fanatic",
@@ -220,7 +260,37 @@
       {"name": "360° Arc", "id": "5cb5-d617-6c0f-f9e4", "description": "Can Fire all around this model", "hidden": false},
       {"name": "Flak", "id": "9c73-bd8d-0be9-fd6f", "description": "This **weapon** can attack **aircraft** during an **Airstrike**", "hidden": false},
       {"name": "Can not Run", "id": "c841-9196-e994-7da2", "description": "**Model's** with this rule can not be giving **run order**", "hidden": false},
-      {"name": "Command Vehicle", "id": "32ca-def0-81a0-34e8", "description": "Adds morale bonus of +1 to itself and friendly vehicles within 12” ", "hidden": false}
+      {"name": "Command Vehicle", "id": "32ca-def0-81a0-34e8", "description": "Adds morale bonus of +1 to itself and friendly vehicles within 12” ", "hidden": false},
+      {"name": "Amphibious", "id": "b985-2a83-d396-67ff", "description": "Can move over impassable water at half movement", "hidden": false},
+      {
+        "name": "Open Topped",
+        "id": "7e19-e7b3-7cb7-4460",
+        "description": " Takes Pins from any hits. **Weapons** gain +1 to Pen and +1 on Damage Tables result against attacks targeting the **Top Armour** of this **Vehicle**",
+        "hidden": false
+      },
+      {"name": "Front Arc", "id": "4d50-0edf-8a60-3af8", "description": "Can Fire **Front Arc**", "hidden": false},
+      {
+        "name": "HE(X\")",
+        "id": "47c0-c90b-acff-3e23",
+        "description": "Use X” **template** to determine hits but you **roll 1 hit roll** for all units in the template. In addition the weapon gains +X Pen and deal additional pins based on X:\n- 1: D2 pins or D3 if the **hit unit** is in a building\n- 2: D2 pins or D6 if the **hit unit** is in a building\n- 3: D3 pins or 2D6 if the **hit unit** is in a building\n- 4: D3 pins or 3D6 if the **hit unit** is in a building",
+        "hidden": false
+      },
+      {
+        "name": "Indirect Fire",
+        "id": "e5b4-599d-635e-b2fa",
+        "description": "This unit hits on 6s for its first **Fire Order** then in its next **Fire Order** hits on 5,6 and so if it targets the same unit however as soon as this model gets any other **order** besides **Fire Order** or the **target unit** has moved more then **2\"** and this **model** is not **hitting** on 2's  this resets.",
+        "hidden": false
+      },
+      {
+        "name": "Landing Craft",
+        "id": "8a85-9521-a4f2-9faf",
+        "description": "The standard rules for transports apply to landing craft, with the exception that units must begin the game on landing craft and cannot mount onto them unless the landing craft is partially on solid ground.",
+        "hidden": false
+      },
+      {"name": "Left Arc", "id": "7cff-3595-a759-21e1", "description": "Can Fire **Left Arc**", "hidden": false},
+      {"name": "Right Arc", "id": "9624-5275-579e-5fd6", "description": "Can Fire **Right Arc**", "hidden": false},
+      {"name": "Rear Arc", "id": "5ef2-cf41-e953-3052", "description": "Can Fire **Rear Arc**", "hidden": false},
+      {"name": "Anti-Tank", "id": "6445-ff51-9edd-1269", "description": "+1 **to hit** when **targeting** a **vehicle**", "hidden": false}
     ],
     "sharedSelectionEntries": [
       {
@@ -274,6 +344,15 @@
         "import": true,
         "type": "upgrade",
         "infoLinks": [{"name": "Assault", "id": "2483-b1d7-d625-b84d", "hidden": false, "targetId": "6f4d-5644-3c2e-e1b2", "type": "rule"}],
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ],
         "profiles": [
           {
             "name": "SMG",
@@ -290,9 +369,95 @@
           }
         ]
       },
-      {"name": "Automatic Rifle", "id": "f065-4d99-5036-4866", "hidden": false, "import": true, "type": "upgrade"},
-      {"name": "LMG", "id": "c809-caf2-cd20-ab0b", "hidden": false, "import": true, "type": "upgrade"},
-      {"name": "MMG", "id": "efe4-2b12-599d-93fb", "hidden": false, "import": true, "type": "upgrade"},
+      {
+        "name": "Automatic Rifle",
+        "id": "f065-4d99-5036-4866",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "profiles": [
+          {
+            "name": "Automatic Rifle",
+            "id": "d7cf-ceb1-4b8c-6de7",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "30\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "-", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "LMG",
+        "id": "c809-caf2-cd20-ab0b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Team", "id": "cf4f-2838-244d-fb29", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}],
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "LMG",
+            "id": "ea3b-da0f-b7b3-21c5",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "36\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "4", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "MMG",
+        "id": "efe4-2b12-599d-93fb",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Fixed", "id": "feab-63fd-f3a8-df1c", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {"name": "Team", "id": "423f-d9ea-ba94-d35c", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "MMG",
+            "id": "20b5-9619-022d-49fe",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "36\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "6", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
       {
         "name": "Wire Cutters",
         "id": "1297-5781-3312-f218",
@@ -374,29 +539,591 @@
         ]
       },
       {
-        "name": "Pintle Mounted LMG",
-        "id": "9239-f6e7-f050-ae4b",
+        "name": "HMG",
+        "id": "8e47-beb7-6879-661e",
         "hidden": false,
         "import": true,
         "type": "upgrade",
         "infoLinks": [
-          {"name": "360° Arc", "id": "6d57-7a48-bdc9-557b", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
-          {"name": "Flak", "id": "e347-185a-b4b9-58e6", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+          {"name": "Fixed", "id": "f60e-106a-86b2-fec1", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {"name": "Team", "id": "8785-70b5-7075-3a08", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
         ],
         "profiles": [
           {
-            "name": "Pintle Mounted LMG",
-            "id": "a446-826a-755d-d2e8",
+            "name": "HMG",
+            "id": "f431-6e63-5ea4-e19f",
             "hidden": false,
             "typeId": "e8ea-235b-e27c-4d69",
             "typeName": "Ranged Weapon",
             "characteristics": [
-              {"name": "Range", "$text": "36\"", "typeId": "48fb-dbbf-ed34-5b90"},
-              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
-              {"name": "Pens", "$text": "0", "typeId": "b7fa-50ee-7ecf-7f80"},
-              {"name": "Special", "$text": "360° Arc, Flak", "typeId": "facf-631c-0026-5956"}
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "6", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "1+", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed", "typeId": "facf-631c-0026-5956"}
             ]
           }
+        ]
+      },
+      {
+        "name": "Pintle Mounted LMG",
+        "id": "6359-a62c-cfb9-95de",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "LMG",
+            "id": "62cd-3ead-d122-5309",
+            "hidden": false,
+            "import": true,
+            "targetId": "c809-caf2-cd20-ab0b",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "d8b4-cc0f-8a6c-757e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "b67b-f062-9bc3-a729", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "360° Arc", "id": "79e8-31dc-bede-7c77", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
+          {"name": "Flak", "id": "9fc3-db1b-0d4e-1051", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "360° Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Pintle Mounted"}
+        ]
+      },
+      {
+        "name": "Pintle Mounted MMG",
+        "id": "6e53-33e9-718c-fa3d",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "MMG",
+            "id": "ddbb-7b04-de0b-00ee",
+            "hidden": false,
+            "import": true,
+            "targetId": "efe4-2b12-599d-93fb",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "d666-cb20-cee4-9e5b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "a059-18ef-c98a-2824", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "360° Arc", "id": "d793-da86-4375-a155", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
+          {"name": "Flak", "id": "a4b0-8be3-34dd-b484", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "360° Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Pintle Mounted"}
+        ]
+      },
+      {
+        "name": "Pintle Mounted HMG",
+        "id": "f978-c230-8fd2-6aea",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "HMG",
+            "id": "2198-4b92-1451-fe86",
+            "hidden": false,
+            "import": true,
+            "targetId": "8e47-beb7-6879-661e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "583a-d1fc-f86c-ab4e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "9524-1667-51de-95d5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "360° Arc", "id": "29a6-a0fe-cdd8-9a86", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
+          {"name": "Flak", "id": "8c1c-b382-02ed-0e5c", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "360° Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Pintle Mounted"}
+        ]
+      },
+      {
+        "name": "Hull Mounted HMG",
+        "id": "2950-5032-eac8-600a",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "HMG",
+            "id": "e40d-ba03-8062-6bb8",
+            "hidden": false,
+            "import": true,
+            "targetId": "8e47-beb7-6879-661e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "1d66-3a3b-304a-8306", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "c04a-9046-cc6e-cfde", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Front Arc", "id": "2b0c-d61d-75f1-7bb2", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"}],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Front Arc"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Hull Mounted"}
+        ]
+      },
+      {
+        "name": "Light Automatic Cannon",
+        "id": "fbf3-b8bf-411e-18cf",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Fixed", "id": "9c95-1759-981c-5af2", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {"name": "Team", "id": "1d97-889c-8c30-5a15", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "baab-a5a6-1e62-f957",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Light Automatic Cannon",
+            "id": "337d-2b1c-0d3f-042c",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+2", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, He(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pintle Mounted Light Automatic Cannon",
+        "id": "7cde-6412-5c26-6971",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "Light Automatic Cannon",
+            "id": "d887-5329-c1ff-4543",
+            "hidden": false,
+            "import": true,
+            "targetId": "fbf3-b8bf-411e-18cf",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "7bfb-d286-48f1-8727", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "a5a3-f8e2-d5ae-5b65", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "360° Arc", "id": "75d1-24c6-84e4-a970", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
+          {"name": "Flak", "id": "9944-70e5-feaf-5c4a", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team, Fixed", "field": "facf-631c-0026-5956", "type": "replace", "value": "360° Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Pintle Mounted"}
+        ]
+      },
+      {
+        "name": "Hull Mounted LMG",
+        "id": "fed2-4f62-bd36-13fd",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "LMG",
+            "id": "30cf-18f8-a455-182f",
+            "hidden": false,
+            "import": true,
+            "targetId": "c809-caf2-cd20-ab0b",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "960e-9ae4-8283-372e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "e49c-4fa8-5cf5-d78b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Front Arc", "id": "e12e-fcba-114e-f140", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"}],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Front Arc"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Hull Mounted"}
+        ]
+      },
+      {
+        "name": "Light Mortar",
+        "id": "9900-602d-0995-d4c9",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "35c3-0de7-b747-38e3",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "Team", "id": "0da6-66b4-fd90-107b", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {"name": "Indirect Fire", "id": "a762-cd96-bf26-ab2e", "hidden": false, "targetId": "e5b4-599d-635e-b2fa", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Light Mortar",
+            "id": "db8a-f11a-640f-b296",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "12\" - 36\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Indirect Fire, HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Front Facing Pintle Mounted LMG",
+        "id": "5cee-d024-697c-a9f5",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "LMG",
+            "id": "ba6e-d9bf-6b08-a299",
+            "hidden": false,
+            "import": true,
+            "targetId": "c809-caf2-cd20-ab0b",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "f77d-be91-f99a-6e2d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "eb6e-a5a8-1d0b-a7d2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Front Arc", "id": "bd81-7f97-f6ef-af21", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"},
+          {"name": "Flak", "id": "9b32-a163-f4c8-a837", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Front Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Pintle Mounted"}
+        ]
+      },
+      {
+        "name": "Front Left Facing Hull Mounted LMG",
+        "id": "eef1-79ed-83f5-b84b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "LMG",
+            "id": "e77c-3d69-c534-920c",
+            "hidden": false,
+            "import": true,
+            "targetId": "c809-caf2-cd20-ab0b",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "39da-010a-2a2c-dd3d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "d25c-5ce7-1020-0e1d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Front Arc", "id": "1ec4-aef7-f40e-dfa3", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"},
+          {"name": "Flak", "id": "41d2-36a4-544d-bb97", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"},
+          {"name": "Left Arc", "id": "1d6b-7493-5bc3-be16", "hidden": false, "targetId": "7cff-3595-a759-21e1", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Left Arc, Front Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Front Left Facing Hull Mounted"}
+        ]
+      },
+      {
+        "name": "Front Right Facing Hull Mounted LMG",
+        "id": "aa48-4290-766d-87c4",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "LMG",
+            "id": "2ce1-f350-fcf7-166d",
+            "hidden": false,
+            "import": true,
+            "targetId": "c809-caf2-cd20-ab0b",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "8a2e-db08-8933-df71", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "b50f-dbd3-9e9d-65d8", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Front Arc", "id": "82c9-7aa3-102a-0e65", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"},
+          {"name": "Flak", "id": "71b1-ca73-c13b-f287", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"},
+          {"name": "Right Arc", "id": "1d33-5bc6-e600-0861", "hidden": false, "targetId": "9624-5275-579e-5fd6", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Right Arc, Front Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Front Right Facing Hull Mounted"}
+        ]
+      },
+      {
+        "name": "Front Right Facing Turret Mounted MMG",
+        "id": "678d-ba22-49ca-1922",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "MMG",
+            "id": "81a0-48fc-703c-6860",
+            "hidden": false,
+            "import": true,
+            "targetId": "efe4-2b12-599d-93fb",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "ac63-59fd-e806-fff8", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "e619-5810-5cc1-a6db", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Front Arc", "id": "71b1-f9cc-e621-a049", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"},
+          {"name": "Right Arc", "id": "0286-dd71-21eb-1d18", "hidden": false, "targetId": "9624-5275-579e-5fd6", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Front Right Facing Turret Mounted"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Right Arc, Front Arc, Flak"}
+        ]
+      },
+      {
+        "name": "Front Left Facing Turret Mounted MMG",
+        "id": "33c1-239d-4eed-8af2",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "MMG",
+            "id": "50ad-96b5-5f3b-f276",
+            "hidden": false,
+            "import": true,
+            "targetId": "efe4-2b12-599d-93fb",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "c4ea-5312-7d6f-f446", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "bdb1-6ab4-da5c-92fa", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Front Arc", "id": "a757-81dd-1a96-988f", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"},
+          {"name": "Left Arc", "id": "7dfb-ed0f-f35d-d5f8", "hidden": false, "targetId": "7cff-3595-a759-21e1", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Front Left Facing Turret Mounted"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Left Arc, Front Arc, Flak"}
+        ]
+      },
+      {
+        "name": "Front Facing Pintle Mounted MMG",
+        "id": "6614-ee56-c3f6-695b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "MMG",
+            "id": "92f4-45be-0b47-f21b",
+            "hidden": false,
+            "import": true,
+            "targetId": "efe4-2b12-599d-93fb",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "d5ae-b860-04a4-e8a6", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "c19e-340e-67af-0f7d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Flak", "id": "2fae-68f9-f56c-33bf", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"},
+          {"name": "Front Arc", "id": "6946-f932-a955-4271", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Pintle Mounted"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Front Arc, Flak"}
+        ]
+      },
+      {
+        "name": "Front Facing Pintle Mounted HMG",
+        "id": "0f8b-6022-01f7-0f73",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "HMG",
+            "id": "15cc-ffbc-6560-4af3",
+            "hidden": false,
+            "import": true,
+            "targetId": "8e47-beb7-6879-661e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "df6a-9974-9ae8-39be", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "e49b-783e-4a13-1017", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Front Arc", "id": "d60e-06d6-0ca4-19a6", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"},
+          {"name": "Flak", "id": "fbf4-da4b-9da6-690d", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Front Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Pintle Mounted"}
+        ]
+      },
+      {
+        "name": "Rear Left Facing Pintle Mounted HMG",
+        "id": "4a9e-d7d3-32ea-96a5",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "HMG",
+            "id": "ed24-ffb2-fd08-5eb1",
+            "hidden": false,
+            "import": true,
+            "targetId": "8e47-beb7-6879-661e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "5a53-398a-5264-11ef", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "dfc3-bdce-0d4b-c590", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Rear Arc", "id": "86bf-2735-96f6-6da3", "hidden": false, "targetId": "5ef2-cf41-e953-3052", "type": "rule"},
+          {"name": "Flak", "id": "f1fa-fd46-86a5-cd25", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"},
+          {"name": "Left Arc", "id": "de54-3acb-1ad1-fb72", "hidden": false, "targetId": "7cff-3595-a759-21e1", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Rear Arc, Left Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Rear Left Facing Pintle Mounted"}
+        ]
+      },
+      {
+        "name": "Rear Right Facing Pintle Mounted HMG",
+        "id": "aec5-0dc4-c945-45f5",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "HMG",
+            "id": "c878-10d5-bfbe-db3a",
+            "hidden": false,
+            "import": true,
+            "targetId": "8e47-beb7-6879-661e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "a769-b27f-a786-9f14", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "8324-0388-2c2a-c9ba", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Rear Arc", "id": "abab-0551-3fba-0ee1", "hidden": false, "targetId": "5ef2-cf41-e953-3052", "type": "rule"},
+          {"name": "Flak", "id": "a1b1-f310-8572-e04f", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"},
+          {"name": "Right Arc", "id": "7e6f-9530-6b96-9a8a", "hidden": false, "targetId": "9624-5275-579e-5fd6", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Rear Arc, Right Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Rear Right Facing Pintle Mounted"}
+        ]
+      },
+      {
+        "name": "Anti-Tank Rifle",
+        "id": "f520-7555-708c-36e3",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Anti-Tank", "id": "456f-680a-c57a-3bb4", "hidden": false, "targetId": "6445-ff51-9edd-1269", "type": "rule"},
+          {"name": "Team", "id": "e51f-c332-7a31-dc49", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Anti-Tank Rifle",
+            "id": "105e-6c5f-48f2-074d",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+2", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Anti-Tank", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hull Mounted Anti-Tank Rifle",
+        "id": "58c0-7e9c-1918-44af",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "Anti-Tank Rifle",
+            "id": "d9f1-92fb-6ba0-e407",
+            "hidden": false,
+            "import": true,
+            "targetId": "f520-7555-708c-36e3",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "9ee3-24d7-92fe-c8ab", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "519f-79ee-76ed-c88b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Front Arc", "id": "cec3-9992-4373-ef6d", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"}],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Front Arc"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Hull Mounted"}
         ]
       }
     ],
