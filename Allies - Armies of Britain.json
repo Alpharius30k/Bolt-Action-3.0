@@ -93,6 +93,14 @@
         "import": true,
         "targetId": "76ef-f95c-bec2-9873",
         "type": "selectionEntry"
+      },
+      {
+        "name": "1st Airborne 'Red Devil' Paratroopers",
+        "id": "0512-1b18-ff19-6086",
+        "hidden": false,
+        "import": true,
+        "targetId": "d76f-31fe-26d5-c740",
+        "type": "selectionEntry"
       }
     ],
     "sharedSelectionEntries": [
@@ -2142,6 +2150,11 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "fea1-2c36-4084-04db", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Wheeled Vehicle", "id": "f8a1-2c6f-9404-3930", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
+          {"name": "Vehicles", "id": "0ae8-0749-ad93-54c8", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
         "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
         "entryLinks": [
           {
@@ -2863,6 +2876,11 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "69d2-a596-fdf9-8235", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Wheeled Vehicle", "id": "5ab0-ed5e-3ad0-fad8", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
+          {"name": "Vehicles", "id": "2ff5-d309-66fb-a059", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
         "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
         "entryLinks": [
           {
@@ -3094,6 +3112,11 @@
         "hidden": false,
         "import": true,
         "type": "model",
+        "categoryLinks": [
+          {"name": "Transport", "id": "0ec4-1215-c955-3324", "hidden": false, "primary": true, "targetId": "dcb5-75bb-240d-01db"},
+          {"name": "Wheeled Vehicle", "id": "5d8a-30c9-454d-fd4d", "hidden": false, "primary": false, "targetId": "32ff-838e-b76e-9e75"},
+          {"name": "Vehicles", "id": "8c97-b4cf-9b70-8a00", "hidden": false, "primary": false, "targetId": "a827-3f5a-6588-bf47"}
+        ],
         "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
         "entryLinks": [
           {
@@ -4281,6 +4304,283 @@
                 "typeId": "e518-6709-d65b-ba02",
                 "typeName": "Unit",
                 "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "1st Airborne 'Red Devil' Paratroopers",
+        "id": "d76f-31fe-26d5-c740",
+        "hidden": false,
+        "import": true,
+        "type": "unit",
+        "categoryLinks": [
+          {"name": "General Infantry Units", "id": "bb43-5127-29c0-8fc5", "hidden": false, "primary": true, "targetId": "7848-d855-f69b-e75e"},
+          {"name": "Infantry", "id": "3718-1afd-a0c4-cec5", "hidden": false, "primary": false, "targetId": "6e1f-0001-8995-dbac"}
+        ],
+        "costs": [{"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "dc5f-4626-8b45-82d4",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [
+              {"affects": "7d03-bd00-3f70-aece", "field": "hidden", "type": "set", "value": true},
+              {"affects": "8066-4eb9-90e7-203a", "field": "hidden", "type": "set", "value": true}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Stubborn", "id": "abe7-f005-f81e-c2fc", "hidden": false, "targetId": "c393-7e04-88d7-f144", "type": "profile"}],
+        "selectionEntries": [
+          {
+            "name": "NCO",
+            "id": "5341-2aeb-0f2a-85f0",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 2,
+            "type": "model",
+            "constraints": [
+              {"id": "30a6-d675-afd7-d29c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "88c6-4ec3-7281-0662", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 14}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+            "profiles": [
+              {
+                "name": "NCO",
+                "id": "c6d6-4667-579a-208a",
+                "hidden": false,
+                "typeId": "e518-6709-d65b-ba02",
+                "typeName": "Unit",
+                "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Weapons",
+                "id": "0d6b-398b-c200-070b",
+                "defaultSelectionEntryId": "31ea-0532-842f-68e4",
+                "hidden": false,
+                "constraints": [
+                  {"id": "24f5-fae4-ad9a-2146", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "47e2-15a5-9036-2b54", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "SMG", "id": "fafd-37d5-de3b-c6e8", "hidden": false, "import": true, "targetId": "a297-b22b-85e4-cc7e", "type": "selectionEntry"},
+                  {"name": "Rifle", "id": "31ea-0532-842f-68e4", "hidden": false, "import": true, "targetId": "caae-7f3a-368b-3047", "type": "selectionEntry"},
+                  {"name": "Pistol", "id": "5be7-5465-fd3f-0eb0", "hidden": false, "import": true, "targetId": "9f21-3c1e-56d5-1ef2", "type": "selectionEntry"}
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Airborne 'Red Devil' Paratroopers",
+            "id": "55ad-3b94-4db4-a50a",
+            "hidden": false,
+            "import": true,
+            "type": "model",
+            "constraints": [
+              {"id": "97ff-4640-cddb-fc6a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 4},
+              {"id": "0bb9-ea31-eee4-5692", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 9}
+            ],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 14}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+            "profiles": [
+              {
+                "name": "Airborne 'Red Devil' Paratroopers",
+                "id": "22fd-dedc-b0c8-40ea",
+                "hidden": false,
+                "typeId": "e518-6709-d65b-ba02",
+                "typeName": "Unit",
+                "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
+            ],
+            "selectionEntryGroups": [
+              {
+                "name": "Weapons",
+                "id": "e279-5e4c-5779-03f2",
+                "defaultSelectionEntryId": "8db4-c270-c552-d632",
+                "hidden": false,
+                "constraints": [
+                  {"id": "6ebd-c6e8-570b-bce3", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "25e5-c47f-bb00-b01f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ],
+                "entryLinks": [
+                  {"name": "Rifle", "id": "8db4-c270-c552-d632", "hidden": false, "import": true, "targetId": "caae-7f3a-368b-3047", "type": "selectionEntry"},
+                  {
+                    "name": "SMG",
+                    "id": "7a84-08c7-6682-b615",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "a297-b22b-85e4-cc7e",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 3}]
+                  },
+                  {
+                    "name": "Pistol",
+                    "id": "76cb-7f75-9414-4e7c",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "9f21-3c1e-56d5-1ef2",
+                    "type": "selectionEntry",
+                    "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -1}]
+                  }
+                ],
+                "selectionEntryGroups": [
+                  {
+                    "name": "Infantry LMG",
+                    "id": "c65c-2658-a7e9-4118",
+                    "hidden": false,
+                    "constraints": [{"id": "afae-e5bf-b326-6c53", "field": "selections", "includeChildSelections": true, "scope": "unit-self", "shared": true, "type": "max", "value": 2}],
+                    "entryLinks": [
+                      {
+                        "name": "LMG",
+                        "id": "3aff-1010-62b3-f547",
+                        "hidden": false,
+                        "import": true,
+                        "targetId": "c809-caf2-cd20-ab0b",
+                        "type": "selectionEntry",
+                        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 20}]
+                      }
+                    ],
+                    "selectionEntries": [
+                      {
+                        "name": "MG42",
+                        "id": "afd7-c59e-d8b3-b594",
+                        "hidden": false,
+                        "import": true,
+                        "type": "upgrade",
+                        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 25}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+                        "infoLinks": [
+                          {"name": "Front Arc", "id": "9bd3-638f-aebe-d38a", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"},
+                          {"name": "Flak", "id": "363c-4c09-8bb9-0554", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+                        ],
+                        "profiles": [
+                          {
+                            "name": "MG42",
+                            "id": "43e0-0c84-bbf0-5ef5",
+                            "hidden": false,
+                            "typeId": "e8ea-235b-e27c-4d69",
+                            "typeName": "Ranged Weapon",
+                            "characteristics": [
+                              {"name": "Range", "$text": "36\"", "typeId": "48fb-dbbf-ed34-5b90"},
+                              {"name": "Shots", "$text": "4", "typeId": "1cc9-8c67-baf2-87e7"},
+                              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+                              {"name": "Special", "$text": "Flak, Front Arc, Hitler's Buzzsaw", "typeId": "facf-631c-0026-5956"}
+                            ]
+                          }
+                        ],
+                        "rules": [
+                          {
+                            "name": "Hitler's Buzzsaw",
+                            "id": "fb11-b29e-5b1f-60f6",
+                            "description": "This Weapon has +1 shots [Already accounted for in profile]",
+                            "hidden": false,
+                            "modifiers": [{"affects": "self.entries.profiles.Ranged Weapon", "field": "1cc9-8c67-baf2-87e7", "scope": "parent", "type": "increment", "value": 1}]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Wargear",
+            "id": "f2d1-0244-6c0d-92fb",
+            "hidden": false,
+            "sortIndex": 1,
+            "entryLinks": [
+              {
+                "name": "Wire Cutters",
+                "id": "6212-9d4f-c955-ef03",
+                "hidden": false,
+                "import": true,
+                "targetId": "1297-5781-3312-f218",
+                "type": "selectionEntry",
+                "modifiers": [
+                  {
+                    "field": "cf06-9113-0bb3-480a",
+                    "type": "increment",
+                    "value": 1,
+                    "repeats": [
+                      {
+                        "childId": "model",
+                        "childName": "model",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "unit-self",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Anti-Tank Grenades",
+                "id": "a4de-51dd-258e-5458",
+                "hidden": false,
+                "import": true,
+                "targetId": "fb70-e417-8f8d-d937",
+                "type": "selectionEntry",
+                "constraints": [{"id": "5c2b-3b82-1f0e-7daf", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+                "modifiers": [
+                  {
+                    "field": "cf06-9113-0bb3-480a",
+                    "type": "increment",
+                    "value": 2,
+                    "repeats": [
+                      {
+                        "childId": "model",
+                        "childName": "model",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "unit-self",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Bangalore Torpedoes",
+                "id": "66cd-60c8-fb11-d637",
+                "hidden": false,
+                "import": true,
+                "targetId": "d46e-206e-93a5-47b3",
+                "type": "selectionEntry",
+                "modifiers": [
+                  {
+                    "field": "cf06-9113-0bb3-480a",
+                    "type": "increment",
+                    "value": 2,
+                    "repeats": [
+                      {
+                        "childId": "model",
+                        "childName": "model",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "repeats": 1,
+                        "roundUp": false,
+                        "scope": "unit-self",
+                        "shared": true,
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }

@@ -1153,6 +1153,30 @@
           {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Front Arc"},
           {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Hull Mounted"}
         ]
+      },
+      {
+        "name": "Bangalore Torpedoes",
+        "id": "d46e-206e-93a5-47b3",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [{"id": "3291-edeb-e051-fb97", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "profiles": [
+          {
+            "name": "Bangalore Torpedoes",
+            "id": "33b6-5ce5-77eb-c6ee",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "Once per game when this unit starts withing 2\" of a obstacles if it was given an **Advance Order** it can place this on the obstacle and then it must move more then **2\"** away from it then they can **detonate** this allowing you to **remove** the **detonated obstacle**.",
+                "typeId": "855b-a61a-569c-a804"
+              }
+            ]
+          }
+        ]
       }
     ],
     "sharedSelectionEntryGroups": [
