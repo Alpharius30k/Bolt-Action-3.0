@@ -1,0 +1,480 @@
+{
+  "catalogue": {
+    "name": "Main Library",
+    "id": "82aa-7e12-b7a9-f2c6",
+    "battleScribeVersion": "2.03",
+    "gameSystemId": "sys-67f7-7e29-8c86-2260",
+    "gameSystemRevision": 1,
+    "library": true,
+    "revision": 1,
+    "type": "catalogue",
+    "categoryEntries": [
+      {
+        "name": "Officer",
+        "id": "a6d4-c1f9-851d-0ba9",
+        "hidden": false,
+        "constraints": [
+          {
+            "id": "81c4-eae5-68f2-7fe2",
+            "field": "selections",
+            "includeChildForces": true,
+            "includeChildSelections": true,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 1
+          },
+          {"id": "cb5d-53d1-1c6d-c0a7", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}
+        ]
+      },
+      {
+        "name": "Support",
+        "id": "baa3-9104-b66e-a552",
+        "hidden": false,
+        "constraints": [{"id": "704b-b145-1c21-04bd", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}]
+      },
+      {"name": "Transport", "id": "dcb5-75bb-240d-01db", "hidden": false},
+      {"name": "Infantry", "id": "6e1f-0001-8995-dbac", "hidden": false},
+      {"name": "Vehicles", "id": "a827-3f5a-6588-bf47", "hidden": false},
+      {"name": "Artillery", "id": "95e0-99a4-f616-19b8", "hidden": false},
+      {"name": "Bicyclist", "id": "c488-c0d7-495d-9cea", "hidden": false},
+      {"name": "Boat", "id": "a730-e929-1d61-ed38", "hidden": false}
+    ],
+    "costTypes": [{"name": "Points", "id": "cf06-9113-0bb3-480a", "defaultCostLimit": 0}, {"name": "Dice", "id": "bc13-1fcd-379a-6b9c", "defaultCostLimit": 0}],
+    "forceEntries": [
+      {
+        "name": "Company Platoon",
+        "id": "f3af-bc62-955c-51ec",
+        "hidden": false,
+        "categoryLinks": [
+          {"name": "Officer", "id": "9844-1544-95c1-152f", "hidden": false, "targetId": "a6d4-c1f9-851d-0ba9"},
+          {"name": "Support", "id": "bb89-e0ea-b76b-645d", "hidden": false, "targetId": "baa3-9104-b66e-a552"},
+          {"name": "Transport", "id": "b72f-e973-8f9b-c81c", "hidden": false, "targetId": "dcb5-75bb-240d-01db"}
+        ],
+        "constraints": [
+          {
+            "id": "abcc-de90-71cf-b1df",
+            "field": "forces",
+            "includeChildForces": true,
+            "includeChildSelections": true,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "profileTypes": [
+      {
+        "name": "Ranged Weapon",
+        "id": "e8ea-235b-e27c-4d69",
+        "hidden": false,
+        "sortIndex": 3,
+        "characteristicTypes": [
+          {"name": "Range", "id": "48fb-dbbf-ed34-5b90"},
+          {"name": "Shots", "id": "1cc9-8c67-baf2-87e7"},
+          {"name": "Pens", "id": "b7fa-50ee-7ecf-7f80"},
+          {"name": "Special", "id": "facf-631c-0026-5956"}
+        ]
+      },
+      {
+        "name": "Unit",
+        "id": "e518-6709-d65b-ba02",
+        "hidden": false,
+        "sortIndex": 1,
+        "characteristicTypes": [{"name": "Movement", "id": "8546-1869-9a5b-f048"}, {"name": "Moral", "id": "2252-0273-4abc-9576"}]
+      },
+      {
+        "name": "Description",
+        "id": "3a75-dfa6-c15d-0221",
+        "hidden": false,
+        "sortIndex": 5,
+        "characteristicTypes": [{"name": "Description", "id": "ad32-0380-9527-1ffd"}]
+      },
+      {
+        "name": "Abilities",
+        "id": "2133-190a-94b8-c4f5",
+        "hidden": false,
+        "sortIndex": 4,
+        "characteristicTypes": [{"name": "Description", "id": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Unit (Vehicle)",
+        "id": "ce5e-65f8-5308-4210",
+        "hidden": false,
+        "sortIndex": 2,
+        "characteristicTypes": [
+          {"name": "Movement", "id": "d6f8-34fd-5990-648b"},
+          {"name": "Armour Value", "id": "7441-e195-03da-f372"},
+          {"name": "Moral", "id": "da9d-5250-9295-6191"},
+          {"name": "Transport", "id": "724f-91db-8d2d-f080"},
+          {"name": "Tow", "id": "59e5-7a0d-c94b-aaa4"}
+        ]
+      }
+    ],
+    "sharedProfiles": [
+      {
+        "name": "Stubborn",
+        "id": "c393-7e04-88d7-f144",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "Ignores **Pins** on **Morale Tests**", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Bicycle",
+        "id": "54cf-b92e-965b-54ff",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": "When this **unit** moves along a **road** or makes a **Run Order** its **movement** is set to **24\"**",
+            "typeId": "855b-a61a-569c-a804"
+          }
+        ]
+      },
+      {
+        "name": "Behind Enemy Lines",
+        "id": "ce4d-3c27-24fa-6bec",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "When **Outflanking**, ignores -1 to **Order Test** when coming onto the board", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Fieldcraft",
+        "id": "f67a-7cab-9490-a8c6",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "Treats **rough ground** as **Open**.", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Ambush Tactics",
+        "id": "a746-b475-447b-adba",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "May start game in **Ambush**. When in **Ambush**, **+1** to **Base Morale Value**", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Tough Fighters",
+        "id": "564a-934a-ce95-ce41",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "Model rerolls 1st Failed to **Damage** in **Closed Combat**", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Independent",
+        "id": "97c3-6f2a-9726-7a59",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "Each model can fire at different targets.", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Inspiring Presence",
+        "id": "862d-dcd7-6fb8-d2f4",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": "Upon receiving his order dice (except for Down), a chaplain may select one friendly unit within 6″ and roll a D6 the chaplain may remove 1 pin from the selected unit.",
+            "typeId": "855b-a61a-569c-a804"
+          }
+        ]
+      },
+      {
+        "name": "Self-Defence",
+        "id": "e8b4-73d0-f785-0ac6",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": " Cannot fire weapons. Cannot initiate close quarters combat. Do not count towards victory conditions or KPs.",
+            "typeId": "855b-a61a-569c-a804"
+          }
+        ]
+      }
+    ],
+    "sharedRules": [
+      {"name": "Assault", "id": "6f4d-5644-3c2e-e1b2", "description": "Ignore -1 **to hit** due to **movement**", "hidden": false},
+      {"name": "Team", "id": "7836-2556-8c6d-07c4", "description": "If this **weapons** unit goes down to 1 **model** it has **-1 to hit**", "hidden": false},
+      {"name": "Fixed", "id": "7a52-6b20-fdaa-42c4", "description": "Can only fire in the **Front Arc** of the model.", "hidden": false},
+      {
+        "name": "Fanatic",
+        "id": "f32b-1e88-ba1d-3efd",
+        "description": "If there are atleast 2 **models** in a unit with this they ignore **pin modifiers**  when making **moral rolls** and this unit can not be **destroyed** due to having more **pin markers** then its **moral** if it has 2 models. In **close combat** if a unit with this and atleast 2 models **looses** it actually counts as a **draw** and another **close combat starts**.",
+        "hidden": false
+      },
+      {"name": "Tow", "id": "5121-e676-4f12-eb50", "description": "Vehicle may tow Artilley Guns and the Crew may ride on board", "hidden": false},
+      {"name": "Transport", "id": "e0e2-d039-c73f-5568", "description": " Vehicle may carry Infantry units", "hidden": false},
+      {"name": "360° Arc", "id": "5cb5-d617-6c0f-f9e4", "description": "Can Fire all around this model", "hidden": false},
+      {"name": "Flak", "id": "9c73-bd8d-0be9-fd6f", "description": "This **weapon** can attack **aircraft** during an **Airstrike**", "hidden": false},
+      {"name": "Can not Run", "id": "c841-9196-e994-7da2", "description": "**Model's** with this rule can not be giving **run order**", "hidden": false},
+      {"name": "Command Vehicle", "id": "32ca-def0-81a0-34e8", "description": "Adds morale bonus of +1 to itself and friendly vehicles within 12” ", "hidden": false}
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "Rifle",
+        "id": "caae-7f3a-368b-3047",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "profiles": [
+          {
+            "name": "Rifle",
+            "id": "1e8b-bc96-3e0b-6ba9",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "24\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "-", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pistol",
+        "id": "9f21-3c1e-56d5-1ef2",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "profiles": [
+          {
+            "name": "Pistol",
+            "id": "6ba2-88c6-fdf1-324a",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "9\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "-", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SMG",
+        "id": "a297-b22b-85e4-cc7e",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Assault", "id": "2483-b1d7-d625-b84d", "hidden": false, "targetId": "6f4d-5644-3c2e-e1b2", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "SMG",
+            "id": "904a-21c2-fb42-b108",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "12\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Assault", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {"name": "Automatic Rifle", "id": "f065-4d99-5036-4866", "hidden": false, "import": true, "type": "upgrade"},
+      {"name": "LMG", "id": "c809-caf2-cd20-ab0b", "hidden": false, "import": true, "type": "upgrade"},
+      {"name": "MMG", "id": "efe4-2b12-599d-93fb", "hidden": false, "import": true, "type": "upgrade"},
+      {
+        "name": "Wire Cutters",
+        "id": "1297-5781-3312-f218",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [{"id": "4ae0-7f37-efa8-c714", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "profiles": [
+          {
+            "name": "Wire Cutters",
+            "id": "3cd1-cefb-001e-aff2",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [{"name": "Description", "$text": "+2 for each **dice roll** when attempting to cut **Barbed Wire**", "typeId": "855b-a61a-569c-a804"}]
+          }
+        ]
+      },
+      {
+        "name": "Intelligence",
+        "id": "26ae-96a7-94d1-2ab7",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [
+          {
+            "id": "f425-d488-5efc-6d41",
+            "field": "selections",
+            "includeChildForces": true,
+            "includeChildSelections": true,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "modifiers": [
+          {"affects": "recursive", "field": "name", "scope": "parent", "type": "set", "value": "Intelligence Officer"},
+          {"affects": "recursive.profiles.Unit", "field": "name", "scope": "parent", "type": "set", "value": "Intelligence Officer"}
+        ],
+        "profiles": [
+          {
+            "name": "Intelligence",
+            "id": "4247-6eb4-a172-30c4",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "Unit becomes an Intelligence Officer. Once per game, at the start of any turn while the Intel Officer is alive, you may attempt to activate before the first die is drawn. Roll a D6, on a 4+, you succeed and may pull an Order Dice to activate",
+                "typeId": "855b-a61a-569c-a804"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Anti-Tank Grenades",
+        "id": "fb70-e417-8f8d-d937",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "profiles": [
+          {
+            "name": "Tank-hunter",
+            "id": "0d27-d8cd-415f-3f9e",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "As a **Winner** in **Close combat** with an **Armored Vehicle**, resolve results on **Damage Table**. This **unit** does not suffer from **Tank Fear**",
+                "typeId": "855b-a61a-569c-a804"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pintle Mounted LMG",
+        "id": "9239-f6e7-f050-ae4b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "360° Arc", "id": "6d57-7a48-bdc9-557b", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
+          {"name": "Flak", "id": "e347-185a-b4b9-58e6", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Pintle Mounted LMG",
+            "id": "a446-826a-755d-d2e8",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "36\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "0", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "360° Arc, Flak", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      }
+    ],
+    "sharedSelectionEntryGroups": [
+      {
+        "name": "Expirence",
+        "id": "2ba1-b6c8-a30e-89b0",
+        "defaultSelectionEntryId": "8066-4eb9-90e7-203a",
+        "hidden": false,
+        "constraints": [
+          {"id": "417d-e1d4-4e3a-d80d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+          {"id": "ddd5-6842-d643-7c78", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+        ],
+        "selectionEntries": [
+          {
+            "name": "Veteran",
+            "id": "a930-4c61-71a3-c8f5",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "modifiers": [
+              {"affects": "self.entries.recursive.profiles.Unit", "field": "2252-0273-4abc-9576", "scope": "unit-self", "type": "set", "value": "10"},
+              {"affects": "recursive", "field": "name", "join": ". ", "scope": "unit-self", "type": "prepend", "value": "Vet"},
+              {"affects": "self.entries.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "unit-self", "type": "prepend", "value": "Vet"}
+            ],
+            "profiles": [
+              {
+                "name": "Veteran",
+                "id": "f800-b998-005e-1f84",
+                "hidden": false,
+                "typeId": "3a75-dfa6-c15d-0221",
+                "typeName": "Description",
+                "characteristics": [{"name": "Description", "$text": "This unit has a **moral** of **10**", "typeId": "ad32-0380-9527-1ffd"}]
+              }
+            ]
+          },
+          {
+            "name": "Regular",
+            "id": "8066-4eb9-90e7-203a",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "modifiers": [{"affects": "self.entries.recursive.profiles.Unit", "field": "2252-0273-4abc-9576", "scope": "unit-self", "type": "set", "value": "9"}],
+            "profiles": [
+              {
+                "name": "Regular",
+                "id": "306a-7af2-9a32-557e",
+                "hidden": false,
+                "typeId": "3a75-dfa6-c15d-0221",
+                "typeName": "Description",
+                "characteristics": [{"name": "Description", "$text": "This unit has a **moral** of **9**", "typeId": "ad32-0380-9527-1ffd"}]
+              }
+            ]
+          },
+          {
+            "name": "Inexpirence",
+            "id": "7d03-bd00-3f70-aece",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "modifiers": [
+              {"affects": "self.entries.recursive.profiles.Unit", "field": "2252-0273-4abc-9576", "scope": "unit-self", "type": "set", "value": "8"},
+              {"affects": "recursive", "field": "name", "join": ". ", "scope": "unit-self", "type": "prepend", "value": "InExp"},
+              {"affects": "self.entries.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "unit-self", "type": "prepend", "value": "InExp"}
+            ],
+            "profiles": [
+              {
+                "name": "Inexpirence",
+                "id": "01dd-4b65-8e74-bdf5",
+                "hidden": false,
+                "typeId": "3a75-dfa6-c15d-0221",
+                "typeName": "Description",
+                "characteristics": [{"name": "Description", "$text": "This unit has a **moral** of **8**", "typeId": "ad32-0380-9527-1ffd"}]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
