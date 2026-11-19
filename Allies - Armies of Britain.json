@@ -4076,7 +4076,8 @@
             "import": true,
             "sortIndex": 1,
             "targetId": "2ba1-b6c8-a30e-89b0",
-            "type": "selectionEntryGroup"
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "7d03-bd00-3f70-aece", "field": "hidden", "type": "set", "value": true}]
           },
           {
             "name": "For King and Country",
@@ -4177,6 +4178,74 @@
               {
                 "name": "Medic",
                 "id": "9c08-5f14-2801-a81d",
+                "hidden": false,
+                "typeId": "e518-6709-d65b-ba02",
+                "typeName": "Unit",
+                "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+              }
+            ]
+          },
+          {
+            "name": "Additional Men",
+            "id": "4761-e5d2-78b5-db3e",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [{"id": "5755-3034-0b00-c7ac", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}],
+            "entryLinks": [
+              {
+                "name": "Rifle",
+                "id": "b0b4-98dd-2ee8-8b11",
+                "hidden": false,
+                "import": true,
+                "targetId": "caae-7f3a-368b-3047",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "9b53-1088-e870-18c6", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "e055-3e1e-eece-adf5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 8,
+                "conditions": [
+                  {
+                    "childId": "8066-4eb9-90e7-203a",
+                    "childName": "Regular",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "field": "cf06-9113-0bb3-480a",
+                "type": "set",
+                "value": 11,
+                "conditions": [
+                  {
+                    "childId": "a930-4c61-71a3-c8f5",
+                    "childName": "Veteran",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ],
+            "profiles": [
+              {
+                "name": "Additional Men",
+                "id": "162a-4355-3994-b218",
                 "hidden": false,
                 "typeId": "e518-6709-d65b-ba02",
                 "typeName": "Unit",
