@@ -84,7 +84,33 @@
           {"name": "AT Weapons / Special Weapons Teams", "id": "18ab-d820-7464-f5a9", "hidden": false, "targetId": "3a9a-3ae8-2149-8b18"},
           {"name": "Heavy Weapons", "id": "1e25-ec91-a3a7-8667", "hidden": false, "targetId": "4c05-26b8-8eb6-3a15"},
           {"name": "Support Vehicles", "id": "a791-99f5-2e35-2450", "hidden": false, "targetId": "9571-d87b-32a5-86fe"},
-          {"name": "Transport", "id": "3ac4-abf1-0e9c-d6e5", "hidden": false, "targetId": "dcb5-75bb-240d-01db"}
+          {
+            "name": "Transport",
+            "id": "3ac4-abf1-0e9c-d6e5",
+            "hidden": false,
+            "targetId": "dcb5-75bb-240d-01db",
+            "constraints": [{"id": "b703-0a0d-6d47-c7e8", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 0}],
+            "modifiers": [
+              {
+                "field": "b703-0a0d-6d47-c7e8",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "unit",
+                    "childName": "unit",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
         ],
         "constraints": [
           {
@@ -1175,6 +1201,42 @@
                 "typeId": "855b-a61a-569c-a804"
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "Bicycles",
+        "id": "69c6-ba39-1dbe-41cd",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [{"id": "6390-7386-ff64-1509", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "profiles": [
+          {
+            "name": "Bicycles",
+            "id": "e08b-1c79-411a-8d6a",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [{"name": "Description", "$text": "This unit has a **movement** of 24\" when it is on a **road** or has a **Run Order**", "typeId": "855b-a61a-569c-a804"}]
+          }
+        ]
+      },
+      {
+        "name": "Motorcycle",
+        "id": "cd78-5cd1-7c59-7578",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [{"id": "4ee2-2eb5-4037-5093", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "profiles": [
+          {
+            "name": "Motorcycle",
+            "id": "c9e0-f416-7d4c-9737",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [{"name": "Description", "$text": "This unit has a **movement** of 12\"", "typeId": "855b-a61a-569c-a804"}]
           }
         ]
       }
