@@ -17,7 +17,7 @@
       {"name": "Landing Craft", "id": "7631-6648-712a-a856", "hidden": false}
     ],
     "entryLinks": [
-      {"name": "Company Commander", "id": "6d44-21b1-4a9a-61e5", "hidden": false, "import": true, "targetId": "4d66-e2fa-da6d-ed08", "type": "selectionEntry"},
+      {"name": "Company Commander Unit", "id": "6d44-21b1-4a9a-61e5", "hidden": false, "import": true, "targetId": "4d66-e2fa-da6d-ed08", "type": "selectionEntry"},
       {"name": "Chaplin", "id": "7269-2796-0f21-e841", "hidden": false, "import": true, "targetId": "6270-f9e0-4a69-35d2", "type": "selectionEntry"},
       {"name": "15CWT Trucks", "id": "c15a-b398-596e-23b3", "hidden": false, "import": true, "targetId": "e3f7-0fcf-d1e9-8798", "type": "selectionEntry"},
       {"name": "30CWT Trucks", "id": "3528-20db-b6d7-23c7", "hidden": false, "import": true, "targetId": "7175-04b3-3d06-b3d7", "type": "selectionEntry"},
@@ -41,7 +41,14 @@
         "type": "selectionEntry"
       },
       {"name": "Jeep", "id": "dd65-4c95-96c0-fd40", "hidden": false, "import": true, "targetId": "0a37-79c2-ac0f-c38a", "type": "selectionEntry"},
-      {"name": "Landing Craft, Assault", "id": "34f7-e1ab-6735-a7f9", "hidden": false, "import": true, "targetId": "857b-1711-0bf2-b8d3", "type": "selectionEntry"},
+      {
+        "name": "Landing Craft, Assault [Boat]",
+        "id": "34f7-e1ab-6735-a7f9",
+        "hidden": false,
+        "import": true,
+        "targetId": "857b-1711-0bf2-b8d3",
+        "type": "selectionEntry"
+      },
       {
         "name": "Landing Craft, Assault [Landing Craft]",
         "id": "b460-7059-c629-cce0",
@@ -52,7 +59,7 @@
       },
       {"name": "Landing Craft, Personnel", "id": "557c-1e92-3186-4e10", "hidden": false, "import": true, "targetId": "46e0-6f93-5f49-a115", "type": "selectionEntry"},
       {"name": "Landing Craft, Mechanized", "id": "5860-4d4c-dee3-d68b", "hidden": false, "import": true, "targetId": "d1a4-6c2d-5268-ee98", "type": "selectionEntry"},
-      {"name": "Platoon Commander", "id": "c7fa-f448-b64b-cbef", "hidden": false, "import": true, "targetId": "312f-6b30-d109-2535", "type": "selectionEntry"},
+      {"name": "Platoon Commander Unit", "id": "c7fa-f448-b64b-cbef", "hidden": false, "import": true, "targetId": "312f-6b30-d109-2535", "type": "selectionEntry"},
       {"name": "Forward Air Observer unit", "id": "0f08-035c-fb3a-97ad", "hidden": false, "import": true, "targetId": "fc9b-11c9-19ff-2b8a", "type": "selectionEntry"},
       {
         "name": "Forward Artillery Observer unit",
@@ -62,7 +69,31 @@
         "targetId": "a7ac-1418-6940-60ab",
         "type": "selectionEntry"
       },
-      {"name": "Medic unit", "id": "d267-531c-6964-dd4a", "hidden": false, "import": true, "targetId": "5e4a-b2a3-d3ef-f2f3", "type": "selectionEntry"}
+      {"name": "Medic unit", "id": "d267-531c-6964-dd4a", "hidden": false, "import": true, "targetId": "5e4a-b2a3-d3ef-f2f3", "type": "selectionEntry"},
+      {"name": "Utility Cars", "id": "0b64-8204-1ca4-dcdb", "hidden": false, "import": true, "targetId": "b3ac-19c2-b4b6-5d21", "type": "selectionEntry"},
+      {"name": "Civillian Car", "id": "14f3-a98a-0753-4d70", "hidden": false, "import": true, "targetId": "caa3-d392-aac3-91ca", "type": "selectionEntry"},
+      {"name": "Light Truck", "id": "6fbe-0b00-a337-4959", "hidden": false, "import": true, "targetId": "8e5c-b23e-a0e8-2c7b", "type": "selectionEntry"},
+      {"name": "M3 / M5 'Stuart' Kangaroo", "id": "7d68-e295-bc79-c311", "hidden": false, "import": true, "targetId": "43f3-ba3b-2cdc-fd34", "type": "selectionEntry"},
+      {"name": "M3 White Scout Car", "id": "357b-e47c-0247-8e31", "hidden": false, "import": true, "targetId": "9031-da81-4155-ea15", "type": "selectionEntry"},
+      {"name": "M7 'Priest' Kangaroo", "id": "2e6f-6c6f-2655-9327", "hidden": false, "import": true, "targetId": "851c-f046-a0e5-3051", "type": "selectionEntry"},
+      {
+        "name": "M4 'Sherman' / 'Ram' Kangaroo",
+        "id": "80d7-dafe-88f3-0af0",
+        "hidden": false,
+        "import": true,
+        "targetId": "6d3b-8ab9-7092-f0c9",
+        "type": "selectionEntry"
+      },
+      {"name": "Terrapin Amphibious Truck", "id": "d4bd-cc03-c48d-dfd5", "hidden": false, "import": true, "targetId": "8de6-7d68-01d6-6d54", "type": "selectionEntry"},
+      {"name": "Truck", "id": "912d-e6a6-b074-5bc9", "hidden": false, "import": true, "targetId": "f590-e1ae-f455-13f0", "type": "selectionEntry"},
+      {
+        "name": "Universal Carrier W/Bren LMG",
+        "id": "0bad-27d9-4508-8607",
+        "hidden": false,
+        "import": true,
+        "targetId": "76ef-f95c-bec2-9873",
+        "type": "selectionEntry"
+      }
     ],
     "sharedSelectionEntries": [
       {

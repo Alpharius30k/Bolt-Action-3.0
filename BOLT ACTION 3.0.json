@@ -3,17 +3,9 @@
     "name": "BOLT ACTION 3.0",
     "id": "sys-67f7-7e29-8c86-2260",
     "battleScribeVersion": "2.03",
-    "revision": 1,
+    "revision": 2,
     "type": "gameSystem",
     "categoryEntries": [{"name": "Default Category", "id": "default-category"}],
-    "forceEntries": [
-      {
-        "name": "Default Force",
-        "id": "default-force",
-        "hidden": false,
-        "categoryLinks": [{"name": "Default Category", "id": "default-force-category-link", "hidden": false, "targetId": "default-category"}]
-      }
-    ],
     "selectionEntries": [
       {
         "name": "Default Root Entry",
