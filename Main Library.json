@@ -2926,7 +2926,8 @@
             "modifiers": [
               {"affects": "self.entries.recursive.profiles.Unit", "field": "2252-0273-4abc-9576", "scope": "unit-self", "type": "set", "value": "10"},
               {"affects": "recursive", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "Vet"},
-              {"affects": "self.entries.forces.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "Vet"}
+              {"affects": "self.entries.forces.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "Vet"},
+              {"affects": "self.entries.recursive.profiles.Unit (Vehicle)", "field": "da9d-5250-9295-6191", "scope": "model-self", "type": "set", "value": "10"}
             ],
             "profiles": [
               {
@@ -2945,7 +2946,10 @@
             "hidden": false,
             "import": true,
             "type": "upgrade",
-            "modifiers": [{"affects": "self.entries.recursive.profiles.Unit", "field": "2252-0273-4abc-9576", "scope": "unit-self", "type": "set", "value": "9"}],
+            "modifiers": [
+              {"affects": "self.entries.recursive.profiles.Unit", "field": "2252-0273-4abc-9576", "scope": "unit-self", "type": "set", "value": "9"},
+              {"affects": "self.entries.recursive.profiles.Unit (Vehicle)", "field": "da9d-5250-9295-6191", "scope": "model-self", "type": "set", "value": "9"}
+            ],
             "profiles": [
               {
                 "name": "Regular",
@@ -2966,7 +2970,8 @@
             "modifiers": [
               {"affects": "self.entries.recursive.profiles.Unit", "field": "2252-0273-4abc-9576", "scope": "unit-self", "type": "set", "value": "8"},
               {"affects": "recursive", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "InExp"},
-              {"affects": "self.entries.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "InExp"}
+              {"affects": "self.entries.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "InExp"},
+              {"affects": "self.entries.recursive.profiles.Unit (Vehicle)", "field": "da9d-5250-9295-6191", "scope": "model-self", "type": "set", "value": "8"}
             ],
             "profiles": [
               {

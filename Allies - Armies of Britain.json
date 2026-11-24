@@ -52,7 +52,9 @@
       {"name": "Infantry Tank MK I Matilda I", "id": "31ca-8055-a22e-0d1e", "hidden": false},
       {"name": "Infantry Tank MK II Matilda II and IIC", "id": "1671-3f97-5ee1-734a", "hidden": false},
       {"name": "Infantry Tank MK III Valentine I - VIIA", "id": "b5d3-720e-8e79-fc39", "hidden": false},
-      {"name": "Infantry Tank MK III Valentine VIII - X", "id": "7e68-6a71-3a6a-31fe", "hidden": false}
+      {"name": "Infantry Tank MK III Valentine VIII - X", "id": "7e68-6a71-3a6a-31fe", "hidden": false},
+      {"name": "Heavy Tank", "id": "5ba8-1d8e-d8b9-a80a", "hidden": false},
+      {"name": "Infantry Tank MK IV Churchill I-VI and IICS", "id": "7efc-c348-bb4f-9635", "hidden": false}
     ],
     "entryLinks": [
       {"name": "Chaplin", "id": "7d04-8cc4-e814-e607", "hidden": false, "import": true, "targetId": "77b9-fb0e-7e86-b046", "type": "selectionEntry"},
@@ -265,6 +267,14 @@
         "hidden": false,
         "import": true,
         "targetId": "f126-3db1-a6ad-241d",
+        "type": "selectionEntry"
+      },
+      {
+        "name": "Infantry Tank MK IV Churchill I-VI and IICS",
+        "id": "39e5-f082-a384-0edf",
+        "hidden": false,
+        "import": true,
+        "targetId": "adc5-faf0-350a-eda2",
         "type": "selectionEntry"
       }
     ],
@@ -9135,6 +9145,211 @@
                 "targetId": "5570-5dea-4d83-63d2",
                 "type": "profile",
                 "modifiers": [{"arg": "WEAPON", "field": "855b-a61a-569c-a804", "type": "replace", "value": "Medium Anti-Tank Gun"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Infantry Tank MK IV Churchill I-VI and IICS",
+        "id": "adc5-faf0-350a-eda2",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "6d03-7126-59ff-47ac", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Heavy Tank", "id": "6e5c-6592-d42d-eeb8", "hidden": false, "primary": false, "targetId": "5ba8-1d8e-d8b9-a80a"},
+          {"name": "Track Vehicle", "id": "0c74-9bf3-2342-5082", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "Infantry Tank MK IV Churchill I-VI and IICS", "id": "bb1f-4f48-ee5e-283e", "hidden": false, "primary": false, "targetId": "7efc-c348-bb4f-9635"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "6760-f077-5a01-cb67",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [{"name": "Slow", "id": "4e0e-3448-4f3d-895b", "hidden": false, "targetId": "6383-df3d-fef2-e594", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 200,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 250,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 300,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Infantry Tank MK IV Churchill I-VI and IICS",
+            "id": "5549-bc7a-c768-a6ee",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "10+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Main Weapon",
+            "id": "da3f-4f5b-62bf-1097",
+            "defaultSelectionEntryId": "a80c-e423-15f9-43f0",
+            "hidden": false,
+            "constraints": [
+              {"id": "4fb7-9d1d-abeb-df49", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "7aa2-5e70-acc2-d1fb", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "entryLinks": [
+              {"name": "Medium Anti-Tank Gun", "id": "a80c-e423-15f9-43f0", "hidden": false, "import": true, "targetId": "621f-e4f2-a687-b0ea", "type": "selectionEntry"},
+              {
+                "name": "Turret-mounted Light Anti-Tank Gun",
+                "id": "3aeb-15ee-fec7-804d",
+                "hidden": false,
+                "import": true,
+                "targetId": "deb0-fce1-cfef-b8a7",
+                "type": "selectionEntry",
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -20}]
+              },
+              {
+                "name": "Turret-mounted Light Howitzer",
+                "id": "5052-165b-812c-30ba",
+                "hidden": false,
+                "import": true,
+                "targetId": "a395-be11-dde6-c956",
+                "type": "selectionEntry",
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": -20}]
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "75mm medium anti-tank gun",
+                "id": "511b-9f5d-306c-72a9",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+                "entryLinks": [
+                  {
+                    "name": "Turrent-mounted Medium Anti-Tank Gun",
+                    "id": "517a-7f26-7c4f-4bfe",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "7062-f323-5441-655e",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "6bc5-05f7-e7de-e3c6", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                      {"id": "866a-eabe-e8ab-2b13", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                    ]
+                  }
+                ],
+                "infoLinks": [
+                  {
+                    "name": "Improved HE",
+                    "id": "e969-adfc-f3c0-6c11",
+                    "hidden": false,
+                    "targetId": "5570-5dea-4d83-63d2",
+                    "type": "profile",
+                    "modifiers": [{"arg": "WEAPON", "field": "855b-a61a-569c-a804", "type": "replace", "value": "Medium Anti-Tank Gun"}]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hull mounted",
+            "id": "e928-13f2-920d-15cc",
+            "defaultSelectionEntryId": "a2ed-9fd5-d826-d4fc",
+            "hidden": false,
+            "constraints": [
+              {"id": "6579-c5fc-5b97-65af", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "ec97-0b98-f2d2-9665", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "entryLinks": [
+              {
+                "name": "Front Facing Hull-mounted MMG",
+                "id": "a2ed-9fd5-d826-d4fc",
+                "hidden": false,
+                "import": true,
+                "targetId": "5a4d-a78f-b6af-7049",
+                "type": "selectionEntry"
+              },
+              {
+                "name": "Light Howitzer",
+                "id": "d6cf-89a1-b2b1-398e",
+                "hidden": false,
+                "import": true,
+                "targetId": "187d-7959-06a6-5c06",
+                "type": "selectionEntry",
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 40}],
+                "modifiers": [
+                  {
+                    "field": "hidden",
+                    "type": "set",
+                    "value": true,
+                    "conditions": [
+                      {
+                        "childId": "deb0-fce1-cfef-b8a7",
+                        "childName": "Turret-mounted Light Anti-Tank Gun",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Light Anti-Tank Gun",
+                "id": "3ed6-711f-ae84-8267",
+                "hidden": false,
+                "import": true,
+                "targetId": "b7b4-2e65-f595-5cd6",
+                "type": "selectionEntry",
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 40}],
+                "modifiers": [
+                  {
+                    "field": "hidden",
+                    "type": "set",
+                    "value": true,
+                    "conditions": [
+                      {
+                        "childId": "a395-be11-dde6-c956",
+                        "childName": "Turret-mounted Light Howitzer",
+                        "field": "selections",
+                        "includeChildSelections": true,
+                        "scope": "parent",
+                        "shared": true,
+                        "type": "lessThan",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
