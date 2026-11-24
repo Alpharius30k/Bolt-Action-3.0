@@ -20,14 +20,32 @@
       {"name": "General Infantry Units", "id": "7848-d855-f69b-e75e", "hidden": false},
       {"name": "AT Weapons / Special Weapons Teams", "id": "3a9a-3ae8-2149-8b18", "hidden": false},
       {"name": "Heavy Weapons", "id": "4c05-26b8-8eb6-3a15", "hidden": false},
-      {"name": "Support Vehicles", "id": "9571-d87b-32a5-86fe", "hidden": false}
+      {"name": "Support Vehicles", "id": "9571-d87b-32a5-86fe", "hidden": false},
+      {"name": "Command Vehicle", "id": "3a73-eadc-f42e-fe2c", "hidden": false},
+      {"name": "Landing Craft", "id": "b0f4-e03d-5345-337b", "hidden": false},
+      {"name": "Mounted", "id": "7808-fba2-565f-1f5e", "hidden": false},
+      {"name": "Slow", "id": "9249-3d08-61e1-b0b1", "hidden": false},
+      {"name": "Track Vehicle", "id": "20b9-afcb-dc06-90bd", "hidden": false},
+      {"name": "Wheeled Vehicle", "id": "64fb-3b58-38d2-b495", "hidden": false},
+      {"name": "Configuration", "id": "3bcf-ea53-f232-234a", "hidden": false},
+      {"name": "Medic", "id": "f560-7ff5-5884-7a09", "hidden": false},
+      {"name": "Platoon Commander", "id": "78c6-fc4a-528d-667a", "hidden": false},
+      {"name": "Observer", "id": "a307-fd76-6059-68b0", "hidden": false},
+      {"name": "Sniper Team", "id": "d506-9093-593b-e691", "hidden": false},
+      {"name": "Anti-Tank Team", "id": "2f5b-d961-43e4-7f00", "hidden": false},
+      {"name": "Light Artillery Team", "id": "33ac-b4d5-cfa3-6985", "hidden": false},
+      {"name": "Engineers", "id": "61af-d582-fb45-c1c0", "hidden": false},
+      {"name": "Flamethrower Team", "id": "cafc-f9b9-d784-2d2c", "hidden": false},
+      {"name": "Machine Gun Team", "id": "e844-ef36-c388-c130", "hidden": false},
+      {"name": "Mortar Team", "id": "9dde-4b82-cb29-ce20", "hidden": false}
     ],
-    "costTypes": [{"name": "Points", "id": "cf06-9113-0bb3-480a", "defaultCostLimit": 0}, {"name": "Dice", "id": "bc13-1fcd-379a-6b9c", "defaultCostLimit": 0}],
+    "costTypes": [{"name": "Points", "id": "cf06-9113-0bb3-480a", "defaultCostLimit": -1}, {"name": "Dice", "id": "bc13-1fcd-379a-6b9c", "defaultCostLimit": -1}],
     "forceEntries": [
       {
         "name": "Company Platoon",
         "id": "f3af-bc62-955c-51ec",
         "hidden": false,
+        "sortIndex": 2,
         "categoryLinks": [
           {
             "name": "Officer",
@@ -46,7 +64,13 @@
             "targetId": "baa3-9104-b66e-a552",
             "constraints": [{"id": "6fb2-2e48-e389-5d00", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}]
           },
-          {"name": "Transport", "id": "b72f-e973-8f9b-c81c", "hidden": false, "targetId": "dcb5-75bb-240d-01db"}
+          {
+            "name": "Transport",
+            "id": "b72f-e973-8f9b-c81c",
+            "hidden": false,
+            "targetId": "dcb5-75bb-240d-01db",
+            "constraints": [{"id": "7d57-91fa-0833-1f9b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}]
+          }
         ],
         "constraints": [
           {
@@ -62,43 +86,154 @@
         ]
       },
       {
-        "name": "Rifle Platoon",
-        "id": "4d24-a495-b13a-b55a",
+        "name": "RULES",
+        "id": "1290-2834-3892-325a",
         "hidden": false,
+        "sortIndex": 1,
+        "categoryLinks": [{"name": "Configuration", "id": "f3b3-ce4d-2ab3-c9a5", "hidden": false, "targetId": "3bcf-ea53-f232-234a"}]
+      },
+      {
+        "name": "Rifle Platoon",
+        "id": "a13c-f6a0-da75-de9d",
+        "hidden": false,
+        "sortIndex": 2,
         "categoryLinks": [
           {
-            "name": "Officer",
-            "id": "f266-1985-42d0-8b15",
+            "name": "Platoon Commander",
+            "id": "28b6-af12-c3a2-fb50",
             "hidden": false,
-            "targetId": "a6d4-c1f9-851d-0ba9",
-            "constraints": [{"id": "1b8e-0399-b736-fdbf", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1}]
+            "targetId": "78c6-fc4a-528d-667a",
+            "constraints": [
+              {"id": "c617-feae-f36e-ea0b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1},
+              {"id": "f96f-251a-3044-2d58", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}
+            ]
           },
-          {"name": "Support", "id": "375f-fdcb-c21f-db4d", "hidden": false, "targetId": "baa3-9104-b66e-a552"},
           {
             "name": "General Infantry Units",
-            "id": "834e-f1b2-1fb1-91c9",
+            "id": "a3cc-8936-992b-3cc6",
             "hidden": false,
             "targetId": "7848-d855-f69b-e75e",
-            "constraints": [{"id": "3c75-5642-d5bc-722b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 2}]
+            "constraints": [
+              {"id": "3f03-8a1c-5914-33d2", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 2},
+              {"id": "c839-0183-00ad-1d58", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 4}
+            ]
           },
-          {"name": "AT Weapons / Special Weapons Teams", "id": "18ab-d820-7464-f5a9", "hidden": false, "targetId": "3a9a-3ae8-2149-8b18"},
-          {"name": "Heavy Weapons", "id": "1e25-ec91-a3a7-8667", "hidden": false, "targetId": "4c05-26b8-8eb6-3a15"},
-          {"name": "Support Vehicles", "id": "a791-99f5-2e35-2450", "hidden": false, "targetId": "9571-d87b-32a5-86fe"},
+          {
+            "name": "Medic",
+            "id": "60ef-56d8-b73f-e768",
+            "hidden": false,
+            "targetId": "f560-7ff5-5884-7a09",
+            "constraints": [{"id": "63a3-ee03-dc56-ffd6", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "Observer",
+            "id": "7938-730a-423f-bba1",
+            "hidden": false,
+            "targetId": "a307-fd76-6059-68b0",
+            "constraints": [{"id": "5187-752c-6f38-82d4", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "Sniper Team",
+            "id": "ea9d-4372-92c2-48a7",
+            "hidden": false,
+            "targetId": "d506-9093-593b-e691",
+            "constraints": [{"id": "f168-fc51-4087-9f20", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "Anti-Tank Team",
+            "id": "1ca7-9f22-eea0-72e7",
+            "hidden": false,
+            "targetId": "2f5b-d961-43e4-7f00",
+            "constraints": [{"id": "bae6-f2f6-419f-c61d", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 1}]
+          },
+          {
+            "name": "Light Artillery Team",
+            "id": "2e33-1640-ba21-fe6b",
+            "hidden": false,
+            "targetId": "33ac-b4d5-cfa3-6985",
+            "constraints": [{"id": "8c76-aee5-efdf-b55c", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 2}]
+          },
           {
             "name": "Transport",
-            "id": "3ac4-abf1-0e9c-d6e5",
+            "id": "8ed7-e14d-6a92-6d5f",
             "hidden": false,
             "targetId": "dcb5-75bb-240d-01db",
-            "constraints": [{"id": "b703-0a0d-6d47-c7e8", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 0}],
+            "constraints": [{"id": "82ea-4af6-bf7d-9cf2", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
             "modifiers": [
               {
-                "field": "b703-0a0d-6d47-c7e8",
+                "field": "82ea-4af6-bf7d-9cf2",
                 "type": "increment",
                 "value": 1,
                 "repeats": [
                   {
-                    "childId": "unit",
-                    "childName": "unit",
+                    "childId": "78c6-fc4a-528d-667a",
+                    "childName": "Platoon Commander",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "33ac-b4d5-cfa3-6985",
+                    "childName": "Light Artillery Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "7848-d855-f69b-e75e",
+                    "childName": "General Infantry Units",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "f560-7ff5-5884-7a09",
+                    "childName": "Medic",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "a307-fd76-6059-68b0",
+                    "childName": "Observer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "d506-9093-593b-e691",
+                    "childName": "Sniper Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "2f5b-d961-43e4-7f00",
+                    "childName": "Anti-Tank Team",
                     "field": "selections",
                     "includeChildSelections": true,
                     "repeats": 1,
@@ -114,7 +249,7 @@
         ],
         "constraints": [
           {
-            "id": "4937-69a2-c3b9-4e4a",
+            "id": "3182-92bc-f19b-eba3",
             "field": "forces",
             "includeChildForces": true,
             "includeChildSelections": true,
@@ -122,6 +257,473 @@
             "shared": true,
             "type": "min",
             "value": 1
+          }
+        ]
+      },
+      {
+        "name": "Engineer Platoon",
+        "id": "c30e-2d9f-bf79-a67b",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Platoon Commander",
+            "id": "4442-e125-0ef3-f87f",
+            "hidden": false,
+            "targetId": "78c6-fc4a-528d-667a",
+            "constraints": [
+              {"id": "a168-1a7f-6734-5278", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1},
+              {"id": "e632-8fbb-7153-46a8", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Engineers",
+            "id": "f5ce-e618-da59-bb9b",
+            "hidden": false,
+            "targetId": "61af-d582-fb45-c1c0",
+            "constraints": [
+              {"id": "b426-e1ce-7ae5-0deb", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 2},
+              {"id": "ace2-85aa-3d23-6d57", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 4}
+            ]
+          },
+          {
+            "name": "Flamethrower Team",
+            "id": "bf80-8fcc-663b-f30a",
+            "hidden": false,
+            "targetId": "cafc-f9b9-d784-2d2c",
+            "constraints": [{"id": "fee7-0b64-ecaa-7fe9", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 3}]
+          },
+          {
+            "name": "Transport",
+            "id": "54d8-8258-0d9c-7787",
+            "hidden": false,
+            "targetId": "dcb5-75bb-240d-01db",
+            "constraints": [{"id": "09ef-63e3-b27c-4154", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifiers": [
+              {
+                "field": "09ef-63e3-b27c-4154",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "78c6-fc4a-528d-667a",
+                    "childName": "Platoon Commander",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "33ac-b4d5-cfa3-6985",
+                    "childName": "Light Artillery Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "7848-d855-f69b-e75e",
+                    "childName": "General Infantry Units",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "f560-7ff5-5884-7a09",
+                    "childName": "Medic",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "a307-fd76-6059-68b0",
+                    "childName": "Observer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "d506-9093-593b-e691",
+                    "childName": "Sniper Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "2f5b-d961-43e4-7f00",
+                    "childName": "Anti-Tank Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heavy Weapon Platoon",
+        "id": "8d58-8ae4-6e3f-e125",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Platoon Commander",
+            "id": "1273-8e48-81c3-b053",
+            "hidden": false,
+            "targetId": "78c6-fc4a-528d-667a",
+            "constraints": [
+              {"id": "3709-4b7f-8c2a-c68b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1},
+              {"id": "e5a7-11a9-e6ae-f157", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Machine Gun Team",
+            "id": "e67a-5572-c90f-fe50",
+            "hidden": false,
+            "targetId": "e844-ef36-c388-c130",
+            "constraints": [
+              {"id": "185d-7e19-0c6a-7fad", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 2},
+              {"id": "7068-62eb-0f5d-df34", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 5}
+            ],
+            "modifiers": [
+              {
+                "field": "185d-7e19-0c6a-7fad",
+                "type": "decrement",
+                "value": 1,
+                "conditions": [{"childId": "9dde-4b82-cb29-ce20", "childName": "Mortar Team", "field": "selections", "scope": "parent", "shared": true, "type": "equalTo", "value": 1}]
+              },
+              {
+                "field": "185d-7e19-0c6a-7fad",
+                "type": "decrement",
+                "value": 2,
+                "conditions": [{"childId": "9dde-4b82-cb29-ce20", "childName": "Mortar Team", "field": "selections", "scope": "parent", "shared": true, "type": "greaterThan", "value": 1}]
+              },
+              {
+                "field": "7068-62eb-0f5d-df34",
+                "type": "decrement",
+                "value": 1,
+                "conditions": [{"childId": "9dde-4b82-cb29-ce20", "childName": "Mortar Team", "field": "selections", "scope": "parent", "shared": true, "type": "equalTo", "value": 1}]
+              },
+              {
+                "field": "7068-62eb-0f5d-df34",
+                "type": "decrement",
+                "value": 2,
+                "conditions": [{"childId": "9dde-4b82-cb29-ce20", "childName": "Mortar Team", "field": "selections", "scope": "parent", "shared": true, "type": "greaterThan", "value": 1}]
+              }
+            ]
+          },
+          {
+            "name": "Mortar Team",
+            "id": "a0d2-ed67-7957-d4ae",
+            "hidden": false,
+            "targetId": "9dde-4b82-cb29-ce20",
+            "constraints": [
+              {"id": "35c8-59fb-a905-6ce2", "field": "selections", "scope": "parent", "shared": true, "type": "min", "value": 2},
+              {"id": "62c9-3a47-917d-9c21", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 5}
+            ],
+            "modifiers": [
+              {
+                "field": "35c8-59fb-a905-6ce2",
+                "type": "decrement",
+                "value": 2,
+                "conditions": [
+                  {"childId": "e844-ef36-c388-c130", "childName": "Machine Gun Team", "field": "selections", "scope": "parent", "shared": true, "type": "greaterThan", "value": 1}
+                ]
+              },
+              {
+                "field": "35c8-59fb-a905-6ce2",
+                "type": "decrement",
+                "value": 1,
+                "conditions": [{"childId": "e844-ef36-c388-c130", "childName": "Machine Gun Team", "field": "selections", "scope": "parent", "shared": true, "type": "equalTo", "value": 1}]
+              },
+              {
+                "field": "62c9-3a47-917d-9c21",
+                "type": "decrement",
+                "value": 2,
+                "conditions": [
+                  {"childId": "e844-ef36-c388-c130", "childName": "Machine Gun Team", "field": "selections", "scope": "parent", "shared": true, "type": "greaterThan", "value": 1}
+                ]
+              },
+              {
+                "field": "62c9-3a47-917d-9c21",
+                "type": "decrement",
+                "value": 1,
+                "conditions": [{"childId": "e844-ef36-c388-c130", "childName": "Machine Gun Team", "field": "selections", "scope": "parent", "shared": true, "type": "equalTo", "value": 1}]
+              }
+            ]
+          },
+          {
+            "name": "Anti-Tank Team",
+            "id": "7d8b-cf83-bdd9-5b6b",
+            "hidden": false,
+            "targetId": "2f5b-d961-43e4-7f00",
+            "constraints": [{"id": "08ed-7969-347c-5cc4", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 3}]
+          },
+          {
+            "name": "Transport",
+            "id": "0cb2-07ac-9050-1225",
+            "hidden": false,
+            "targetId": "dcb5-75bb-240d-01db",
+            "constraints": [{"id": "2572-ee75-b8b6-6bfd", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifiers": [
+              {
+                "field": "2572-ee75-b8b6-6bfd",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "78c6-fc4a-528d-667a",
+                    "childName": "Platoon Commander",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "33ac-b4d5-cfa3-6985",
+                    "childName": "Light Artillery Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "7848-d855-f69b-e75e",
+                    "childName": "General Infantry Units",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "f560-7ff5-5884-7a09",
+                    "childName": "Medic",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "a307-fd76-6059-68b0",
+                    "childName": "Observer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "d506-9093-593b-e691",
+                    "childName": "Sniper Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "2f5b-d961-43e4-7f00",
+                    "childName": "Anti-Tank Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Artillery Platoon",
+        "id": "fee4-2afb-6c05-5c89",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Platoon Commander",
+            "id": "61f2-f9bf-3e4b-a969",
+            "hidden": false,
+            "targetId": "78c6-fc4a-528d-667a",
+            "constraints": [
+              {"id": "7f5d-1a92-d9fb-da13", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1},
+              {"id": "a075-8034-ff4c-308c", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Artillery",
+            "id": "6d79-8ddf-4d71-cf12",
+            "hidden": false,
+            "targetId": "95e0-99a4-f616-19b8",
+            "constraints": [
+              {"id": "0b91-07b7-2afa-48d1", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 4},
+              {"id": "94c3-af29-a4cb-2ea8", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1}
+            ]
+          },
+          {
+            "name": "Transport",
+            "id": "b58e-b830-4643-3e91",
+            "hidden": false,
+            "targetId": "dcb5-75bb-240d-01db",
+            "constraints": [{"id": "c83c-cb25-efd3-6fa6", "field": "selections", "scope": "parent", "shared": true, "type": "max", "value": 0}],
+            "modifiers": [
+              {
+                "field": "c83c-cb25-efd3-6fa6",
+                "type": "increment",
+                "value": 1,
+                "repeats": [
+                  {
+                    "childId": "78c6-fc4a-528d-667a",
+                    "childName": "Platoon Commander",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "33ac-b4d5-cfa3-6985",
+                    "childName": "Light Artillery Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "7848-d855-f69b-e75e",
+                    "childName": "General Infantry Units",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "f560-7ff5-5884-7a09",
+                    "childName": "Medic",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "a307-fd76-6059-68b0",
+                    "childName": "Observer",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "d506-9093-593b-e691",
+                    "childName": "Sniper Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  },
+                  {
+                    "childId": "2f5b-d961-43e4-7f00",
+                    "childName": "Anti-Tank Team",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "force",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Armoured Platoon",
+        "id": "8241-3c0a-694a-d525",
+        "hidden": false,
+        "categoryLinks": [
+          {
+            "name": "Command Vehicle",
+            "id": "2504-dee5-c42d-3354",
+            "hidden": false,
+            "targetId": "3a73-eadc-f42e-fe2c",
+            "constraints": [
+              {"id": "e119-6690-4642-1e72", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 1},
+              {"id": "8b82-a397-cd5f-47ad", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1}
+            ]
+          },
+          {
+            "name": "Vehicles",
+            "id": "4ac5-428e-9356-bbfe",
+            "hidden": false,
+            "targetId": "a827-3f5a-6588-bf47",
+            "constraints": [
+              {"id": "6bec-ef48-ddab-ad9b", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "max", "value": 4},
+              {"id": "fd19-3321-fd3b-010a", "field": "selections", "includeChildSelections": true, "scope": "force", "shared": true, "type": "min", "value": 1}
+            ]
           }
         ]
       }
@@ -235,7 +837,13 @@
         "hidden": false,
         "typeId": "2133-190a-94b8-c4f5",
         "typeName": "Abilities",
-        "characteristics": [{"name": "Description", "$text": "Each model can fire at different targets.", "typeId": "855b-a61a-569c-a804"}]
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": "If a **Commando subsection** loses its\n**NCO**, roll a die. On a roll of 3 or more, another\nmodel within the unit is immediately selected to\n**act** as the unit’s **NCO**. On the roll of 1 or 2, treat the **subsection** as having **lost its NCO** as normal.",
+            "typeId": "855b-a61a-569c-a804"
+          }
+        ]
       },
       {
         "name": "Inspiring Presence",
@@ -246,7 +854,7 @@
         "characteristics": [
           {
             "name": "Description",
-            "$text": "Upon receiving his order dice (except for Down), a chaplain may select one friendly unit within 6″ and roll a D6 the chaplain may remove 1 pin from the selected unit.",
+            "$text": "Upon receiving his order dice (except for Down), a chaplain may select one friendly unit within 6″ and roll a D6 and on a X+ the chaplain may remove 1 pin from the selected unit.",
             "typeId": "855b-a61a-569c-a804"
           }
         ]
@@ -286,6 +894,60 @@
             "typeId": "855b-a61a-569c-a804"
           }
         ]
+      },
+      {
+        "name": "LZ Signals",
+        "id": "e5c3-13ca-f3bf-40e8",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [
+          {
+            "name": "Description",
+            "$text": "Pathfinders may always start on the table within the owning player’s deployment area.\nIf you deploy at least one unit of Pathfinders on the table before the first turn starts (i.e. the Pathfinders are not in the first wave\nor in reserve), then any friendly paratroopers and glider units in reserve may re-roll failed order tests to come onto the table.",
+            "typeId": "855b-a61a-569c-a804"
+          }
+        ]
+      },
+      {
+        "name": "Motorcycle",
+        "id": "ab76-78f5-1cdd-e854",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Sniper",
+        "id": "94dd-19df-1804-b24a",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Gun Shield",
+        "id": "887c-8421-b3b1-4a62",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "All models in this unit withing **unit coherency** count as being in light cover.", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Light HE",
+        "id": "c18c-45a0-1b92-ed3d",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "This models weapon HE(X\") is set to **HE(1\")**", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Reinforced Armour",
+        "id": "d61e-acc7-e702-a025",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "", "typeId": "855b-a61a-569c-a804"}]
       }
     ],
     "sharedRules": [
@@ -344,7 +1006,34 @@
         "id": "f302-dea3-875e-af89",
         "description": "When rolling cover saves, as long as the unit does not have an Advance or Run order, it receives an additional +1 to the roll. Can benefit from special deployment rules, per scenarios",
         "hidden": false
-      }
+      },
+      {
+        "name": "Green",
+        "id": "38cd-5731-d52e-882c",
+        "description": "The first time this unit suffers a **casulaity** this game it must make a **moral test**",
+        "hidden": false
+      },
+      {
+        "name": "Flamethrower (Infantry)",
+        "id": "d572-afe3-eff5-9b7f",
+        "description": "Due to their diffrence in shotting the do not follow the same rools\n- Roll the dice to hit but instead each hit is actually D6 hits and no saves are made it moces over to damage instatly.\n- They always hit the top of the vehicle\n- Instead of only 1 pin the targted unit suffers D3+1 pins\n- The **shooting unit** however also suffers 1 **pin**\n- The **targeted** unit then must take a **moral test** if it fails an dits **infantry** the unit is destroyed no matter what. **Vehicles** are abadoned instead\n- The **shooting unit** then rolls a D6 and on a 2- the **flamethrower** is used up and this model can no longer use it.",
+        "hidden": false
+      },
+      {
+        "name": "Flamethrower (Vehicle)",
+        "id": "6f74-b960-ea8e-bf93",
+        "description": "Due to their diffrence in shotting the do not follow the same rools\n- Roll the dice to hit but instead each hit is actually D6+1 hits and no saves are made it moces over to damage instatly.\n- They always hit the top of the vehicle\n- Instead of only 1 pin the targted unit suffers D3+1 pins\n- The **shooting unit** however also suffers 1 **pin**\n- The **targeted** unit then must take a **moral test** if it fails an dits **infantry** the unit is destroyed no matter what. **Vehicles** are abadoned instead\n- The **shooting unit** then rolls a D6 and on a 2- the **flamethrower** is used up and this model can no longer use it.",
+        "hidden": false
+      },
+      {
+        "name": "Howitzer",
+        "id": "febb-1ee1-796e-f5b1",
+        "description": "This model can shoot directly (using the first ranged profile) or **Indirect Fire** using the (X\" - X\") ranged profile. If doing so this counts as switching orders for **indirect Fire**",
+        "hidden": false
+      },
+      {"name": "Co-axial", "id": "5183-5187-25d8-8529", "description": "You can not fire this and your main **turret weapon** you must choose", "hidden": false},
+      {"name": "Fast", "id": "9e65-e8fe-388d-c7da", "hidden": false},
+      {"name": "Slow", "id": "6383-df3d-fef2-e594", "hidden": false}
     ],
     "sharedSelectionEntries": [
       {
@@ -1229,6 +1918,7 @@
         "import": true,
         "type": "upgrade",
         "constraints": [{"id": "4ee2-2eb5-4037-5093", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "modifiers": [{"affects": "self.entries.profiles.Unit", "field": "8546-1869-9a5b-f048", "scope": "parent", "type": "set", "value": "12\""}],
         "profiles": [
           {
             "name": "Motorcycle",
@@ -1237,6 +1927,973 @@
             "typeId": "2133-190a-94b8-c4f5",
             "typeName": "Abilities",
             "characteristics": [{"name": "Description", "$text": "This unit has a **movement** of 12\"", "typeId": "855b-a61a-569c-a804"}]
+          }
+        ]
+      },
+      {
+        "name": "Shotgun",
+        "id": "498e-f411-aef8-90e8",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Assault", "id": "39fc-d1af-520d-a9e2", "hidden": false, "targetId": "6f4d-5644-3c2e-e1b2", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Shotgun",
+            "id": "30c6-ac82-bacb-6775",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "18\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Assault", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Flamethrower (Infantry)",
+        "id": "ef76-ffba-a70a-9fb9",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Flamethrower (Infantry)", "id": "7584-474d-19b4-629e", "hidden": false, "targetId": "d572-afe3-eff5-9b7f", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Flamethrower",
+            "id": "dbf7-9114-f310-67b2",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "6\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+2", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Flamethrower", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "PIAT",
+        "id": "9740-dc4c-476c-73ee",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Team", "id": "beef-3ca5-8ab5-0558", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "PIAT",
+            "id": "16fc-5cdc-7e82-f89c",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "12\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+5", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Shaped Charge", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Medium Mortar",
+        "id": "a5c4-c747-88bb-1145",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "cbd0-9722-5dd1-4e00",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "2"}, {"arg": "X", "field": "description", "type": "replace", "value": "2"}]
+          },
+          {"name": "Fixed", "id": "42ce-d9b4-4064-bbeb", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {"name": "Indirect Fire", "id": "1b44-a4b3-b1fb-e1ed", "hidden": false, "targetId": "e5b4-599d-635e-b2fa", "type": "rule"},
+          {"name": "Team", "id": "6116-c726-dff6-843a", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Medium Mortar",
+            "id": "58dc-4b8e-1db0-9a3d",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "12\" - 60\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Indirect Fire, HE(2\"), Fixed", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heavy Mortar",
+        "id": "f657-cf6c-2017-29d7",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "5aae-4aa5-69cc-8019",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "3"}, {"arg": "X", "field": "description", "type": "replace", "value": "3"}]
+          },
+          {"name": "Fixed", "id": "3a7a-352e-8c44-df18", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {"name": "Indirect Fire", "id": "36ad-0c98-2d33-b003", "hidden": false, "targetId": "e5b4-599d-635e-b2fa", "type": "rule"},
+          {"name": "Team", "id": "7639-f7e1-6fa8-4934", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Heavy Mortar",
+            "id": "a3e3-ea38-2420-7638",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "12\" - 72\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Indirect Fire, HE(3\"), Fixed", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Spotter",
+        "id": "1e8e-e2df-2bdb-e108",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "constraints": [{"id": "78e1-21d2-2c37-6a1a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 10}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+        "infoLinks": [{"name": "Infiltrator", "id": "4434-eda6-6702-1c34", "hidden": false, "targetId": "f302-dea3-875e-af89", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Spotter",
+            "id": "ae85-a4c6-68dd-6151",
+            "hidden": false,
+            "typeId": "e518-6709-d65b-ba02",
+            "typeName": "Unit",
+            "characteristics": [{"name": "Movement", "$text": "6\"", "typeId": "8546-1869-9a5b-f048"}, {"name": "Moral", "$text": "", "typeId": "2252-0273-4abc-9576"}]
+          },
+          {
+            "name": "Spotter",
+            "id": "a649-52f8-4780-5855",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This model must stay outside of **unit coherency** of its unit. If its unit is a **Regular** or **Veteran** can see whatever the **Spotter** sees as if it was in **Line of sight** of them.",
+                "typeId": "855b-a61a-569c-a804"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bazooka",
+        "id": "fe5e-5b44-db1d-7e50",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Team", "id": "50c4-0c21-54e2-2c0f", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Bazooka",
+            "id": "ef0f-51d8-355d-0ef9",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "24\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+5", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Shaped Charged", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Panzerschreck",
+        "id": "0976-ce80-e625-17f9",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Team", "id": "f32d-86d1-d07b-5aa5", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Panzerschreck",
+            "id": "519e-fa9d-77f9-3323",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "24\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+6", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Shaped Charge", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Panzerfaust",
+        "id": "7391-5192-5bf8-1594",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "profiles": [
+          {
+            "name": "Panzerfaust",
+            "id": "971a-0416-9507-6ebd",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "12\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+6", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "One-shot, Shaped Charge", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Light Anti-Tank Gun",
+        "id": "b7b4-2e65-f595-5cd6",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "8f53-ae7e-c8bb-c393",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "Team", "id": "56b6-2e7d-869b-500f", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {"name": "Fixed", "id": "5ab1-9835-6e7a-b424", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Light Anti-Tank Gun",
+            "id": "0450-eccf-3f40-96f0",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+4", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Medium Anti-Tank Gun",
+        "id": "621f-e4f2-a687-b0ea",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Team", "id": "88eb-4317-e650-3b8c", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {"name": "Fixed", "id": "d79b-a113-932c-4b8e", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "4a48-64d9-2c3a-252c",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Medium Anti-Tank Gun",
+            "id": "eadd-8b4b-8475-7565",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "60\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+5", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heavy Anti-Tank Gun",
+        "id": "9b14-817a-68ea-648c",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Fixed", "id": "5653-bfc3-d221-3a24", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {"name": "Team", "id": "d2f4-42ab-9d1a-9921", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "1359-bbbb-95ae-0503",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "2"}, {"arg": "X", "field": "description", "type": "replace", "value": "2"}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Heavy Anti-Tank Gun",
+            "id": "ce80-7ec3-4768-d548",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "72\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+6", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, HE(2\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Flamethrower (Vehicle)",
+        "id": "eb2c-94fb-0045-694e",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Flamethrower (Vehicle)", "id": "7212-0184-a295-83a1", "hidden": false, "targetId": "6f74-b960-ea8e-bf93", "type": "rule"}],
+        "profiles": [
+          {
+            "name": "Flamethrower (Vehicle)",
+            "id": "7d80-5518-a498-28c9",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "12\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+2", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Flamethrower", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Light Howitzer",
+        "id": "187d-7959-06a6-5c06",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "e0a5-a43e-ebb0-0263",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "2"}, {"arg": "X", "field": "description", "type": "replace", "value": "2"}]
+          },
+          {"name": "Fixed", "id": "809d-20b8-f62d-3b79", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {"name": "Team", "id": "2b86-7f10-7824-1c17", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {"name": "Howitzer", "id": "cf50-3275-d9c6-2706", "hidden": false, "targetId": "febb-1ee1-796e-f5b1", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Light Howitzer",
+            "id": "4458-7ecb-bbec-d4bf",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\" or 30\"-60\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, Howitzer, HE(2\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Medium Howitzer",
+        "id": "59fe-f6e0-8c80-be0f",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Fixed", "id": "9f60-db98-e601-08aa", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "72ab-7032-25c2-8eed",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "3"}, {"arg": "X", "field": "description", "type": "replace", "value": "3"}]
+          },
+          {"name": "Howitzer", "id": "f49f-8632-99ee-fd01", "hidden": false, "targetId": "febb-1ee1-796e-f5b1", "type": "rule"},
+          {"name": "Team", "id": "eddb-1f92-0fd2-5db0", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Medium Howitzer",
+            "id": "8180-dffa-4ae9-f06a",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "60\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, Howitzer, HE(3\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heavy Howitzer",
+        "id": "214e-c65e-d7cb-7ff5",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Fixed", "id": "2434-76af-e49d-cc9e", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "2372-c365-73aa-460b",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "4"}, {"arg": "X", "field": "description", "type": "replace", "value": "4"}]
+          },
+          {"name": "Howitzer", "id": "8497-5188-e021-db76", "hidden": false, "targetId": "febb-1ee1-796e-f5b1", "type": "rule"},
+          {"name": "Team", "id": "e33e-1de4-8a09-e6e4", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Heavy Howitzer",
+            "id": "822b-324f-9ae1-63ec",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "72\" (42\"-84\")", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, Howitzer, HE(4\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Light Anti-Tank Gun on a rotating platform",
+        "id": "a68b-221b-ca4c-f46e",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "90ba-290a-18e0-4b5d",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "Team", "id": "26f6-269c-e522-1a23", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Light Anti-Tank Gun",
+            "id": "1b21-847c-53bb-9630",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+4", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Super-Heavy Anti-Tank Gun",
+        "id": "9709-a230-0a36-25fe",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Team", "id": "2268-ac65-33bd-3861", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "7ea8-0cfc-e184-03db",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "3"}, {"arg": "X", "field": "description", "type": "replace", "value": "3"}]
+          },
+          {"name": "Fixed", "id": "18f3-6aa5-f569-f202", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {"name": "Anti-Tank", "id": "85c5-37a8-445b-e263", "hidden": false, "targetId": "6445-ff51-9edd-1269", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Super-Heavy Anti-Tank Gun",
+            "id": "56aa-e992-3515-2457",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "84\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+7", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, HE(3\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Light Automatic Cannon on a Rotating Platform",
+        "id": "204d-3009-583a-15d7",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Team", "id": "939b-6113-c39d-b430", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "97a8-eb30-bf01-c684",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "Flak", "id": "b9ef-1f05-59c8-c4b1", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Light Automatic Cannon",
+            "id": "1f96-89ed-52d2-cb36",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+2", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Flak, He(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heavy Automatic Cannon",
+        "id": "e144-ba9f-e38e-098b",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Fixed", "id": "195d-580d-2ee5-9c7a", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "83be-e831-75b1-04d2",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "Team", "id": "b51a-8d51-09e7-3aec", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Heavy Automatic Cannon",
+            "id": "7952-8801-f83c-77e9",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "72\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+3", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Heavy Automatic Cannonon a rotating platform",
+        "id": "a097-6b17-1070-8f0a",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "ae5a-8b96-e262-b49f",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "Flak", "id": "50de-5837-8647-a509", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"},
+          {"name": "Team", "id": "4d5b-cff3-f6e6-4a41", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Heavy Automatic Cannon",
+            "id": "7184-1c2d-7502-ea18",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "72\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+3", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Flak, HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Turret-Mounted HMG",
+        "id": "dc25-9339-8774-484c",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "HMG",
+            "id": "7ce1-c42a-f936-4a6e",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "6", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "1+", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "\n", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Co-axial MMG",
+        "id": "6e7f-ff8d-410e-b885",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Co-axial", "id": "37a5-06b1-5c67-9912", "hidden": false, "targetId": "5183-5187-25d8-8529", "type": "rule"}],
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "MMG",
+            "id": "bfde-9df2-306e-9ae3",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "36\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "6", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Co-axial", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Turret-mounted Light Automatic Cannon",
+        "id": "6849-3e0f-8711-ab54",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "95b6-6959-0dc8-05f4",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Light Automatic Cannon",
+            "id": "d8a4-0019-81d7-fb30",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+2", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Turret-mounted MMG",
+        "id": "6731-d142-0a34-d251",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "MMG",
+            "id": "9866-3c48-fa33-e12e",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "36\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "6", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "\n", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Turret-mounted Light Anti-Tank Gun",
+        "id": "deb0-fce1-cfef-b8a7",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "8728-4984-ca6f-51d8",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [
+              {"arg": "X", "field": "name", "type": "replace", "value": "1"},
+              {"arg": "X", "field": "description", "type": "replace", "value": "1"},
+              {
+                "field": "hidden",
+                "type": "set",
+                "value": true,
+                "conditions": [
+                  {
+                    "childId": "fe82-3d71-31d8-a928",
+                    "childName": "Littlejohn Adaptors",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Light Anti-Tank Gun",
+            "id": "a2c2-8cdd-9de2-f8c9",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+4", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Turret-mounted Light Howitzer",
+        "id": "a395-be11-dde6-c956",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "eebe-0f86-2eef-0c5a",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "2"}, {"arg": "X", "field": "description", "type": "replace", "value": "2"}]
+          },
+          {"name": "Howitzer", "id": "280d-19c7-e816-5145", "hidden": false, "targetId": "febb-1ee1-796e-f5b1", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Light Howitzer",
+            "id": "112b-e289-9f99-d5d4",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\" or 30\"-60\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Howitzer, HE(2\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Littlejohn Adaptors",
+        "id": "fe82-3d71-31d8-a928",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "constraints": [{"id": "0cbf-f702-cf18-3829", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+        "modifiers": [{"affects": "self.entries.recursive.profiles.Ranged Weapon", "field": "b7fa-50ee-7ecf-7f80", "scope": "parent", "type": "set", "value": "+5"}],
+        "profiles": [
+          {
+            "name": "Littlejohn Adaptors",
+            "id": "e214-3f8b-072a-b08f",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This models **anti-tank gun** goes to **Pen** +5 however it looses **HE(X\")** and if you roll a natural **hit roll** of 1 this gun can no longer be used for the rest of the game.",
+                "typeId": "855b-a61a-569c-a804"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Front Facing Hull-mounted MMG",
+        "id": "5a4d-a78f-b6af-7049",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "MMG",
+            "id": "d306-2fe8-560a-cdaf",
+            "hidden": false,
+            "import": true,
+            "targetId": "efe4-2b12-599d-93fb",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "648f-3bad-1d61-2c3a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "e2f9-30cc-e8ad-a892", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Front Arc", "id": "af5d-a4a8-1292-cd56", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"}],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Front Facing Hull-mounted"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "Front Arc, Flak"}
+        ]
+      },
+      {
+        "name": "Front-facing MMG",
+        "id": "3df9-f496-f3c7-d0d7",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "Front Arc", "id": "fb36-3c31-2652-a58a", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"}],
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "MMG",
+            "id": "0368-9acc-018e-4066",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "36\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "6", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Front Arc", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Turrent-mounted Medium Anti-Tank Gun",
+        "id": "7062-f323-5441-655e",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "2e47-dbec-0f6d-2e68",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Medium Anti-Tank Gun",
+            "id": "5259-0661-eb8f-c876",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "60\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+5", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
           }
         ]
       }
@@ -1260,8 +2917,8 @@
             "type": "upgrade",
             "modifiers": [
               {"affects": "self.entries.recursive.profiles.Unit", "field": "2252-0273-4abc-9576", "scope": "unit-self", "type": "set", "value": "10"},
-              {"affects": "recursive", "field": "name", "join": ". ", "scope": "unit-self", "type": "prepend", "value": "Vet"},
-              {"affects": "self.entries.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "unit-self", "type": "prepend", "value": "Vet"}
+              {"affects": "recursive", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "Vet"},
+              {"affects": "self.entries.forces.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "Vet"}
             ],
             "profiles": [
               {
@@ -1300,8 +2957,8 @@
             "type": "upgrade",
             "modifiers": [
               {"affects": "self.entries.recursive.profiles.Unit", "field": "2252-0273-4abc-9576", "scope": "unit-self", "type": "set", "value": "8"},
-              {"affects": "recursive", "field": "name", "join": ". ", "scope": "unit-self", "type": "prepend", "value": "InExp"},
-              {"affects": "self.entries.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "unit-self", "type": "prepend", "value": "InExp"}
+              {"affects": "recursive", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "InExp"},
+              {"affects": "self.entries.recursive.profiles.Unit", "field": "name", "join": ". ", "scope": "parent", "type": "prepend", "value": "InExp"}
             ],
             "profiles": [
               {
