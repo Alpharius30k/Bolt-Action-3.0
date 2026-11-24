@@ -948,6 +948,14 @@
         "typeId": "2133-190a-94b8-c4f5",
         "typeName": "Abilities",
         "characteristics": [{"name": "Description", "$text": "", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Improved HE",
+        "id": "5570-5dea-4d83-63d2",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "The **WEAPON** has +1 to its **HE(X\")**", "typeId": "855b-a61a-569c-a804"}]
       }
     ],
     "sharedRules": [

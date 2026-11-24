@@ -50,7 +50,9 @@
       {"name": "Cruiser Tank Challenger", "id": "f642-c084-76f0-f464", "hidden": false},
       {"name": "Cruiser Tank Comet", "id": "02bf-e1ed-5322-48b1", "hidden": false},
       {"name": "Infantry Tank MK I Matilda I", "id": "31ca-8055-a22e-0d1e", "hidden": false},
-      {"name": "Infantry Tank MK II Matilda II and IIC", "id": "1671-3f97-5ee1-734a", "hidden": false}
+      {"name": "Infantry Tank MK II Matilda II and IIC", "id": "1671-3f97-5ee1-734a", "hidden": false},
+      {"name": "Infantry Tank MK III Valentine I - VIIA", "id": "b5d3-720e-8e79-fc39", "hidden": false},
+      {"name": "Infantry Tank MK III Valentine VIII - X", "id": "7e68-6a71-3a6a-31fe", "hidden": false}
     ],
     "entryLinks": [
       {"name": "Chaplin", "id": "7d04-8cc4-e814-e607", "hidden": false, "import": true, "targetId": "77b9-fb0e-7e86-b046", "type": "selectionEntry"},
@@ -132,11 +134,11 @@
       {"name": "Vickers 6-Ton Light Tank", "id": "bc5f-175a-888c-4320", "hidden": false, "import": true, "targetId": "6667-ab2b-fbb3-f1d8", "type": "selectionEntry"},
       {"name": "Light Tank MK VIC", "id": "cbee-eb30-24f3-843e", "hidden": false, "import": true, "targetId": "aa04-4c1b-b26a-20b8", "type": "selectionEntry"},
       {
-        "name": "Blacker Bombard Anti-Tank Team",
+        "name": "Infantry Tank MK III Valentine VIII - X",
         "id": "1fbd-d163-6056-ae4c",
         "hidden": false,
         "import": true,
-        "targetId": "17b3-7a3a-1292-2c87",
+        "targetId": "c866-fea7-ae3b-f516",
         "type": "selectionEntry"
       },
       {
@@ -239,7 +241,32 @@
         "targetId": "844b-3cae-3d9f-585f",
         "type": "selectionEntry"
       },
-      {"name": "40mm Bofors Gun", "id": "d456-b6a4-cf13-d701", "hidden": false, "import": true, "targetId": "07ae-92d8-221e-71f5", "type": "selectionEntry"}
+      {"name": "40mm Bofors Gun", "id": "d456-b6a4-cf13-d701", "hidden": false, "import": true, "targetId": "07ae-92d8-221e-71f5", "type": "selectionEntry"},
+      {"name": "Army Rules", "id": "3371-1b1a-cd19-9fee", "hidden": false, "import": true, "targetId": "9120-1b7d-1f49-ac30", "type": "selectionEntry"},
+      {
+        "name": "Infantry Tank MK III Valentine XI",
+        "id": "031b-dcdd-6666-b12c",
+        "hidden": false,
+        "import": true,
+        "targetId": "f506-0164-9a76-1d95",
+        "type": "selectionEntry"
+      },
+      {
+        "name": "Blacker Bombard Anti-Tank Team",
+        "id": "aa4c-e31b-c40b-fbef",
+        "hidden": false,
+        "import": true,
+        "targetId": "17b3-7a3a-1292-2c87",
+        "type": "selectionEntry"
+      },
+      {
+        "name": "Infantry Tank MK III Valentine I - VIIA",
+        "id": "ed33-f495-bd41-8d1d",
+        "hidden": false,
+        "import": true,
+        "targetId": "f126-3db1-a6ad-241d",
+        "type": "selectionEntry"
+      }
     ],
     "sharedProfiles": [
       {
@@ -794,36 +821,19 @@
             "field": "cf06-9113-0bb3-480a",
             "type": "set",
             "value": 17,
-            "conditions": [{"childId": "7d03-bd00-3f70-aece", "childName": "Inexpirence", "field": "selections", "scope": "parent", "shared": true, "type": "atLeast", "value": 1}]
+            "conditions": [{"childId": "7d03-bd00-3f70-aece", "childName": "Inexpirence", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
           },
           {
             "field": "cf06-9113-0bb3-480a",
             "type": "set",
             "value": 25,
-            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "parent", "shared": true, "type": "atLeast", "value": 1}]
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
           },
           {
             "field": "cf06-9113-0bb3-480a",
             "type": "set",
             "value": 33,
-            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "parent", "shared": true, "type": "atLeast", "value": 1}]
-          },
-          {
-            "field": "hidden",
-            "type": "set",
-            "value": true,
-            "conditions": [
-              {
-                "childId": "f3af-bc62-955c-51ec",
-                "childName": "Company Platoon",
-                "field": "selections",
-                "includeChildSelections": true,
-                "scope": "force",
-                "shared": true,
-                "type": "notInstanceOf",
-                "value": 1
-              }
-            ]
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
           }
         ],
         "profiles": [
@@ -962,7 +972,7 @@
               {
                 "name": "Weapon",
                 "id": "f4c5-a99a-47ca-1e80",
-                "defaultSelectionEntryId": "b44d-f0bf-6bb9-7d8e",
+                "defaultSelectionEntryId": "4835-0c21-773c-4d23",
                 "hidden": false,
                 "constraints": [
                   {"id": "2d17-bb17-2ce0-5c0b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -1056,7 +1066,7 @@
               {
                 "name": "Weapon",
                 "id": "9032-e6f6-c2b4-bf80",
-                "defaultSelectionEntryId": "d062-3a4a-fcfd-d6f7",
+                "defaultSelectionEntryId": "5c64-0e57-b8b1-a719",
                 "hidden": false,
                 "constraints": [
                   {"id": "43e7-b2c0-1cad-c5e2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
@@ -7562,7 +7572,7 @@
                 ]
               },
               {
-                "name": "Front Facing Hull-mounted Turret Mounted MMG",
+                "name": "Front Facing Hull-mounted MMG",
                 "id": "704e-b3a5-db75-fa04",
                 "hidden": false,
                 "import": true,
@@ -7612,7 +7622,7 @@
                         ]
                       },
                       {
-                        "name": "Front Facing Hull-mounted Turret Mounted MMG",
+                        "name": "Front Facing Hull-mounted MMG",
                         "id": "551a-5689-736d-028d",
                         "hidden": false,
                         "import": true,
@@ -8309,7 +8319,7 @@
             ]
           },
           {
-            "name": "Front Facing Hull-mounted Turret Mounted MMG",
+            "name": "Front Facing Hull-mounted MMG",
             "id": "3927-783a-4720-d0a7",
             "hidden": false,
             "import": true,
@@ -8406,18 +8416,17 @@
                     "constraints": [
                       {"id": "8519-2c21-661b-8cb6", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
                       {"id": "16ab-fffa-184e-f08c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
-                    ],
-                    "infoLinks": [
-                      {
-                        "name": "HE(X\")",
-                        "id": "d96a-0247-3f6e-3616",
-                        "hidden": false,
-                        "targetId": "47c0-c90b-acff-3e23",
-                        "type": "rule",
-                        "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "2"}, {"arg": "X", "field": "description", "type": "replace", "value": "2"}]
-                      }
-                    ],
-                    "modifiers": [{"affects": "self.entries.recursive.profiles.Ranged Weapon", "arg": "HE(1\")", "field": "facf-631c-0026-5956", "type": "replace", "value": "HE(2\")"}]
+                    ]
+                  }
+                ],
+                "infoLinks": [
+                  {
+                    "name": "Improved HE",
+                    "id": "a0f8-b270-c3e4-6f95",
+                    "hidden": false,
+                    "targetId": "5570-5dea-4d83-63d2",
+                    "type": "profile",
+                    "modifiers": [{"arg": "WEAPON", "field": "855b-a61a-569c-a804", "type": "replace", "value": "Medium Anti-Tank Gun"}]
                   }
                 ]
               }
@@ -8851,6 +8860,281 @@
                 "import": true,
                 "targetId": "a395-be11-dde6-c956",
                 "type": "selectionEntry"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Army Rules",
+        "id": "9120-1b7d-1f49-ac30",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Configuration", "id": "51f5-c30d-83c0-9e91", "hidden": false, "primary": true, "targetId": "3bcf-ea53-f232-234a"}],
+        "constraints": [
+          {"id": "aa99-48f3-c810-d904", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+          {"id": "10d9-6a73-ecf1-71e0", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+        ],
+        "infoLinks": [
+          {"name": "Fix Bayonets", "id": "6ca8-d74d-88e8-992d", "hidden": false, "targetId": "1a9c-1cde-877c-1dd4", "type": "rule"},
+          {"name": "Come on, Lads!", "id": "ebb4-66e9-61bd-c130", "hidden": false, "targetId": "3fa4-4638-39a5-88e5", "type": "rule"},
+          {"name": "Artiller Support", "id": "8ea1-a2df-2fda-b522", "hidden": false, "targetId": "8a7a-fab1-b3c4-1e03", "type": "rule"}
+        ]
+      },
+      {
+        "name": "Infantry Tank MK III Valentine I - VIIA",
+        "id": "f126-3db1-a6ad-241d",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "f651-53ff-c48b-e84c", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Medium Tank", "id": "f935-5f6c-2604-6b67", "hidden": false, "primary": false, "targetId": "6aaf-3503-eafe-ea2e"},
+          {"name": "Track Vehicle", "id": "bb7f-d454-40b5-00c4", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "Infantry Tank MK III Valentine I - VIIA", "id": "336d-ce99-03dd-cfe8", "hidden": false, "primary": false, "targetId": "b5d3-720e-8e79-fc39"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "587a-4e68-b18c-a2ae",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Co-axial MMG",
+            "id": "466b-f159-bfcb-7fe0",
+            "hidden": false,
+            "import": true,
+            "targetId": "6e7f-ff8d-410e-b885",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "5675-44c9-756b-7dd5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "9bbd-e59f-5e2a-9df9", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Turret-mounted Light Anti-Tank Gun",
+            "id": "76c3-f963-2f15-90cb",
+            "hidden": false,
+            "import": true,
+            "targetId": "deb0-fce1-cfef-b8a7",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "b220-56fc-dda4-5cae", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "96a7-8eca-325a-9f83", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Slow", "id": "4a44-bc92-d31f-c2f8", "hidden": false, "targetId": "6383-df3d-fef2-e594", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 124,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 155,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 186,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Infantry Tank MK III Valentine I - VIIA",
+            "id": "86f2-97c6-3d86-dfdd",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "9+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Infantry Tank MK III Valentine VIII - X",
+        "id": "c866-fea7-ae3b-f516",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "c54a-8be0-5a35-03ed", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Medium Tank", "id": "e89c-64d7-ecc6-cbdd", "hidden": false, "primary": false, "targetId": "6aaf-3503-eafe-ea2e"},
+          {"name": "Track Vehicle", "id": "f326-3f4e-fba1-ed1e", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "Infantry Tank MK III Valentine VIII - X", "id": "61a5-1780-e5fc-7d03", "hidden": false, "primary": false, "targetId": "7e68-6a71-3a6a-31fe"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "9b9c-236a-b817-db5d",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Turrent-mounted Medium Anti-Tank Gun",
+            "id": "7470-3d7a-dd6f-7b83",
+            "hidden": false,
+            "import": true,
+            "targetId": "7062-f323-5441-655e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "8a8c-c92a-90f9-d307", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "75db-e535-c28f-dc27", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Co-axial MMG",
+            "id": "b433-4aad-f4e6-5e34",
+            "hidden": false,
+            "import": true,
+            "targetId": "6e7f-ff8d-410e-b885",
+            "type": "selectionEntry",
+            "constraints": [{"id": "663a-cc21-7e01-f99b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 5}]
+          }
+        ],
+        "infoLinks": [{"name": "Slow", "id": "c41f-c018-dd39-2915", "hidden": false, "targetId": "6383-df3d-fef2-e594", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 136,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 170,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 204,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Infantry Tank MK III Valentine VIII - X",
+            "id": "ffdc-01c0-6144-5b3f",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "9+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Infantry Tank MK III Valentine XI",
+        "id": "f506-0164-9a76-1d95",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [{"name": "Vehicles", "id": "482b-b965-e6a0-d1e7", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"}],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "743b-c4a8-a407-88f6",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Co-axial MMG",
+            "id": "ff05-e913-cf2d-55dd",
+            "hidden": false,
+            "import": true,
+            "targetId": "6e7f-ff8d-410e-b885",
+            "type": "selectionEntry",
+            "constraints": [{"id": "c8d0-626a-d27c-c81f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 5}]
+          }
+        ],
+        "infoLinks": [{"name": "Slow", "id": "e925-bc59-5b3c-3bd4", "hidden": false, "targetId": "6383-df3d-fef2-e594", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 152,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 190,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 228,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "75mm medium anti-tank gun",
+            "id": "8031-6fe6-2663-8190",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [
+              {"id": "5c05-bf9c-0a38-7dce", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "fa49-4411-5375-e930", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "entryLinks": [
+              {
+                "name": "Turrent-mounted Medium Anti-Tank Gun",
+                "id": "1a1b-c68a-87d5-d7e6",
+                "hidden": false,
+                "import": true,
+                "targetId": "7062-f323-5441-655e",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "2f6a-112a-77a5-99f2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "6813-83d1-91fb-6f04", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              }
+            ],
+            "infoLinks": [
+              {
+                "name": "Improved HE",
+                "id": "b5d0-c745-a592-abcd",
+                "hidden": false,
+                "targetId": "5570-5dea-4d83-63d2",
+                "type": "profile",
+                "modifiers": [{"arg": "WEAPON", "field": "855b-a61a-569c-a804", "type": "replace", "value": "Medium Anti-Tank Gun"}]
               }
             ]
           }
