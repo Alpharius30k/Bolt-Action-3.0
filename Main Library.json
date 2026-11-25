@@ -956,6 +956,14 @@
         "typeId": "2133-190a-94b8-c4f5",
         "typeName": "Abilities",
         "characteristics": [{"name": "Description", "$text": "The **WEAPON** has +1 to its **HE(X\")**", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Crew-Carried Small Arms",
+        "id": "dcb2-b08d-da50-e3c5",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "The crew can either fire the main gun or the LMG, but not both", "typeId": "855b-a61a-569c-a804"}]
       }
     ],
     "sharedRules": [
@@ -2901,6 +2909,294 @@
               {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
               {"name": "Pens", "$text": "+5", "typeId": "b7fa-50ee-7ecf-7f80"},
               {"name": "Special", "$text": "HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "360° Medium Anti-Tank Gun",
+        "id": "8e0c-6e8e-61f1-8cdc",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Team", "id": "2b99-ef1b-46c6-4895", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "f4bc-7389-9cfb-d979",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "360° Arc", "id": "700a-48ff-ca3f-d51e", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Medium Anti-Tank Gun",
+            "id": "59cb-5ec5-dd6f-d80c",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "60\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+5", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, 360° Arc, HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "360° Light Anti-Tank Gun",
+        "id": "6a98-7aa8-3673-873e",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "9c40-60b8-1b37-5ffe",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "Team", "id": "8d9f-dc67-579b-7069", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {"name": "360° Arc", "id": "51fd-f90d-dd62-32fe", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Light Anti-Tank Gun",
+            "id": "2a04-e97b-01c7-643b",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+4", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, 360° Arc, HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rear Medium Anti-Tank Gun",
+        "id": "1de5-41c7-0fbd-4811",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Team", "id": "8f2d-3c9f-7e7c-0d3a", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {"name": "Rear Arc", "id": "58d0-cb64-1f05-72c6", "hidden": false, "targetId": "5ef2-cf41-e953-3052", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "2453-e844-fc2b-fc90",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Medium Anti-Tank Gun",
+            "id": "b91c-1a96-1e07-7aab",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "60\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+5", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Rear Arc, HE(1\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rear Super-Heavy Anti-Tank Gun",
+        "id": "78d4-aa00-552b-3acf",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Team", "id": "7fe7-493f-c51e-7187", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "b868-f003-28fa-dedd",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "3"}, {"arg": "X", "field": "description", "type": "replace", "value": "3"}]
+          },
+          {"name": "Rear Arc", "id": "b194-53bd-eecd-3b3d", "hidden": false, "targetId": "5ef2-cf41-e953-3052", "type": "rule"},
+          {"name": "Anti-Tank", "id": "dbd7-8c78-8cde-04a6", "hidden": false, "targetId": "6445-ff51-9edd-1269", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Super-Heavy Anti-Tank Gun",
+            "id": "9339-4831-2179-748d",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "84\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+7", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Rear Arc, HE(3\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Front Facing Hull-mounted Medium Anti-tank Gun",
+        "id": "6665-8dcf-19af-c1a0",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "Medium Anti-Tank Gun",
+            "id": "c926-b7e8-84aa-361d",
+            "hidden": false,
+            "import": true,
+            "targetId": "621f-e4f2-a687-b0ea",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "4066-908e-3de1-a6b3", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "d852-3b36-0a61-109f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Front Arc", "id": "4daa-c034-738d-a6b4", "hidden": false, "targetId": "4d50-0edf-8a60-3af8", "type": "rule"}],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Front Facing Hull-mounted"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Fixed", "field": "facf-631c-0026-5956", "type": "replace", "value": "Front Arc"}
+        ]
+      },
+      {
+        "name": "75mm medium anti-tank gun",
+        "id": "688b-32e9-61ee-be63",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "Turrent-mounted Medium Anti-Tank Gun",
+            "id": "a730-61cb-0d62-cbce",
+            "hidden": false,
+            "import": true,
+            "targetId": "7062-f323-5441-655e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "60d4-c2f2-f478-cffc", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "153e-ff9d-f21f-e3ea", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {
+            "name": "Improved HE",
+            "id": "d4c2-8c0c-b2e2-ac43",
+            "hidden": false,
+            "targetId": "5570-5dea-4d83-63d2",
+            "type": "profile",
+            "modifiers": [{"arg": "WEAPON", "field": "855b-a61a-569c-a804", "type": "replace", "value": "Medium Anti-Tank Gun"}]
+          }
+        ]
+      },
+      {
+        "name": "Turret Mounted Heavy Anti-Tank Gun",
+        "id": "dd21-6382-bc80-f89e",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "dd47-0eed-f046-48c2",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "2"}, {"arg": "X", "field": "description", "type": "replace", "value": "2"}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Heavy Anti-Tank Gun",
+            "id": "678e-0ea5-86cc-d984",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "72\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+6", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "HE(2\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pintle Mounted MMG",
+        "id": "df9a-463d-026f-aa2f",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "entryLinks": [
+          {
+            "name": "HMG",
+            "id": "80a6-46c8-a8ca-56b7",
+            "hidden": false,
+            "import": true,
+            "targetId": "8e47-beb7-6879-661e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "cbec-86fd-2ef6-89f4", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "7c00-a2e3-f5c6-d907", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "360° Arc", "id": "3c12-2b4e-7eb1-c78d", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
+          {"name": "Flak", "id": "b800-9ebf-a5ad-ee58", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "modifiers": [
+          {"affects": "self.entries.profiles.Ranged Weapon", "arg": "Team", "field": "facf-631c-0026-5956", "type": "replace", "value": "360° Arc, Flak"},
+          {"affects": "self.entries.profiles.Ranged Weapon", "field": "name", "join": " ", "type": "prepend", "value": "Pintle Mounted"}
+        ]
+      },
+      {
+        "name": "Turret-mounted Super-Heavy Anti-Tank Gun",
+        "id": "9b93-82fe-2777-9f63",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "b1b4-3b1a-4ac8-5a6f",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "3"}, {"arg": "X", "field": "description", "type": "replace", "value": "3"}]
+          },
+          {"name": "Anti-Tank", "id": "a0aa-7db8-c4c9-349a", "hidden": false, "targetId": "6445-ff51-9edd-1269", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Super-Heavy Anti-Tank Gun",
+            "id": "d623-b1ab-b11e-8496",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "84\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+7", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "HE(3\")", "typeId": "facf-631c-0026-5956"}
             ]
           }
         ]

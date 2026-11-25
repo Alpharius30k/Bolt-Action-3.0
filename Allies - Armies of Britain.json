@@ -54,7 +54,18 @@
       {"name": "Infantry Tank MK III Valentine I - VIIA", "id": "b5d3-720e-8e79-fc39", "hidden": false},
       {"name": "Infantry Tank MK III Valentine VIII - X", "id": "7e68-6a71-3a6a-31fe", "hidden": false},
       {"name": "Heavy Tank", "id": "5ba8-1d8e-d8b9-a80a", "hidden": false},
-      {"name": "Infantry Tank MK IV Churchill I-VI and IICS", "id": "7efc-c348-bb4f-9635", "hidden": false}
+      {"name": "Infantry Tank MK IV Churchill I-VI and IICS", "id": "7efc-c348-bb4f-9635", "hidden": false},
+      {"name": "soft-skin", "id": "5e17-930e-4c26-269d", "hidden": false},
+      {"name": "2-PDR Portee", "id": "6cdd-285f-4610-64b0", "hidden": false},
+      {"name": "Armoured carrier", "id": "f5a1-0952-e19d-2a2d", "hidden": false},
+      {"name": "Deacon", "id": "5505-91db-f5da-cb40", "hidden": false},
+      {"name": "Half-tracked", "id": "faa5-8735-0c7d-2c9b", "hidden": false},
+      {"name": "57mm SP autocar", "id": "4ee1-3817-769f-9f48", "hidden": false},
+      {"name": "6-PDR Portee", "id": "e2d3-d954-a9f0-5f18", "hidden": false},
+      {"name": "75mm SP Autocar", "id": "d98b-b2ae-6f88-e7c2", "hidden": false},
+      {"name": "M10 Wolverine", "id": "253d-31ad-7957-4974", "hidden": false},
+      {"name": "Archer SP 17-PDR", "id": "c108-ce7c-4ce6-68ea", "hidden": false},
+      {"name": "M10 17-PDR Achilles", "id": "14ac-b454-fbbf-ff44", "hidden": false}
     ],
     "entryLinks": [
       {"name": "Chaplin", "id": "7d04-8cc4-e814-e607", "hidden": false, "import": true, "targetId": "77b9-fb0e-7e86-b046", "type": "selectionEntry"},
@@ -276,7 +287,15 @@
         "import": true,
         "targetId": "adc5-faf0-350a-eda2",
         "type": "selectionEntry"
-      }
+      },
+      {"name": "M10 Wolverine", "id": "b26d-efe2-7aaf-f898", "hidden": false, "import": true, "targetId": "267b-885f-fad9-a2f4", "type": "selectionEntry"},
+      {"name": "2-PDR Portee", "id": "2dc0-3264-639c-b6e3", "hidden": false, "import": true, "targetId": "b675-5842-7fef-0eed", "type": "selectionEntry"},
+      {"name": "6-PDR Portee", "id": "efb6-2cd6-9bf3-cee2", "hidden": false, "import": true, "targetId": "6630-22c8-14b3-49e0", "type": "selectionEntry"},
+      {"name": "57mm SP autocar", "id": "66c0-fa7b-c81d-1799", "hidden": false, "import": true, "targetId": "1117-4ee4-9b73-266c", "type": "selectionEntry"},
+      {"name": "75mm SP Autocar", "id": "2e4f-0fe7-15df-e300", "hidden": false, "import": true, "targetId": "a0a5-233d-d764-5a8c", "type": "selectionEntry"},
+      {"name": "Archer SP 17-PDR", "id": "67b0-913d-54f5-dac6", "hidden": false, "import": true, "targetId": "299b-44a8-5bb6-8fc4", "type": "selectionEntry"},
+      {"name": "Deacon", "id": "e8af-6059-e554-eab9", "hidden": false, "import": true, "targetId": "b5da-b928-3b82-4840", "type": "selectionEntry"},
+      {"name": "M10 17-PDR Achilles", "id": "24a4-8207-6b6e-8ae7", "hidden": false, "import": true, "targetId": "d0c8-254f-859b-efe2", "type": "selectionEntry"}
     ],
     "sharedProfiles": [
       {
@@ -9350,6 +9369,927 @@
                     ]
                   }
                 ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "2-PDR Portee",
+        "id": "b675-5842-7fef-0eed",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "b644-fb62-bffd-4075", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "soft-skin", "id": "726a-4c46-48c8-a4b7", "hidden": false, "primary": false, "targetId": "5e17-930e-4c26-269d"},
+          {"name": "Wheeled Vehicle", "id": "c98d-73a0-48ce-277c", "hidden": false, "primary": false, "targetId": "64fb-3b58-38d2-b495"},
+          {"name": "2-PDR Portee", "id": "776a-381c-5b38-e6ce", "hidden": false, "primary": false, "targetId": "6cdd-285f-4610-64b0"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "051f-1e1b-c50a-7c41",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "Pintle Mounted MMG",
+            "id": "6aec-c5d3-d46d-236b",
+            "hidden": false,
+            "import": true,
+            "targetId": "6e53-33e9-718c-fa3d",
+            "type": "selectionEntry",
+            "constraints": [{"id": "0dc9-029f-f0b1-456b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
+          },
+          {
+            "name": "360° Light Anti-Tank Gun",
+            "id": "f2c0-7814-790d-24d6",
+            "hidden": false,
+            "import": true,
+            "targetId": "6a98-7aa8-3673-873e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "5e58-b2b3-7ec1-4207", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "b27d-79bc-c001-ac33", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 56,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 70,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 84,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "2-PDR Portee",
+            "id": "b17d-0a18-1412-5493",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "6-PDR Portee",
+        "id": "6630-22c8-14b3-49e0",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "dab4-55fc-b135-bcea", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "soft-skin", "id": "4308-7b6f-58bf-6378", "hidden": false, "primary": false, "targetId": "5e17-930e-4c26-269d"},
+          {"name": "Wheeled Vehicle", "id": "027c-c27a-2b69-dc57", "hidden": false, "primary": false, "targetId": "64fb-3b58-38d2-b495"},
+          {"name": "6-PDR Portee", "id": "cfe1-7f21-1e2e-2899", "hidden": false, "primary": false, "targetId": "e2d3-d954-a9f0-5f18"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "1c7f-4790-5513-74e6",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "Pintle Mounted MMG",
+            "id": "6b20-59ad-83fe-60ff",
+            "hidden": false,
+            "import": true,
+            "targetId": "6e53-33e9-718c-fa3d",
+            "type": "selectionEntry",
+            "constraints": [{"id": "de94-af90-922a-a574", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 68,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 85,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 102,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "6-PDR Portee",
+            "id": "dab5-5d43-ae1e-271b",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Main Weapon",
+            "id": "1593-3cd6-d2dc-3640",
+            "hidden": false,
+            "constraints": [
+              {"id": "cf70-257c-98f4-7dd8", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "b63a-95fb-c8e6-de6a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "entryLinks": [
+              {"name": "Medium Anti-Tank Gun", "id": "3049-eb77-2da6-7141", "hidden": false, "import": true, "targetId": "621f-e4f2-a687-b0ea", "type": "selectionEntry"},
+              {"name": "Rear Medium Anti-Tank Gun", "id": "0f53-6329-a4b9-5616", "hidden": false, "import": true, "targetId": "1de5-41c7-0fbd-4811", "type": "selectionEntry"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Deacon",
+        "id": "b5da-b928-3b82-4840",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "ac43-4314-952d-ed2d", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Armoured carrier", "id": "ea98-12fc-25e7-5368", "hidden": false, "primary": false, "targetId": "f5a1-0952-e19d-2a2d"},
+          {"name": "Wheeled Vehicle", "id": "a31a-3833-78c8-c536", "hidden": false, "primary": false, "targetId": "64fb-3b58-38d2-b495"},
+          {"name": "Deacon", "id": "7d75-b568-95e0-6027", "hidden": false, "primary": false, "targetId": "5505-91db-f5da-cb40"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "fa1d-f8c7-9518-67ef",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "Turrent-mounted Medium Anti-Tank Gun",
+            "id": "9d7f-16f4-f5b4-04d8",
+            "hidden": false,
+            "import": true,
+            "targetId": "7062-f323-5441-655e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "fb65-b0a8-6a13-f244", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "9f31-dd6b-e226-af7a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 88,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 110,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 132,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Deacon",
+            "id": "7c9f-fefc-3dc6-b76d",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Archer SP 17-PDR",
+        "id": "299b-44a8-5bb6-8fc4",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "b06a-a4c8-cc76-ba88", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Medium Tank", "id": "8fc4-46b1-5a87-7a0b", "hidden": false, "primary": false, "targetId": "6aaf-3503-eafe-ea2e"},
+          {"name": "Track Vehicle", "id": "1118-13b8-3644-452b", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "Archer SP 17-PDR", "id": "5981-ba0f-0167-3097", "hidden": false, "primary": false, "targetId": "c108-ce7c-4ce6-68ea"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "c107-6077-92a2-7639",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "6215-8366-c31a-db7d", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Light HE", "id": "29b3-10ee-78b2-10ad", "hidden": false, "targetId": "c18c-45a0-1b92-ed3d", "type": "profile"},
+          {"name": "Crew-Carried Small Arms", "id": "4d23-8b24-f04a-c208", "hidden": false, "targetId": "dcb2-b08d-da50-e3c5", "type": "profile"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 158,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 198,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 238,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Archer SP 17-PDR",
+            "id": "d826-3775-516e-ffe1",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "9+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Weapons",
+            "id": "588e-9553-4216-5a37",
+            "hidden": false,
+            "entryLinks": [
+              {
+                "name": "Rear Super-Heavy Anti-Tank Gun",
+                "id": "8f3c-b089-31bc-55dd",
+                "hidden": false,
+                "import": true,
+                "targetId": "78d4-aa00-552b-3acf",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "0d9d-801b-dbdb-90b3", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "5b18-1fa2-f0c5-10a2", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              },
+              {
+                "name": "Pintle Mounted LMG",
+                "id": "1aa2-c685-dff1-9267",
+                "hidden": false,
+                "import": true,
+                "targetId": "6359-a62c-cfb9-95de",
+                "type": "selectionEntry",
+                "constraints": [
+                  {"id": "82b5-4c06-9e60-118b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+                  {"id": "31e3-1fa0-ea28-738b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "57mm SP autocar",
+        "id": "1117-4ee4-9b73-266c",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "f531-0e12-6f62-94f6", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Armoured carrier", "id": "aa81-5b27-f86a-6dbf", "hidden": false, "primary": false, "targetId": "f5a1-0952-e19d-2a2d"},
+          {"name": "Half-tracked", "id": "7b91-3439-4bc2-dbca", "hidden": false, "primary": false, "targetId": "faa5-8735-0c7d-2c9b"},
+          {"name": "57mm SP autocar", "id": "0c65-6fd5-2100-d6f7", "hidden": false, "primary": false, "targetId": "4ee1-3817-769f-9f48"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "bb64-a0d7-7dc3-8efd",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "Front Facing Hull-mounted Medium Anti-tank Gun",
+            "id": "d9b3-f955-6313-c8aa",
+            "hidden": false,
+            "import": true,
+            "targetId": "6665-8dcf-19af-c1a0",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "11b9-29df-3920-e3d5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "e202-4465-b8ca-f178", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Pintle Mounted MMG",
+            "id": "4fe5-3429-0aee-955f",
+            "hidden": false,
+            "import": true,
+            "targetId": "6e53-33e9-718c-fa3d",
+            "type": "selectionEntry",
+            "constraints": [{"id": "ebed-03b3-1eb9-97fb", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 15}]
+          }
+        ],
+        "infoLinks": [{"name": "Open Topped", "id": "a978-9457-39ba-260c", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 84,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 105,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 126,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "57mm SP autocar",
+            "id": "622e-d4b7-10fc-b8ad",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "75mm SP Autocar",
+        "id": "a0a5-233d-d764-5a8c",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "2697-cafb-790e-1b25", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Armoured carrier", "id": "9e19-b598-ec8f-8433", "hidden": false, "primary": false, "targetId": "f5a1-0952-e19d-2a2d"},
+          {"name": "Half-tracked", "id": "2288-eb2f-904b-a50b", "hidden": false, "primary": false, "targetId": "faa5-8735-0c7d-2c9b"},
+          {"name": "75mm SP Autocar", "id": "0a61-2cee-3404-b95e", "hidden": false, "primary": false, "targetId": "d98b-b2ae-6f88-e7c2"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "ce2d-bcd5-7322-568e",
+            "hidden": false,
+            "import": true,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "75mm medium anti-tank gun",
+            "id": "cae5-443f-1a65-e9ab",
+            "hidden": false,
+            "import": true,
+            "targetId": "688b-32e9-61ee-be63",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "819b-713b-7309-a7b6", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "7708-975b-44c9-eae5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Open Topped", "id": "c2b6-19ad-9b17-40b9", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 84,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 105,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 126,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M10 Wolverine",
+        "id": "267b-885f-fad9-a2f4",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "039e-bf0e-a5e3-cd43", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Light Tank", "id": "dbd3-bb58-f084-aec2", "hidden": false, "primary": false, "targetId": "422c-f7f9-65a3-412d"},
+          {"name": "Track Vehicle", "id": "efec-e5b2-2e13-546f", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "M10 Wolverine", "id": "dae8-f39e-8bee-5f49", "hidden": false, "primary": false, "targetId": "253d-31ad-7957-4974"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "b108-e5b3-07a7-51c2",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "Turret Mounted Heavy Anti-Tank Gun",
+            "id": "0aa4-443c-de2a-80aa",
+            "hidden": false,
+            "import": true,
+            "targetId": "dd21-6382-bc80-f89e",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "dd74-5609-f0b8-d67a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "d630-b604-9663-f63f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Front Facing Pintle Mounted MMG",
+            "id": "a1ae-a5eb-bc36-e19c",
+            "hidden": false,
+            "import": true,
+            "targetId": "6614-ee56-c3f6-695b",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "79ab-6948-315d-b0f7", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "d794-3e1e-7fee-f9ae", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Pintle Mounted HMG",
+            "id": "3603-47e7-9527-29af",
+            "hidden": false,
+            "import": true,
+            "targetId": "f978-c230-8fd2-6aea",
+            "type": "selectionEntry",
+            "constraints": [{"id": "b591-495f-f5ef-5368", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 25}]
+          }
+        ],
+        "infoLinks": [{"name": "Open Topped", "id": "06a4-7eda-5024-270e", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 128,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 160,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 192,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "M10 Wolverine",
+            "id": "19a4-f52a-dfe7-072f",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "8+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M10 17-PDR Achilles",
+        "id": "d0c8-254f-859b-efe2",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "ce91-5307-0d95-2944", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Light Tank", "id": "2c8b-0880-8629-58a0", "hidden": false, "primary": false, "targetId": "422c-f7f9-65a3-412d"},
+          {"name": "Track Vehicle", "id": "af77-06a0-dd9c-60fb", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "M10 17-PDR Achilles", "id": "16ed-a3cc-5043-5654", "hidden": false, "primary": false, "targetId": "14ac-b454-fbbf-ff44"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "7b97-e9ab-5306-625a",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "Turret-mounted Super-Heavy Anti-Tank Gun",
+            "id": "a391-df53-16fb-3c43",
+            "hidden": false,
+            "import": true,
+            "targetId": "9b93-82fe-2777-9f63",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "b61e-9c10-aedf-cc0c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "ce67-022c-038c-b612", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Pintle Mounted HMG",
+            "id": "0925-57ae-149b-951e",
+            "hidden": false,
+            "import": true,
+            "targetId": "f978-c230-8fd2-6aea",
+            "type": "selectionEntry",
+            "constraints": [{"id": "c7e9-fbe6-c28c-0984", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 25}]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "4b39-2f6a-1cc2-002c", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Light HE", "id": "9202-dbeb-ed64-176e", "hidden": false, "targetId": "c18c-45a0-1b92-ed3d", "type": "profile"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 128,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 160,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 192,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
               }
             ]
           }
