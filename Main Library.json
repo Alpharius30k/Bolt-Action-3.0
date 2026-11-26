@@ -37,7 +37,10 @@
       {"name": "Engineers", "id": "61af-d582-fb45-c1c0", "hidden": false},
       {"name": "Flamethrower Team", "id": "cafc-f9b9-d784-2d2c", "hidden": false},
       {"name": "Machine Gun Team", "id": "e844-ef36-c388-c130", "hidden": false},
-      {"name": "Mortar Team", "id": "9dde-4b82-cb29-ce20", "hidden": false}
+      {"name": "Mortar Team", "id": "9dde-4b82-cb29-ce20", "hidden": false},
+      {"name": "Lord of War", "id": "367d-3c92-fe6c-db3e", "hidden": false},
+      {"name": "Train carried", "id": "51e0-0086-9ad4-d4f5", "hidden": false},
+      {"name": "Custom Made", "id": "d46b-6df6-4e8f-6135", "hidden": false}
     ],
     "costTypes": [{"name": "Points", "id": "cf06-9113-0bb3-480a", "defaultCostLimit": -1}, {"name": "Dice", "id": "bc13-1fcd-379a-6b9c", "defaultCostLimit": -1}],
     "forceEntries": [
@@ -264,6 +267,7 @@
         "name": "Engineer Platoon",
         "id": "c30e-2d9f-bf79-a67b",
         "hidden": false,
+        "sortIndex": 3,
         "categoryLinks": [
           {
             "name": "Platoon Commander",
@@ -391,6 +395,7 @@
         "name": "Heavy Weapon Platoon",
         "id": "8d58-8ae4-6e3f-e125",
         "hidden": false,
+        "sortIndex": 3,
         "categoryLinks": [
           {
             "name": "Platoon Commander",
@@ -584,6 +589,7 @@
         "name": "Artillery Platoon",
         "id": "fee4-2afb-6c05-5c89",
         "hidden": false,
+        "sortIndex": 3,
         "categoryLinks": [
           {
             "name": "Platoon Commander",
@@ -704,6 +710,7 @@
         "name": "Armoured Platoon",
         "id": "8241-3c0a-694a-d525",
         "hidden": false,
+        "sortIndex": 3,
         "categoryLinks": [
           {
             "name": "Command Vehicle",
@@ -726,6 +733,13 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Lord of War",
+        "id": "2041-daa7-d3b8-461b",
+        "hidden": false,
+        "sortIndex": 4,
+        "categoryLinks": [{"name": "Lord of War", "id": "3872-0426-23be-001f", "hidden": false, "targetId": "367d-3c92-fe6c-db3e"}]
       }
     ],
     "profileTypes": [
@@ -964,6 +978,14 @@
         "typeId": "2133-190a-94b8-c4f5",
         "typeName": "Abilities",
         "characteristics": [{"name": "Description", "$text": "The crew can either fire the main gun or the LMG, but not both", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Rail Locked",
+        "id": "b15e-f7e7-fa7c-fc8e",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "This **model** can only move along a **rail track**", "typeId": "855b-a61a-569c-a804"}]
       }
     ],
     "sharedRules": [
@@ -998,7 +1020,7 @@
       {
         "name": "HE(X\")",
         "id": "47c0-c90b-acff-3e23",
-        "description": "Use X” **template** to determine hits but you **roll 1 hit roll** for all units in the template. In addition the weapon gains +X Pen and deal additional pins based on X:\n- 1: D2 pins or D3 if the **hit unit** is in a building\n- 2: D2 pins or D6 if the **hit unit** is in a building\n- 3: D3 pins or 2D6 if the **hit unit** is in a building\n- 4: D3 pins or 3D6 if the **hit unit** is in a building",
+        "description": "Use X” **template** to determine hits but you **roll 1 hit roll** for all units in the template. In addition the weapon gains +X Pen and deal additional pins based on X:\n- 1: D2 pins or D3 if the **hit unit** is in a building\n- 2: D2 pins or D6 if the **hit unit** is in a building\n- 3: D3 pins or 2D6 if the **hit unit** is in a building\n- 4: D3 pins or 3D6 if the **hit unit** is in a building\n- 5: D6 pins or 4D6 if the **hit unit** is in a building",
         "hidden": false
       },
       {
@@ -1049,7 +1071,10 @@
       },
       {"name": "Co-axial", "id": "5183-5187-25d8-8529", "description": "You can not fire this and your main **turret weapon** you must choose", "hidden": false},
       {"name": "Fast", "id": "9e65-e8fe-388d-c7da", "hidden": false},
-      {"name": "Slow", "id": "6383-df3d-fef2-e594", "hidden": false}
+      {"name": "Slow", "id": "6383-df3d-fef2-e594", "hidden": false},
+      {"name": "Multi-Stage Launch", "id": "3d0d-86cb-51ca-3901", "description": "This **weapon** can only be fired every other turn", "hidden": false},
+      {"name": "Long Ranged Barrage", "id": "239d-4745-fa69-1a36", "description": "This weapon can target any unit in the same room as it", "hidden": false},
+      {"name": "Turn on the spot", "id": "8f35-62e5-9375-8216", "description": "This **vehicle** can pivot without moving", "hidden": false}
     ],
     "sharedSelectionEntries": [
       {
@@ -3197,6 +3222,141 @@
               {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
               {"name": "Pens", "$text": "+7", "typeId": "b7fa-50ee-7ecf-7f80"},
               {"name": "Special", "$text": "HE(3\")", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Super Heavy Howitzer",
+        "id": "076d-2f99-cf4e-a06d",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Fixed", "id": "60bd-ebd4-9f95-e667", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "5346-06b8-e248-bae3",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "5"}, {"arg": "X", "field": "description", "type": "replace", "value": "5"}]
+          },
+          {"name": "Howitzer", "id": "9159-3931-2f98-9901", "hidden": false, "targetId": "febb-1ee1-796e-f5b1", "type": "rule"},
+          {"name": "Team", "id": "016f-7cf2-cf38-19ca", "hidden": false, "targetId": "7836-2556-8c6d-07c4", "type": "rule"},
+          {"name": "Multi-Stage Launch", "id": "7a68-3fae-5a4a-83ca", "hidden": false, "targetId": "3d0d-86cb-51ca-3901", "type": "rule"},
+          {"name": "Long Ranged Barrage", "id": "1c4f-d8bc-d082-9ee9", "hidden": false, "targetId": "239d-4745-fa69-1a36", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Super Heavy Howitzer",
+            "id": "a8db-b102-2879-0b32",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "96\" (42\"-X\")", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Team, Fixed, Howitzer, HE(5\"), Multi-Stage Launch", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "360° Medium Mortar",
+        "id": "ebff-1d0a-ad97-35a0",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "360° Arc", "id": "3477-d758-5917-1796", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
+          {"name": "Indirect Fire", "id": "ec2a-97c1-3fb7-6e92", "hidden": false, "targetId": "e5b4-599d-635e-b2fa", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "4afa-00b5-7167-1b75",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "2"}, {"arg": "X", "field": "description", "type": "replace", "value": "2"}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Medium Mortar",
+            "id": "c101-2eb7-beaa-260b",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "12\" - 60\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "360° Arc, HE(2\"), Indirect Fire", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "360° HMG",
+        "id": "29ec-6360-8eb2-c495",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "360° Arc", "id": "b036-65e2-5d84-25fa", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"}],
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "HMG",
+            "id": "6ad7-5bd7-febf-ef45",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "6", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "1+", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "360° Arc", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "360° LMG",
+        "id": "8b42-42a7-e2d6-02c8",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [{"name": "360° Arc", "id": "42b6-15f5-a1ab-19ac", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"}],
+        "modifiers": [
+          {
+            "affects": "profiles.Ranged Weapon",
+            "field": "1cc9-8c67-baf2-87e7",
+            "type": "divide",
+            "value": "2",
+            "conditions": [{"childId": "a827-3f5a-6588-bf47", "childName": "Vehicles", "field": "selections", "scope": "ancestor", "shared": true, "type": "instanceOf", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "LMG",
+            "id": "1672-27d2-cc1a-438a",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "36\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "4", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "360° Arc", "typeId": "facf-631c-0026-5956"}
             ]
           }
         ]

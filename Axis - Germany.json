@@ -1,0 +1,130 @@
+{
+  "catalogue": {
+    "name": "Axis - Germany",
+    "id": "718b-c7a0-5f33-c6ed",
+    "battleScribeVersion": "2.03",
+    "gameSystemId": "sys-67f7-7e29-8c86-2260",
+    "gameSystemRevision": 2,
+    "library": false,
+    "revision": 1,
+    "type": "catalogue",
+    "catalogueLinks": [{"name": "Main Library", "id": "3736-992e-c93a-ba2f", "targetId": "82aa-7e12-b7a9-f2c6", "type": "catalogue"}],
+    "categoryEntries": [{"name": "Schwerer Gustav", "id": "a863-88b0-0904-04a1", "hidden": false}],
+    "entryLinks": [{"name": "Schwerer Gustav", "id": "001b-5338-150f-e8dc", "hidden": false, "import": true, "targetId": "8958-bfd1-4db5-d07d", "type": "selectionEntry"}],
+    "sharedSelectionEntries": [
+      {
+        "name": "Schwerer Gustav",
+        "id": "8958-bfd1-4db5-d07d",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Lord of War", "id": "29f8-83f3-2e08-66d5", "hidden": false, "primary": true, "targetId": "367d-3c92-fe6c-db3e"},
+          {"name": "Artillery", "id": "3391-a3cc-3384-417e", "hidden": false, "primary": false, "targetId": "95e0-99a4-f616-19b8"},
+          {"name": "Train carried", "id": "7be5-69a0-f216-09b8", "hidden": false, "primary": false, "targetId": "51e0-0086-9ad4-d4f5"},
+          {"name": "Schwerer Gustav", "id": "fbe9-52ea-c48e-232b", "hidden": false, "primary": false, "targetId": "a863-88b0-0904-04a1"},
+          {"name": "Custom Made", "id": "5be9-84fa-81e9-3ae7", "hidden": false, "primary": false, "targetId": "d46b-6df6-4e8f-6135"}
+        ],
+        "constraints": [
+          {
+            "id": "8d86-ca2a-7e41-2828",
+            "field": "selections",
+            "includeChildForces": true,
+            "includeChildSelections": true,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 500}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "d8c8-01c4-87a6-ba65",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [
+              {"affects": "7d03-bd00-3f70-aece", "field": "hidden", "type": "set", "value": true},
+              {"affects": "8066-4eb9-90e7-203a", "field": "hidden", "type": "set", "value": true}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Rail Locked", "id": "2186-cf2b-7500-b15c", "hidden": false, "targetId": "b15e-f7e7-fa7c-fc8e", "type": "profile"}],
+        "profiles": [
+          {
+            "name": "Schwerer Gustav",
+            "id": "e1ef-66b1-3c28-45dc",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "3\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "12+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "Schwerer Gustav Rail Cannon",
+            "id": "87f5-e400-1a40-8dbf",
+            "hidden": false,
+            "import": true,
+            "type": "upgrade",
+            "constraints": [
+              {"id": "1909-3a8e-22a6-19d5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "7a54-3e06-d248-f072", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "infoLinks": [
+              {
+                "name": "HE(X\")",
+                "id": "9910-567d-fc70-f29f",
+                "hidden": false,
+                "targetId": "47c0-c90b-acff-3e23",
+                "type": "rule",
+                "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "5"}, {"arg": "X", "field": "description", "type": "replace", "value": "5"}]
+              },
+              {"name": "Fixed", "id": "adf9-baf8-32b5-23bf", "hidden": false, "targetId": "7a52-6b20-fdaa-42c4", "type": "rule"},
+              {"name": "Multi-Stage Launch", "id": "5b84-57b7-3305-7f18", "hidden": false, "targetId": "3d0d-86cb-51ca-3901", "type": "rule"}
+            ],
+            "profiles": [
+              {
+                "name": "Schwerer Gustav Rail Cannon",
+                "id": "0643-2a16-be79-f1c1",
+                "hidden": false,
+                "typeId": "e8ea-235b-e27c-4d69",
+                "typeName": "Ranged Weapon",
+                "characteristics": [
+                  {"name": "Range", "$text": "-", "typeId": "48fb-dbbf-ed34-5b90"},
+                  {"name": "Shots", "$text": "1", "typeId": "1cc9-8c67-baf2-87e7"},
+                  {"name": "Pens", "$text": "+12", "typeId": "b7fa-50ee-7ecf-7f80"},
+                  {"name": "Special", "$text": "HE(5\"), Fixed, Multi-Stage Launch", "typeId": "facf-631c-0026-5956"}
+                ]
+              },
+              {
+                "name": "Schwerer Gustav Rail Cannon",
+                "id": "12a3-934e-9ce9-65a9",
+                "hidden": false,
+                "typeId": "2133-190a-94b8-c4f5",
+                "typeName": "Abilities",
+                "characteristics": [
+                  {
+                    "name": "Description",
+                    "$text": "The **Schwerer Gustav Rail Cannon** can target any **unit** in the same **Building** as the **Schwerer Gustav**",
+                    "typeId": "855b-a61a-569c-a804"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

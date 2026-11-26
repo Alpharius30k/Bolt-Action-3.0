@@ -65,7 +65,14 @@
       {"name": "75mm SP Autocar", "id": "d98b-b2ae-6f88-e7c2", "hidden": false},
       {"name": "M10 Wolverine", "id": "253d-31ad-7957-4974", "hidden": false},
       {"name": "Archer SP 17-PDR", "id": "c108-ce7c-4ce6-68ea", "hidden": false},
-      {"name": "M10 17-PDR Achilles", "id": "14ac-b454-fbbf-ff44", "hidden": false}
+      {"name": "M10 17-PDR Achilles", "id": "14ac-b454-fbbf-ff44", "hidden": false},
+      {"name": "BL 18-inch railway howitzer", "id": "2726-d7a7-de43-fc9a", "hidden": false},
+      {"name": "Self-Propelled Atillery", "id": "67d1-ece7-9074-ba0a", "hidden": false},
+      {"name": "Machine Gun Carrier", "id": "cbb9-45f2-f1a0-81b5", "hidden": false},
+      {"name": "3-Inch Mortar Carrier", "id": "89c2-9ed6-c7c5-075c", "hidden": false},
+      {"name": "Bishop SP 25-PDR", "id": "8de2-6ce2-9b3f-3171", "hidden": false},
+      {"name": "M7 Priest", "id": "2e25-4f31-d121-18d0", "hidden": false},
+      {"name": "Sexton", "id": "4208-dad7-0cde-eea3", "hidden": false}
     ],
     "entryLinks": [
       {"name": "Chaplin", "id": "7d04-8cc4-e814-e607", "hidden": false, "import": true, "targetId": "77b9-fb0e-7e86-b046", "type": "selectionEntry"},
@@ -295,7 +302,20 @@
       {"name": "75mm SP Autocar", "id": "2e4f-0fe7-15df-e300", "hidden": false, "import": true, "targetId": "a0a5-233d-d764-5a8c", "type": "selectionEntry"},
       {"name": "Archer SP 17-PDR", "id": "67b0-913d-54f5-dac6", "hidden": false, "import": true, "targetId": "299b-44a8-5bb6-8fc4", "type": "selectionEntry"},
       {"name": "Deacon", "id": "e8af-6059-e554-eab9", "hidden": false, "import": true, "targetId": "b5da-b928-3b82-4840", "type": "selectionEntry"},
-      {"name": "M10 17-PDR Achilles", "id": "24a4-8207-6b6e-8ae7", "hidden": false, "import": true, "targetId": "d0c8-254f-859b-efe2", "type": "selectionEntry"}
+      {"name": "M10 17-PDR Achilles", "id": "24a4-8207-6b6e-8ae7", "hidden": false, "import": true, "targetId": "d0c8-254f-859b-efe2", "type": "selectionEntry"},
+      {
+        "name": "BL 18-inch railway howitzer",
+        "id": "bee2-53fa-d144-49c9",
+        "hidden": false,
+        "import": true,
+        "targetId": "ddf7-d175-cb4d-5184",
+        "type": "selectionEntry"
+      },
+      {"name": "Sexton", "id": "de62-c5de-7223-ce9b", "hidden": false, "import": true, "targetId": "7066-d168-967b-1c4e", "type": "selectionEntry"},
+      {"name": "3-Inch Mortar Carrier", "id": "9135-e56e-1a71-434d", "hidden": false, "import": true, "targetId": "fbcf-e40b-a3ef-6210", "type": "selectionEntry"},
+      {"name": "Bishop SP 25-PDR", "id": "a67c-0a9d-49af-b97d", "hidden": false, "import": true, "targetId": "a47c-39df-5da7-58eb", "type": "selectionEntry"},
+      {"name": "M7 Priest", "id": "3fc1-73c4-6548-338f", "hidden": false, "import": true, "targetId": "6ff5-6636-97c7-6708", "type": "selectionEntry"},
+      {"name": "Machine Gun Carrier", "id": "c357-9406-edb6-9df9", "hidden": false, "import": true, "targetId": "c63b-1582-ca99-1437", "type": "selectionEntry"}
     ],
     "sharedProfiles": [
       {
@@ -10294,6 +10314,603 @@
             ]
           }
         ]
+      },
+      {
+        "name": "BL 18-inch railway howitzer",
+        "id": "ddf7-d175-cb4d-5184",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Artillery", "id": "a33f-41cd-1936-5b48", "hidden": false, "primary": true, "targetId": "95e0-99a4-f616-19b8"},
+          {"name": "Track Vehicle", "id": "5c69-8175-3de0-2a02", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "BL 18-inch railway howitzer", "id": "fcff-e838-b0cb-16c8", "hidden": false, "primary": false, "targetId": "2726-d7a7-de43-fc9a"},
+          {"name": "Custom Made", "id": "d6ff-aafa-fb40-6ad4", "hidden": false, "primary": false, "targetId": "d46b-6df6-4e8f-6135"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "b4be-3b0d-4804-f79c",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "7d03-bd00-3f70-aece", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "Super Heavy Howitzer",
+            "id": "8785-3f42-ecee-e11e",
+            "hidden": false,
+            "import": true,
+            "targetId": "076d-2f99-cf4e-a06d",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "0ab4-921d-e4ca-bd07", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "e1f7-1ca7-df52-fd6b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "For King and Country!",
+            "id": "b5c5-c5fd-13a8-08a2",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "f975-845c-ef0e-2e5e",
+            "type": "selectionEntryGroup",
+            "modifiers": [
+              {"affects": "3afd-fac2-ce09-0c52", "field": "hidden", "type": "set", "value": true},
+              {"affects": "4e26-04d8-71b1-9376", "field": "hidden", "type": "set", "value": true},
+              {"affects": "16b6-65ae-2f99-83c4", "field": "hidden", "type": "set", "value": true}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Rail Locked", "id": "0762-e4a2-0186-76f7", "hidden": false, "targetId": "b15e-f7e7-fa7c-fc8e", "type": "profile"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 200,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 225,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "BL 18-inch railway howitzer",
+            "id": "7f12-e1b4-4f34-3435",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "3\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "10+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Machine Gun Carrier",
+        "id": "c63b-1582-ca99-1437",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "f0f9-eabc-4b27-d3a5", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Armoured carrier", "id": "9625-12bd-e034-0a95", "hidden": false, "primary": false, "targetId": "f5a1-0952-e19d-2a2d"},
+          {"name": "Track Vehicle", "id": "d798-8b69-7866-1152", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "Machine Gun Carrier", "id": "691d-7f19-adbf-a692", "hidden": false, "primary": false, "targetId": "cbb9-45f2-f1a0-81b5"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Front-facing MMG",
+            "id": "6864-119f-cafb-cd56",
+            "hidden": false,
+            "import": true,
+            "targetId": "3df9-f496-f3c7-d0d7",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "b01a-7dec-997f-3c04", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "aa5d-4954-1da5-4abb", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Expirence",
+            "id": "cc7b-fe33-ad89-2e3c",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "b107-e679-ce01-5af4", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Turn on the spot", "id": "1681-85a4-fa50-8b69", "hidden": false, "targetId": "8f35-62e5-9375-8216", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 40,
+            "conditions": [{"childId": "7d03-bd00-3f70-aece", "childName": "Inexpirence", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 50,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 60,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Machine Gun Carrier",
+            "id": "ee97-6c4f-b17b-4a4b",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "3-Inch Mortar Carrier",
+        "id": "fbcf-e40b-a3ef-6210",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "2067-fad1-3c81-d74a", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Armoured Car", "id": "69cd-c012-9ff7-28be", "hidden": false, "primary": false, "targetId": "22de-78ae-5389-f4e8"},
+          {"name": "Track Vehicle", "id": "3689-407f-a403-4c12", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "3-Inch Mortar Carrier", "id": "bd07-de2e-39da-af0d", "hidden": false, "primary": false, "targetId": "89c2-9ed6-c7c5-075c"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "de11-29e4-d206-4e98",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "360° Medium Mortar",
+            "id": "6045-077c-75a7-f30e",
+            "hidden": false,
+            "import": true,
+            "targetId": "ebff-1d0a-ad97-35a0",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "d1eb-ab11-0957-266d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "abd7-c3f4-2ee1-d3f3", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "ed43-fb41-c5fe-8d69", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Turn on the spot", "id": "40e2-7ebb-97d3-1a71", "hidden": false, "targetId": "8f35-62e5-9375-8216", "type": "rule"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 72,
+            "conditions": [{"childId": "7d03-bd00-3f70-aece", "childName": "Inexpirence", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 90,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 108,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "3-Inch Mortar Carrier",
+            "id": "8c78-c3b6-85ae-cc3d",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "7+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bishop SP 25-PDR",
+        "id": "a47c-39df-5da7-58eb",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "17e8-54a3-41c7-07ab", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Medium Tank", "id": "3c28-1122-1c91-66ff", "hidden": false, "primary": false, "targetId": "6aaf-3503-eafe-ea2e"},
+          {"name": "Track Vehicle", "id": "f7ad-9533-8822-adde", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "Bishop SP 25-PDR", "id": "afe4-d955-c245-9d19", "hidden": false, "primary": false, "targetId": "8de2-6ce2-9b3f-3171"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "b6f1-70cf-738a-d1c2",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "Light Howitzer",
+            "id": "eb25-9fad-8970-9880",
+            "hidden": false,
+            "import": true,
+            "targetId": "187d-7959-06a6-5c06",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "8491-5213-0871-3253", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "2814-bf3d-d9e6-eac9", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Light Anti-Tank Gun",
+            "id": "cb0f-689d-cdf5-57ed",
+            "hidden": false,
+            "import": true,
+            "targetId": "b7b4-2e65-f595-5cd6",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "d215-a386-5504-940d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "3c1f-3dab-660e-c701", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 128,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 160,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Bishop SP 25-PDR",
+            "id": "6226-55fc-317c-2406",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "9+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          },
+          {
+            "name": "25-Pdr AT Shell",
+            "id": "5e52-81b8-2736-e5ad",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This models **Light Howitzer** can be fired as a **light anti-tank gun**. Must declare before shooting.",
+                "typeId": "855b-a61a-569c-a804"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "M7 Priest",
+        "id": "6ff5-6636-97c7-6708",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "e5c4-a51b-0cfa-0424", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Light Tank", "id": "e1bf-c908-b6e4-edc7", "hidden": false, "primary": false, "targetId": "422c-f7f9-65a3-412d"},
+          {"name": "Track Vehicle", "id": "85a2-baa1-d4cc-39ea", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "M7 Priest", "id": "3c27-372f-458f-d2e3", "hidden": false, "primary": false, "targetId": "2e25-4f31-d121-18d0"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "77e1-6dfd-c439-02cb",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Medium Howitzer",
+            "id": "bce9-18b5-212c-7ad6",
+            "hidden": false,
+            "import": true,
+            "targetId": "59fe-f6e0-8c80-be0f",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "5600-d05b-62bb-2e8f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "4c52-ca65-edb8-eb5e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "360° HMG",
+            "id": "41dd-a4b0-d59a-a36c",
+            "hidden": false,
+            "import": true,
+            "targetId": "29ec-6360-8eb2-c495",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "cc33-5216-b41b-dfb4", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "15b7-88a7-713c-04f7", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Open Topped", "id": "4624-1c20-2f38-8c8c", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 136,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 170,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 204,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "M7 Priest",
+            "id": "81aa-5a46-722e-cd04",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "8+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sexton",
+        "id": "7066-d168-967b-1c4e",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "ca2f-ced0-155c-fd43", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Light Tank", "id": "92e7-a756-7439-2772", "hidden": false, "primary": false, "targetId": "422c-f7f9-65a3-412d"},
+          {"name": "Track Vehicle", "id": "4061-abaa-4c4c-3fb6", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "Sexton", "id": "02b2-41e6-3408-c3c2", "hidden": false, "primary": false, "targetId": "4208-dad7-0cde-eea3"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "7c0d-b634-53c6-5103",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Light Howitzer",
+            "id": "2461-6914-5f94-ecd0",
+            "hidden": false,
+            "import": true,
+            "targetId": "187d-7959-06a6-5c06",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "4cba-0101-0b04-c224", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "c02d-e0c0-9377-839a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "360° LMG",
+            "id": "6117-e376-6983-b7da",
+            "hidden": false,
+            "import": true,
+            "targetId": "8b42-42a7-e2d6-02c8",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "f3a9-9581-667a-183f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "7a26-9be7-d34d-28ea", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "bbd1-2371-ba33-489c", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Crew-Carried Small Arms", "id": "7c27-dc4b-35d2-1f96", "hidden": false, "targetId": "dcb2-b08d-da50-e3c5", "type": "profile"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 100,
+            "conditions": [{"childId": "7d03-bd00-3f70-aece", "childName": "Inexpirence", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 125,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 150,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Sexton",
+            "id": "a17e-5f11-ac85-da17",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "8+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          },
+          {
+            "name": "25-Pdr AT Shell",
+            "id": "7013-b0e3-51fc-27b1",
+            "hidden": false,
+            "typeId": "2133-190a-94b8-c4f5",
+            "typeName": "Abilities",
+            "characteristics": [
+              {
+                "name": "Description",
+                "$text": "This models **Light Howitzer** can be fired as a **light anti-tank gun**. Must declare before shooting.",
+                "typeId": "855b-a61a-569c-a804"
+              }
+            ]
+          }
+        ]
       }
     ],
     "sharedSelectionEntryGroups": [
@@ -10339,7 +10956,7 @@
                     "includeChildSelections": true,
                     "repeats": 1,
                     "roundUp": false,
-                    "scope": "unit-self",
+                    "scope": "root-entry-self",
                     "shared": true,
                     "value": 1
                   }
