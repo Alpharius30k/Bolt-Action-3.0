@@ -986,6 +986,14 @@
         "typeId": "2133-190a-94b8-c4f5",
         "typeName": "Abilities",
         "characteristics": [{"name": "Description", "$text": "This **model** can only move along a **rail track**", "typeId": "855b-a61a-569c-a804"}]
+      },
+      {
+        "name": "Stationary Firing Platform",
+        "id": "a7a9-b6eb-05df-257e",
+        "hidden": false,
+        "typeId": "2133-190a-94b8-c4f5",
+        "typeName": "Abilities",
+        "characteristics": [{"name": "Description", "$text": "This model can only shoot when it has the **Fire order**", "typeId": "855b-a61a-569c-a804"}]
       }
     ],
     "sharedRules": [
@@ -1074,7 +1082,33 @@
       {"name": "Slow", "id": "6383-df3d-fef2-e594", "hidden": false},
       {"name": "Multi-Stage Launch", "id": "3d0d-86cb-51ca-3901", "description": "This **weapon** can only be fired every other turn", "hidden": false},
       {"name": "Long Ranged Barrage", "id": "239d-4745-fa69-1a36", "description": "This weapon can target any unit in the same room as it", "hidden": false},
-      {"name": "Turn on the spot", "id": "8f35-62e5-9375-8216", "description": "This **vehicle** can pivot without moving", "hidden": false}
+      {"name": "Turn on the spot", "id": "8f35-62e5-9375-8216", "description": "This **vehicle** can pivot without moving", "hidden": false},
+      {
+        "name": "Advance Order",
+        "id": "7af5-cb29-3ef1-f4de",
+        "description": "While a model has the **Advance Order** it can move up to its **movement characteristic** then shoot however it has **-1 to hit**.",
+        "hidden": false
+      },
+      {"name": "Fire Order", "id": "7772-290e-91c0-945e", "description": "This model can not move but can shoot", "hidden": false},
+      {
+        "name": "Run Order",
+        "id": "2f97-6717-5b1b-84ee",
+        "description": "This model can move up to **double** its **movement characteristic** but can not **shoot**",
+        "hidden": false
+      },
+      {
+        "name": "Rally Order",
+        "id": "07ba-f912-a2f0-afae",
+        "description": "After this **unit** or **model** makes a **order test** instead of removing a set number of pins remove all pins however they can not **move** or **shoot**.",
+        "hidden": false
+      },
+      {
+        "name": "Ambush Order",
+        "id": "f4d3-4d0d-2c0f-232e",
+        "description": "This **unit**/**model** does not **move** or **shoot** but instead if an **enemy model** moves withing range this **unit**/**model** can shoot them in your opponents **activation** or if this unit is being shot and this has not shot yet you can replace this with the **Down Order**",
+        "hidden": false
+      },
+      {"name": "Down Order", "id": "9ecf-a8b5-6e0d-830e", "description": "This **Unit**/**Model** gains a **5+ Save** or **2+** while in cover", "hidden": false}
     ],
     "sharedSelectionEntries": [
       {
@@ -3357,6 +3391,140 @@
               {"name": "Shots", "$text": "4", "typeId": "1cc9-8c67-baf2-87e7"},
               {"name": "Pens", "$text": "-", "typeId": "b7fa-50ee-7ecf-7f80"},
               {"name": "Special", "$text": "360° Arc", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "360° Heavy Automatic Cannon",
+        "id": "0d2a-0d95-4482-5a88",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "ed0d-e79a-fab7-f02e",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "360° Arc", "id": "2616-4c56-a759-14fd", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
+          {"name": "Flak", "id": "306e-9c70-396c-0c91", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Heavy Automatic Cannon",
+            "id": "4a8e-2f40-9cbe-5e04",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "72\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+3", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "360° Arc, HE(1\"), Flak", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "360° Light Automatic Cannon",
+        "id": "8a60-ec14-630a-81f1",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "5af5-6165-cd06-d33e",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "360° Arc", "id": "224b-406f-7821-67e6", "hidden": false, "targetId": "5cb5-d617-6c0f-f9e4", "type": "rule"},
+          {"name": "Flak", "id": "41ef-512c-db6b-ba90", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Light Automatic Cannon",
+            "id": "8307-04dc-c4e8-be42",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "48\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+2", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "360° Arc, He(1\"), Flak", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Turret-mounted Heavy Automatic Cannon",
+        "id": "555b-3c2d-0f7d-0628",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {
+            "name": "HE(X\")",
+            "id": "b543-49a0-67ad-0279",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          },
+          {"name": "Flak", "id": "7a0f-19cc-56d2-59c8", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}
+        ],
+        "profiles": [
+          {
+            "name": "Heavy Automatic Cannon",
+            "id": "d014-d985-374a-5414",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "72\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+3", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "HE(1\"), Flak", "typeId": "facf-631c-0026-5956"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rear facing Heavy Automatic Cannon",
+        "id": "3702-edd6-4830-ba97",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "infoLinks": [
+          {"name": "Rear Arc", "id": "43e7-6e25-34ac-0e03", "hidden": false, "targetId": "5ef2-cf41-e953-3052", "type": "rule"},
+          {
+            "name": "HE(X\")",
+            "id": "9afe-15a5-eb3f-459e",
+            "hidden": false,
+            "targetId": "47c0-c90b-acff-3e23",
+            "type": "rule",
+            "modifiers": [{"arg": "X", "field": "name", "type": "replace", "value": "1"}, {"arg": "X", "field": "description", "type": "replace", "value": "1"}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Heavy Automatic Cannon",
+            "id": "f78e-82d5-cfb4-b93a",
+            "hidden": false,
+            "typeId": "e8ea-235b-e27c-4d69",
+            "typeName": "Ranged Weapon",
+            "characteristics": [
+              {"name": "Range", "$text": "72\"", "typeId": "48fb-dbbf-ed34-5b90"},
+              {"name": "Shots", "$text": "2", "typeId": "1cc9-8c67-baf2-87e7"},
+              {"name": "Pens", "$text": "+3", "typeId": "b7fa-50ee-7ecf-7f80"},
+              {"name": "Special", "$text": "Rear Arc, HE(1\")", "typeId": "facf-631c-0026-5956"}
             ]
           }
         ]

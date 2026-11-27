@@ -72,7 +72,12 @@
       {"name": "3-Inch Mortar Carrier", "id": "89c2-9ed6-c7c5-075c", "hidden": false},
       {"name": "Bishop SP 25-PDR", "id": "8de2-6ce2-9b3f-3171", "hidden": false},
       {"name": "M7 Priest", "id": "2e25-4f31-d121-18d0", "hidden": false},
-      {"name": "Sexton", "id": "4208-dad7-0cde-eea3", "hidden": false}
+      {"name": "Sexton", "id": "4208-dad7-0cde-eea3", "hidden": false},
+      {"name": "Boforis AA truck", "id": "01e4-f6e1-74c6-d17b", "hidden": false},
+      {"name": "Polesten AA Truck", "id": "57dc-3874-8b23-754b", "hidden": false},
+      {"name": "Crusader III AA MK I and MK II", "id": "2ed6-bd1d-8b71-763f", "hidden": false},
+      {"name": "Staghound AA", "id": "1618-894a-d710-dd7f", "hidden": false},
+      {"name": "Armadillo", "id": "0773-662c-25e6-c264", "hidden": false}
     ],
     "entryLinks": [
       {"name": "Chaplin", "id": "7d04-8cc4-e814-e607", "hidden": false, "import": true, "targetId": "77b9-fb0e-7e86-b046", "type": "selectionEntry"},
@@ -262,7 +267,7 @@
         "type": "selectionEntry"
       },
       {"name": "40mm Bofors Gun", "id": "d456-b6a4-cf13-d701", "hidden": false, "import": true, "targetId": "07ae-92d8-221e-71f5", "type": "selectionEntry"},
-      {"name": "Army Rules", "id": "3371-1b1a-cd19-9fee", "hidden": false, "import": true, "targetId": "9120-1b7d-1f49-ac30", "type": "selectionEntry"},
+      {"name": "Order Dice", "id": "3371-1b1a-cd19-9fee", "hidden": false, "import": true, "targetId": "6e83-a3ff-ed03-dadc", "type": "selectionEntry"},
       {
         "name": "Infantry Tank MK III Valentine XI",
         "id": "031b-dcdd-6666-b12c",
@@ -315,7 +320,20 @@
       {"name": "3-Inch Mortar Carrier", "id": "9135-e56e-1a71-434d", "hidden": false, "import": true, "targetId": "fbcf-e40b-a3ef-6210", "type": "selectionEntry"},
       {"name": "Bishop SP 25-PDR", "id": "a67c-0a9d-49af-b97d", "hidden": false, "import": true, "targetId": "a47c-39df-5da7-58eb", "type": "selectionEntry"},
       {"name": "M7 Priest", "id": "3fc1-73c4-6548-338f", "hidden": false, "import": true, "targetId": "6ff5-6636-97c7-6708", "type": "selectionEntry"},
-      {"name": "Machine Gun Carrier", "id": "c357-9406-edb6-9df9", "hidden": false, "import": true, "targetId": "c63b-1582-ca99-1437", "type": "selectionEntry"}
+      {"name": "Machine Gun Carrier", "id": "c357-9406-edb6-9df9", "hidden": false, "import": true, "targetId": "c63b-1582-ca99-1437", "type": "selectionEntry"},
+      {"name": "Army Rules", "id": "5d3b-75bd-59bd-7939", "hidden": false, "import": true, "targetId": "9120-1b7d-1f49-ac30", "type": "selectionEntry"},
+      {"name": "Staghound AA", "id": "d3a9-8c75-a2d6-a5a7", "hidden": false, "import": true, "targetId": "257e-3bf7-48c6-9bf9", "type": "selectionEntry"},
+      {"name": "Boforis AA truck", "id": "217c-b439-16cb-6da2", "hidden": false, "import": true, "targetId": "411e-f240-c298-35aa", "type": "selectionEntry"},
+      {"name": "Polesten AA Truck", "id": "5f4c-9b26-3e03-2d11", "hidden": false, "import": true, "targetId": "18ca-01a5-99c5-5e64", "type": "selectionEntry"},
+      {
+        "name": "Crusader III AA MK I and MK II",
+        "id": "6c4e-123a-39db-7850",
+        "hidden": false,
+        "import": true,
+        "targetId": "5e1e-7a68-5754-7be1",
+        "type": "selectionEntry"
+      },
+      {"name": "Armadillo", "id": "4ec3-b3cc-0d9c-e6e6", "hidden": false, "import": true, "targetId": "08d3-f1cb-7dec-4e08", "type": "selectionEntry"}
     ],
     "sharedProfiles": [
       {
@@ -10908,6 +10926,528 @@
                 "$text": "This models **Light Howitzer** can be fired as a **light anti-tank gun**. Must declare before shooting.",
                 "typeId": "855b-a61a-569c-a804"
               }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Boforis AA truck",
+        "id": "411e-f240-c298-35aa",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "288b-1022-8fae-2724", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "soft-skin", "id": "b6ac-3d4c-ca54-e3de", "hidden": false, "primary": false, "targetId": "5e17-930e-4c26-269d"},
+          {"name": "Wheeled Vehicle", "id": "134a-5923-dd3b-a376", "hidden": false, "primary": false, "targetId": "64fb-3b58-38d2-b495"},
+          {"name": "Boforis AA truck", "id": "0fdc-e402-ed1f-b4c7", "hidden": false, "primary": false, "targetId": "01e4-f6e1-74c6-d17b"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "360° Heavy Automatic Cannon",
+            "id": "e971-60c5-b94b-fc7b",
+            "hidden": false,
+            "import": true,
+            "targetId": "0d2a-0d95-4482-5a88",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "3b85-89a1-0a38-417c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "9089-741b-2c3e-585a", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Expirence",
+            "id": "c033-946e-8ce0-9108",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [{"name": "Stationary Firing Platform", "id": "976b-8e5c-b2e2-23f3", "hidden": false, "targetId": "a7a9-b6eb-05df-257e", "type": "profile"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 44,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 55,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 66,
+            "conditions": [
+              {
+                "childId": "a930-4c61-71a3-c8f5",
+                "childName": "Veteran",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Boforis AA truck",
+            "id": "696d-5106-4ee4-ad0d",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Order Dice",
+        "id": "6e83-a3ff-ed03-dadc",
+        "hidden": false,
+        "import": true,
+        "type": "upgrade",
+        "categoryLinks": [{"name": "Configuration", "id": "c1f4-c21d-484b-4e7a", "hidden": false, "primary": true, "targetId": "3bcf-ea53-f232-234a"}],
+        "constraints": [
+          {
+            "id": "b24e-7923-bff0-5156",
+            "field": "selections",
+            "includeChildForces": true,
+            "includeChildSelections": true,
+            "scope": "roster",
+            "shared": true,
+            "type": "min",
+            "value": 1
+          },
+          {
+            "id": "ecb9-4843-9d96-786e",
+            "field": "selections",
+            "includeChildForces": true,
+            "includeChildSelections": true,
+            "scope": "roster",
+            "shared": true,
+            "type": "max",
+            "value": 1
+          }
+        ],
+        "infoLinks": [
+          {"name": "Run Order", "id": "227f-9118-f472-7193", "hidden": false, "targetId": "2f97-6717-5b1b-84ee", "type": "rule"},
+          {"name": "Advance order", "id": "363c-b32f-347a-793d", "hidden": false, "targetId": "7af5-cb29-3ef1-f4de", "type": "rule"},
+          {"name": "Fire Order", "id": "214c-7fd6-9e00-dfe7", "hidden": false, "targetId": "7772-290e-91c0-945e", "type": "rule"},
+          {"name": "Ambush Order", "id": "33d2-989c-40b8-c7ad", "hidden": false, "targetId": "f4d3-4d0d-2c0f-232e", "type": "rule"},
+          {"name": "Rally Order", "id": "ca61-9031-358d-13a6", "hidden": false, "targetId": "07ba-f912-a2f0-afae", "type": "rule"},
+          {"name": "Down Order", "id": "8bf9-8369-b55f-b7d9", "hidden": false, "targetId": "9ecf-a8b5-6e0d-830e", "type": "rule"}
+        ]
+      },
+      {
+        "name": "Polesten AA Truck",
+        "id": "18ca-01a5-99c5-5e64",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "e2d7-534c-15f3-8525", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "soft-skin", "id": "f119-bc78-c3d8-9402", "hidden": false, "primary": false, "targetId": "5e17-930e-4c26-269d"},
+          {"name": "Wheeled Vehicle", "id": "a058-1c18-4942-138e", "hidden": false, "primary": false, "targetId": "64fb-3b58-38d2-b495"},
+          {"name": "Polesten AA Truck", "id": "1b66-bee1-1785-e409", "hidden": false, "primary": false, "targetId": "57dc-3874-8b23-754b"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "0ca6-cd29-11c4-bf4f",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "360° Light Automatic Cannon",
+            "id": "5b8a-6663-68ea-2b20",
+            "hidden": false,
+            "import": true,
+            "targetId": "8a60-ec14-630a-81f1",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "5914-559f-cded-1e6b", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "1e3d-ade0-1a81-3680", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          }
+        ],
+        "infoLinks": [{"name": "Stationary Firing Platform", "id": "2ae7-b812-ee80-1370", "hidden": false, "targetId": "a7a9-b6eb-05df-257e", "type": "profile"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 36,
+            "conditions": [{"childId": "7d03-bd00-3f70-aece", "childName": "Inexpirence", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 45,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 54,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Polesten AA Truck",
+            "id": "fd00-24cd-1fc3-04ff",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "6+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Crusader III AA MK I and MK II",
+        "id": "5e1e-7a68-5754-7be1",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "4afb-358e-0232-8a46", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Light Tank", "id": "cc39-6da4-ecfa-79df", "hidden": false, "primary": false, "targetId": "422c-f7f9-65a3-412d"},
+          {"name": "Track Vehicle", "id": "cf24-6cf1-21a5-4c9d", "hidden": false, "primary": false, "targetId": "20b9-afcb-dc06-90bd"},
+          {"name": "Crusader III AA MK I and MK II", "id": "dad5-45e3-9a66-f6de", "hidden": false, "primary": false, "targetId": "2ed6-bd1d-8b71-763f"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "c207-e9e4-46e2-2aba",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          }
+        ],
+        "infoLinks": [{"name": "Open Topped", "id": "72f9-58fe-3fe7-8862", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 84,
+            "conditions": [{"childId": "7d03-bd00-3f70-aece", "childName": "Inexpirence", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 105,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 126,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Crusader III AA MK I and MK II",
+            "id": "95fb-531b-fdbd-92ba",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "9\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "8+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ],
+        "selectionEntryGroups": [
+          {
+            "name": "Turret Weapon",
+            "id": "bbbb-5f22-b524-350c",
+            "hidden": false,
+            "constraints": [
+              {"id": "0a34-33ba-3740-1b6e", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "af60-d47c-62d0-a9fa", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "entryLinks": [
+              {
+                "name": "Turret-mounted Heavy Automatic Cannon",
+                "id": "1988-7e62-40d2-0ba5",
+                "hidden": false,
+                "import": true,
+                "targetId": "555b-3c2d-0f7d-0628",
+                "type": "selectionEntry"
+              }
+            ],
+            "selectionEntries": [
+              {
+                "name": "2 Turrent-mounted Light Automatic Cannon",
+                "id": "9c95-38cd-57aa-e6fc",
+                "hidden": false,
+                "import": true,
+                "type": "upgrade",
+                "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 30}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 0}],
+                "entryLinks": [
+                  {
+                    "name": "Turret-mounted Light Automatic Cannon",
+                    "id": "9ea2-d8fa-8dd0-1fa0",
+                    "hidden": false,
+                    "import": true,
+                    "targetId": "6849-3e0f-8711-ab54",
+                    "type": "selectionEntry",
+                    "constraints": [
+                      {"id": "8fdc-07db-9832-cb85", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2},
+                      {"id": "44b6-8aec-17fc-4a6c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}
+                    ],
+                    "infoLinks": [{"name": "Flak", "id": "c430-b54f-fe79-4f7c", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}],
+                    "modifiers": [{"affects": "profiles.Ranged Weapon", "field": "facf-631c-0026-5956", "join": ", ", "type": "append", "value": "Flak"}]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Staghound AA",
+        "id": "257e-3bf7-48c6-9bf9",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "8d3b-a705-e714-f867", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Light Tank", "id": "3140-6a3d-4256-f041", "hidden": false, "primary": false, "targetId": "422c-f7f9-65a3-412d"},
+          {"name": "Wheeled Vehicle", "id": "2c9e-219f-1826-42ee", "hidden": false, "primary": false, "targetId": "64fb-3b58-38d2-b495"},
+          {"name": "Staghound AA", "id": "2491-88f5-0b79-32ee", "hidden": false, "primary": false, "targetId": "1618-894a-d710-dd7f"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Turret-Mounted HMG",
+            "id": "9d5e-194b-1470-a82b",
+            "hidden": false,
+            "import": true,
+            "targetId": "dc25-9339-8774-484c",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "e12d-00b5-6e74-9bf9", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 2},
+              {"id": "c787-1735-a312-4964", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 2}
+            ],
+            "infoLinks": [{"name": "Flak", "id": "8f61-4afc-193a-174d", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}],
+            "modifiers": [{"affects": "profiles.Ranged Weapon", "field": "facf-631c-0026-5956", "join": ", ", "type": "append", "value": "Flak"}]
+          },
+          {
+            "name": "Expirence",
+            "id": "2967-6e00-698e-23a4",
+            "hidden": false,
+            "import": true,
+            "sortIndex": 1,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup"
+          },
+          {
+            "name": "Front Facing Hull-mounted MMG",
+            "id": "7d1c-2ee1-8779-cf3f",
+            "hidden": false,
+            "import": true,
+            "targetId": "5a4d-a78f-b6af-7049",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "3112-9737-b849-c01c", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "95cb-d1e2-112d-437d", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ],
+            "modifiers": [{"affects": "self.entries.profiles.Ranged Weapon", "arg": "Flak", "field": "facf-631c-0026-5956", "type": "set", "value": "Front Arc, Fixed"}]
+          }
+        ],
+        "infoLinks": [{"name": "Open Topped", "id": "d3a7-fe96-96aa-07b0", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"}],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 100,
+            "conditions": [{"childId": "7d03-bd00-3f70-aece", "childName": "Inexpirence", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 125,
+            "conditions": [{"childId": "8066-4eb9-90e7-203a", "childName": "Regular", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 150,
+            "conditions": [{"childId": "a930-4c61-71a3-c8f5", "childName": "Veteran", "field": "selections", "scope": "self", "shared": true, "type": "atLeast", "value": 1}]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Staghound AA",
+            "id": "a265-ea16-ac3c-66a3",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "12\"", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "8+", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Armadillo",
+        "id": "08d3-f1cb-7dec-4e08",
+        "hidden": false,
+        "import": true,
+        "type": "model",
+        "categoryLinks": [
+          {"name": "Vehicles", "id": "2455-26f9-1883-6277", "hidden": false, "primary": true, "targetId": "a827-3f5a-6588-bf47"},
+          {"name": "Armoured Car", "id": "fa6d-a4f2-4822-4b09", "hidden": false, "primary": false, "targetId": "22de-78ae-5389-f4e8"},
+          {"name": "Wheeled Vehicle", "id": "0032-b012-a25c-4207", "hidden": false, "primary": false, "targetId": "64fb-3b58-38d2-b495"},
+          {"name": "Armadillo", "id": "76d4-afbd-ad7b-4a20", "hidden": false, "primary": false, "targetId": "0773-662c-25e6-c264"}
+        ],
+        "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 0}, {"name": "Dice", "typeId": "bc13-1fcd-379a-6b9c", "value": 1}],
+        "entryLinks": [
+          {
+            "name": "Expirence",
+            "id": "bc1d-2f66-ac63-1f3e",
+            "hidden": false,
+            "import": true,
+            "targetId": "2ba1-b6c8-a30e-89b0",
+            "type": "selectionEntryGroup",
+            "modifiers": [{"affects": "a930-4c61-71a3-c8f5", "field": "hidden", "type": "set", "value": true}]
+          },
+          {
+            "name": "Pintle Mounted LMG",
+            "id": "193e-176e-ff26-961b",
+            "hidden": false,
+            "import": true,
+            "targetId": "6359-a62c-cfb9-95de",
+            "type": "selectionEntry",
+            "constraints": [
+              {"id": "d08f-72fc-f65e-c8b5", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "min", "value": 1},
+              {"id": "fc10-5c28-d1c9-586f", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}
+            ]
+          },
+          {
+            "name": "Rear facing Heavy Automatic Cannon",
+            "id": "1844-9241-f3dd-6376",
+            "hidden": false,
+            "import": true,
+            "targetId": "3702-edd6-4830-ba97",
+            "type": "selectionEntry",
+            "constraints": [{"id": "e07c-5aa6-50b9-bc33", "field": "selections", "includeChildSelections": false, "scope": "parent", "shared": true, "type": "max", "value": 1}],
+            "costs": [{"name": "Points", "typeId": "cf06-9113-0bb3-480a", "value": 40}],
+            "infoLinks": [{"name": "Flak", "id": "ad73-6a0c-e2b2-3312", "hidden": false, "targetId": "9c73-bd8d-0be9-fd6f", "type": "rule"}],
+            "modifiers": [{"affects": "profiles.Ranged Weapon", "field": "facf-631c-0026-5956", "join": ", ", "type": "append", "value": "Flak"}]
+          }
+        ],
+        "infoLinks": [
+          {"name": "Open Topped", "id": "f41e-bbee-1257-197f", "hidden": false, "targetId": "7e19-e7b3-7cb7-4460", "type": "rule"},
+          {"name": "Stationary Firing Platform", "id": "3c52-72c2-93ac-42dd", "hidden": false, "targetId": "a7a9-b6eb-05df-257e", "type": "profile"}
+        ],
+        "modifiers": [
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 32,
+            "conditions": [
+              {
+                "childId": "7d03-bd00-3f70-aece",
+                "childName": "Inexpirence",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "field": "cf06-9113-0bb3-480a",
+            "type": "set",
+            "value": 40,
+            "conditions": [
+              {
+                "childId": "8066-4eb9-90e7-203a",
+                "childName": "Regular",
+                "field": "selections",
+                "includeChildSelections": true,
+                "scope": "self",
+                "shared": true,
+                "type": "atLeast",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "profiles": [
+          {
+            "name": "Armadillo",
+            "id": "af91-45d8-2a94-67a6",
+            "hidden": false,
+            "typeId": "ce5e-65f8-5308-4210",
+            "typeName": "Unit (Vehicle)",
+            "characteristics": [
+              {"name": "Movement", "$text": "", "typeId": "d6f8-34fd-5990-648b"},
+              {"name": "Armour Value", "$text": "", "typeId": "7441-e195-03da-f372"},
+              {"name": "Moral", "$text": "", "typeId": "da9d-5250-9295-6191"},
+              {"name": "Transport", "$text": "", "typeId": "724f-91db-8d2d-f080"},
+              {"name": "Tow", "$text": "", "typeId": "59e5-7a0d-c94b-aaa4"}
             ]
           }
         ]
